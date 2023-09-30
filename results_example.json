@@ -1,0 +1,2365 @@
+[
+  {
+    "event": "http://www.wikidata.org/entity/Q4556608",
+    "date": "1892-01-01T00:00:00Z",
+    "label": "1892 Broken Hill miners' strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Broken%20Hill%20Strike%201892%20Arrest.png",
+    "article": "https://en.wikipedia.org/wiki/1892_Broken_Hill_miners%27_strike",
+    "summary": "The 1892 Broken Hill miners' strike was a sixteen-week strike which was one of four major strikes that took place between 1889 and 1920 in Broken Hill, NSW, Australia.During the four months from July to November 1892, both local miners and Women's Brigade were active in defending the mines from imported labour using organised direct action methods.The strike collapsed after several strike leaders were arrested and tried for 'unlawful conspiracy and inciting riots', found guilty and sentenced to imprisonment and it became unpracticable for locals to defend the mines from imported labour.",
+    "statements": {
+      "country": [
+        "Australia"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Broken%20Hill%20Strike%201892%20Arrest.png"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "point in time": [
+        "1892-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0glrpyn"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4559498",
+    "date": "1912-01-01T00:00:00Z",
+    "label": "1912 New York City waiters' strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Strike%202990272474%20524b6f4c0d%20o.jpg",
+    "article": "https://en.wikipedia.org/wiki/1912_New_York_City_waiters%27_strike",
+    "summary": "The 1912 New York City waiters\u2019 strike began on May 7, 1912 at the Belmont Hotel and was the first general strike for waiters and hotel workers in New York City history.  That day over 150 hotel workers walked out as a sign of protest against their poor working conditions.  The strike was organized by Joseph James Ettor and Elizabeth Gurley Flynn of the Industrial Workers of the World (IWW) in conjunction with the Hotel Workers' International Union. At the height of the strike there were 54 hotels and 30 restaurants and other establishments without their staff.  This amounted to 2,500 waiters, 1,000 cooks, and 3,000 other striking hotel workers.  The strike continued through the rest of May but police began reprimanding protestors, making many of them go back to work.  The strike officially ended on June 25, 1912.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Strike%202990272474%20524b6f4c0d%20o.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Striking%20waiters%20at%20Hdqrts.%20LCCN2014692213.jpg"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "point in time": [
+        "1912-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/06_vyqy"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4563463",
+    "date": "1934-01-01T00:00:00Z",
+    "label": "1934 West Coast waterfront strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Confrontation%20between%20a%20policeman%20wielding%20a%20night%20stick%20and%20a%20striker%20during%20the%20San%20Francisco%20General%20Strike%2C%201934%20-%20NARA%20-%20541926.jpg",
+    "article": "https://en.wikipedia.org/wiki/1934_West_Coast_waterfront_strike",
+    "summary": "The 1934 West Coast Waterfront Strike (also known as the 1934 West Coast Longshoremen's Strike, as well as a number of variations on these names) lasted 83 days, and began on May 9, 1934, when longshoremen in every US West Coast port walked out. Organized by the International Longshore and Warehouse Union (ILWU), the strike peaked with the death of two workers on \"Bloody Thursday\" and the San Francisco General Strike which stopped all work in the major port city for four days and led ultimately to the settlement of the West Coast Longshoremen's Strike.The result of the strike was the unionization of all of the West Coast ports of the United States. The San Francisco General Strike of 1934, along with the Toledo Auto-Lite Strike of 1934 led by the American Workers Party and the Minneapolis Teamsters Strike of 1934 led by the Communist League of America, were catalysts for the rise of industrial unionism in the 1930s, much of which was organized through the Congress of Industrial Organizations.\n\n",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Confrontation%20between%20a%20policeman%20wielding%20a%20night%20stick%20and%20a%20striker%20during%20the%20San%20Francisco%20General%20Strike%2C%201934%20-%20NARA%20-%20541926.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh96002507"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "location": [
+        "West Coast of the United States"
+      ],
+      "Commons category": [
+        "1934 West Coast waterfront strike"
+      ],
+      "start time": [
+        "1934-05-09T00:00:00Z"
+      ],
+      "point in time": [
+        "1934-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/04_sm3"
+      ],
+      "organizer": [
+        "International Longshoremen's Association"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007544449205171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4614187",
+    "date": "2009-01-01T00:00:00Z",
+    "label": "2009 Leeds refuse workers strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Headingley%20Avenue%20at%20night%20during%20the%202009%20Leeds%20refuse%20strike.jpg",
+    "article": "https://en.wikipedia.org/wiki/2009_Leeds_refuse_workers%27_strike",
+    "summary": "The 2009 Leeds refuse workers strike was an eleven-week industrial dispute in City of Leeds, West Yorkshire, England between Leeds City Council and the city's binmen.",
+    "statements": {
+      "country": [
+        "United Kingdom"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Headingley%20Avenue%20at%20night%20during%20the%202009%20Leeds%20refuse%20strike.jpg"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "Commons category": [
+        "2009 Leeds refuse workers strike"
+      ],
+      "point in time": [
+        "2009-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/080bq5v"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5600021",
+    "date": "1886-01-01T00:00:00Z",
+    "label": "Great Southwest Railroad Strike of 1886",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Railway%20Strike%201886%20-%20E%20St%20Louis.jpg",
+    "article": "https://en.wikipedia.org/wiki/Great_Southwest_railroad_strike_of_1886",
+    "summary": "The Great Southwest railroad strike of 1886 was a labor union strike involving more than 200,000 workers. Beginning on March 1, 1886, railroad workers in five states struck against the Union Pacific and Missouri Pacific railroads, owned by Jay Gould.  At least ten people were killed.  The unravelling of the strike within two months led directly to the collapse of the Knights of Labor and the formation of the American Federation of Labor.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Railway%20Strike%201886%20-%20E%20St%20Louis.jpg"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "point in time": [
+        "1886-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0db2nr"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5609753",
+    "date": "1933-02-01T00:00:00Z",
+    "label": "Grivi\u021ba Strike of 1933",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/30%20years%20from%20Grivi%C8%9Ba%20strike%20of%201933.jpg",
+    "article": "https://en.wikipedia.org/wiki/Grivi%C8%9Ba_strike_of_1933",
+    "summary": "The Grivi\u021ba strike of 1933 was a railway strike which was started at the Grivi\u021ba Workshops, Bucharest, the Kingdom of Romania in February 1933 by workers of C\u0103ile Ferate Rom\u00e2ne (Romanian Railways). The strike was brought about by the increasingly poor working conditions of railway employees in the context of the worldwide Great Depression, which affected Romania significantly. As the workers occupied the workshops, the Romanian Army surrounded and sieged them. The fighting resulted in the death of 7 workers, including Vasile Roait\u0103, a 19-year-old worker whose image was used by the early Communist regime.\n\n",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/30%20years%20from%20Grivi%C8%9Ba%20strike%20of%201933.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85110903"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "location": [
+        "CFR Grivi\u021ba Workshops"
+      ],
+      "Commons category": [
+        "Grivi\u021ba strike"
+      ],
+      "point in time": [
+        "1933-02-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/08c2h4"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007560722105171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q6023927",
+    "date": "1913-01-01T00:00:00Z",
+    "label": "Indianapolis Streetcar Strike of 1913",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Crowd%20swarms%20streetcar%20in%201913%20Indianapolis%20Streetcar%20Stirke.jpg",
+    "article": "https://en.wikipedia.org/wiki/Indianapolis_streetcar_strike_of_1913",
+    "summary": "The Indianapolis streetcar strike of 1913 and the subsequent police mutiny and riots was a civil conflict in Indianapolis, Indiana. The events began as a workers strike by the union employees of the Indianapolis Traction & Terminal Company and their allies on Halloween night, October 31, 1913. The company was responsible for public transportation in Indianapolis, the capital city and transportation hub of the U.S. state of Indiana. The unionization effort was being organized by the Amalgamated Street Railway Employees of America who had successfully enforced strikes in other major United States cities. Company management suppressed the initial attempt by some of its employees to unionize and rejected an offer of mediation by the United States Department of Labor, which led to a rapid rise in tensions, and ultimately the strike. Government response to the strike was politically charged, as the strike began during the week leading up to public elections. The strike effectively shut down mass transit in the city and caused severe interruptions of statewide rail transportation and the 1913 city elections.\n\nA riot that lasted four days broke out on November 2 when strikebreakers attempted to restart transit services. At its height, eight to ten thousand rioters flooded downtown Indianapolis and vandalized the city's main business district. Numerous workers, strikebreakers, policemen, and bystanders were injured. Two strikebreakers and four union members were killed. The city police were unable to control the situation and refused orders to combat the rioters as the violence worsened. After pleas for help from city leaders following continued rioting on Election Day, Governor Samuel Ralston called out the Indiana National Guard and put the city under martial law on the evening of November 5.\nOn November 6, an angry crowd surrounded the Indiana Statehouse, listed their grievances, demanded the military leave the city, and threatened more violence if their demands were not met. Ralston addressed the crowd to promise concessions if the workers would return to work. His speech was credited by the press with ending the strike. After three days of peace, the military withdrew from the city. The Indiana General Assembly met later that month and enacted Indiana's first minimum wage laws, regular working hours, workplace safety requirements, and began projects to improve the city's tenement slums.\nArbitration between the company and its employees by the Indiana Public Service Commission resulted in a decision mostly favoring the company. The employees were permitted to unionize, guaranteed wage increases, a minimum monthly salary, and certain days off work. The company, however, was permitted to continue hiring non-union employees and to bar union membership solicitation on the company's property.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Crowd%20swarms%20streetcar%20in%201913%20Indianapolis%20Streetcar%20Stirke.jpg"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "point in time": [
+        "1913-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/05q4xtj"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5644307",
+    "date": "1876-07-01T00:00:00Z",
+    "label": "Hamburg Massacre",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%20cartoon.jpg",
+    "article": "https://en.wikipedia.org/wiki/Hamburg_massacre",
+    "summary": "The Hamburg Massacre (or Red Shirt Massacre or Hamburg riot) was a riot in the United States town of Hamburg, South Carolina, in July 1876, leading up to the last election season of the Reconstruction Era. It was the first of a series of civil disturbances planned and carried out by white Democrats in the majority-black Republican Edgefield District, with the goal of suppressing black Americans' civil rights and voting rights and disrupting Republican meetings, through actual and threatened violence.Beginning with a dispute over free passage on a public road, the massacre was rooted in racial hatred and political motives. A court hearing attracted armed white \"rifle clubs,\" colloquially called the \"Red Shirts\". Desiring to regain control of state governments and eradicate the civil rights of black Americans, over 100 white men attacked about 30 black servicemen of the National Guard at the armory, killing two as they tried to leave that night. Later that night, the Red Shirts tortured and murdered four of the militia while holding them as prisoners, and wounded several others. In total, the events in Hamburg resulted in the death of one white man and six black men with several more blacks being wounded. Although 94 white men were indicted for murder by a coroner's jury, none were prosecuted.\nThe events were a catalyst in the overarching violence in the volatile 1876 election campaign. There were other episodes of violence in the months before the election, including an estimated 100 blacks killed during several days in Ellenton, South Carolina, also in Aiken County. The Southern Democrats succeeded in \"redeeming\" the state government and electing Wade Hampton III as governor. During the remainder of the century, they passed laws to establish single-party white rule, impose legal segregation and \"Jim Crow,\" and disenfranchise blacks with a new state constitution adopted in 1895. This exclusion of blacks from the political system was effectively maintained into the late 1960s.",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "South Carolina"
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%20cartoon.jpg"
+      ],
+      "locator map image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%20Massacre1.gif"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "number of deaths": [
+        "7"
+      ],
+      "location": [
+        "Hamburg"
+      ],
+      "part of": [
+        "Reconstruction Era"
+      ],
+      "on focus list of Wikimedia project": [
+        "WikiProject African diaspora"
+      ],
+      "point in time": [
+        "1876-07-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/08xdh9"
+      ],
+      "BlackPast.org ID": [
+        "african-american-history/hamburg-massacre-1876"
+      ],
+      "South Carolina Encyclopedia ID": [
+        "hamburg-massacre"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1250976",
+    "date": "1978-07-11T00:00:00Z",
+    "label": "Los Alfaques disaster",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Los%20Alfaques%20Gedenken.jpg",
+    "article": "https://en.wikipedia.org/wiki/Los_Alfaques_disaster",
+    "summary": "The Los Alfaques disaster was a tanker explosion that occurred near a holiday campsite on Tuesday July 11, 1978 in Alcanar, Spain. The exploding truck, which was carrying 23 tons of a highly flammable liquefied petroleum gas called propylene, killed 217 people and severely burned 200 more. Several people from the company that owned the vehicle were prosecuted for criminal negligence. It also resulted in new legislation in Spain making it only legal for vehicles carrying dangerous cargo to transit populated areas at night.\nMost of the victims were holidaymakers from Germany and other European countries who were staying at the Los Alfaques seaside campground. The site, which is located at km 159 on the N-340 national road, is 2 km south of the town of Sant Carles de la R\u00e0pita.\n\n",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Alcanar"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Los%20Alfaques%20Gedenken.jpg"
+      ],
+      "instance of": [
+        "traffic collision",
+        "chemical accident",
+        "occurrence"
+      ],
+      "number of deaths": [
+        "243"
+      ],
+      "number of injured": [
+        "300"
+      ],
+      "start point": [
+        "Tarragona"
+      ],
+      "destination point": [
+        "Alicante"
+      ],
+      "location": [
+        "Tarragona"
+      ],
+      "point in time": [
+        "1978-07-11T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(0.570556 40.595278)"
+      ],
+      "Freebase ID": [
+        "/m/02prtr3"
+      ],
+      "has cause": [
+        "traffic collision"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q2193276",
+    "date": "1997-08-31T00:00:00Z",
+    "label": "death of Diana, Princess of Wales",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alma%20tunnel%20Paris.jpg",
+    "article": "https://en.wikipedia.org/wiki/Death_of_Diana,_Princess_of_Wales",
+    "summary": "During the early hours of 31 August 1997, Diana, Princess of Wales, died from injuries sustained earlier that night in a car crash in the Pont de l'Alma tunnel in Paris, France. Diana's partner, Dodi Fayed, and the driver of the Mercedes-Benz W140, Henri Paul, were found dead inside the car. Dodi's bodyguard, Trevor Rees-Jones, was seriously injured, but was the only survivor of the crash.\nSome media claimed that the erratic behaviour of the paparazzi chasing the car, as reported by the BBC, caused the crash. In 1999, a French investigation found that Paul lost control of the vehicle at high speed while intoxicated by alcohol and under the effects of prescription drugs, and concluded that he was solely responsible for the crash. He was the deputy head of security at the H\u00f4tel Ritz Paris and had earlier goaded paparazzi waiting for Diana and Fayed outside the hotel. Anti-depressants and traces of an anti-psychotic in his blood might have worsened Paul's inebriation.In 2008, a jury at the British inquest, Operation Paget, returned a verdict of unlawful killing through grossly negligent driving by Paul and the following paparazzi vehicles. Some media reports claimed that Rees-Jones survived because he was wearing a seat belt, but other investigations revealed that none of the occupants of the car were wearing them.Diana was 36 years old when she died. Her death sparked an outpouring of public grief in the United Kingdom and worldwide, and her televised funeral was watched by an estimated 2.5 billion people. The royal family were criticised in the press for their reaction to Diana's death. Public interest in Diana has remained high and she continues to retain regular press coverage in the decades since her death.",
+    "statements": {
+      "country": [
+        "France"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Alma%20tunnel%20Paris.jpg"
+      ],
+      "instance of": [
+        "accidental death",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "4"
+      ],
+      "facet of": [
+        "Diana, Princess of Wales"
+      ],
+      "BBC Things ID": [
+        "afc6229b-6f03-4073-9636-ef845c2e3e61"
+      ],
+      "YouTube video ID": [
+        "Ln2tpXQ7F4c"
+      ],
+      "location": [
+        "pont de l'Alma"
+      ],
+      "point in time": [
+        "1997-08-31T00:00:00Z"
+      ],
+      "BBC News topic ID": [
+        "c2858pddz1dt"
+      ],
+      "coordinate location": [
+        "Point(2.30188889 48.86436111)"
+      ],
+      "Freebase ID": [
+        "/m/0cn9f0"
+      ],
+      "victim": [
+        "Diana, Princess of Wales",
+        "Dodi Fayed",
+        "Henri Paul"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q2822712",
+    "date": "1969-07-18T00:00:00Z",
+    "label": "Chappaquiddick incident",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chappaquiddick4.png",
+    "article": "https://en.wikipedia.org/wiki/Chappaquiddick_incident",
+    "summary": "The Chappaquiddick incident occurred on the island in Massachusetts of the same name some time around midnight between July 18 and 19, 1969, when Senator Edward M. \"Ted\" Kennedy negligently drove his car off a narrow bridge, causing it to overturn in a tidal pond. This resulted in the drowning death of his 28-year-old passenger Mary Jo Kopechne, who was trapped inside the vehicle.Kennedy left a party on Chappaquiddick at 11:15 p.m. Friday. He maintained that his intent was to immediately take Kopechne to a ferry landing and return to Edgartown, but that he accidentally made a wrong turn onto a dirt road leading to a one-lane bridge. After his car skidded off the bridge into Poucha Pond, Kennedy swam free, and maintained that he tried to rescue Kopechne from the submerged car, but that he could not. Kopechne's death could have happened any time between about 11:30 p.m. Friday and 1 a.m. Saturday, as an off-duty deputy sheriff stated he saw a car matching Kennedy's license plate at 12:40 a.m. Kennedy left the scene and did not report the accident to police until after 10 a.m. Saturday. Meanwhile, a diver recovered Kopechne's body from Kennedy's car shortly before 9 a.m. Saturday.\nAt a July 25, 1969, court hearing, Kennedy pled guilty to a charge of leaving the scene of an accident, and received a two-month suspended jail sentence. In a televised statement that same evening, he said his conduct immediately after the accident \"made no sense to me at all\", and that he regarded his failure to report the accident immediately as \"indefensible\". A January 5, 1970, judicial inquest concluded that Kennedy and Kopechne did not intend to take the ferry, and that Kennedy intentionally turned toward the bridge, operating his vehicle negligently, if not recklessly, at too high a speed for the hazard which the bridge posed in the dark. The judge stopped short of recommending charges, and a grand jury convened on April 6, 1970, returning no indictments. On May 27, 1970, a Registry of Motor Vehicles hearing resulted in Kennedy's driver's license being suspended for a total of sixteen months after the accident.\nThe Chappaquiddick incident became national news that influenced Kennedy's decision not to run for President in 1972 and 1976, and it was said to have undermined his chances of ever becoming President. Kennedy ultimately decided to enter the 1980 Democratic Party presidential primaries, but earned only 37.6% of the vote and lost the nomination to incumbent President Jimmy Carter.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Chappaquiddick4.png"
+      ],
+      "instance of": [
+        "political scandal",
+        "accidental death",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "1"
+      ],
+      "number of injured": [
+        "0"
+      ],
+      "location": [
+        "Chappaquiddick Island"
+      ],
+      "Commons category": [
+        "Chappaquiddick incident"
+      ],
+      "point in time": [
+        "1969-07-18T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-70.4537 41.3733)"
+      ],
+      "Freebase ID": [
+        "/m/0g10d3"
+      ],
+      "victim": [
+        "Mary Jo Kopechne"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q3149853",
+    "date": "1999-03-24T00:00:00Z",
+    "label": "fire of the Mont Blanc tunnel",
+    "image": "http://www.wikidata.org/.well-known/genid/74cff68d6fb2fcc431fac884afbf14b1",
+    "article": "https://en.wikipedia.org/wiki/Mont_Blanc_Tunnel_fire",
+    "summary": "On 24 March 1999, a transport truck caught fire while driving through the Mont Blanc Tunnel between France and Italy. When it stopped halfway through the tunnel, it violently combusted. Other vehicles traveling through the tunnel quickly became trapped and they also caught fire as firefighters were unable to reach the transport truck. 39 people were killed. In the aftermath, major changes were made to the tunnel to improve its safety.\n\n",
+    "statements": {
+      "country": [
+        "France"
+      ],
+      "image": [
+        "http://www.wikidata.org/.well-known/genid/aafb7680da115a23e7c94ff170940f9e"
+      ],
+      "instance of": [
+        "conflagration",
+        "vehicle fire",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "39"
+      ],
+      "plaque image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Mont%20Blanc%20Tunnel%20Commemorative%20Plaque.JPG"
+      ],
+      "Google Knowledge Graph ID": [
+        "/g/122mqp7j"
+      ],
+      "location": [
+        "Mont Blanc Tunnel"
+      ],
+      "Encyclop\u00e6dia Universalis ID": [
+        "catastrophe-du-tunnel-du-mont-blanc"
+      ],
+      "start time": [
+        "1999-03-24T00:00:00Z"
+      ],
+      "end time": [
+        "1999-03-26T00:00:00Z"
+      ],
+      "point in time": [
+        "1999-03-24T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(6.9084 45.85885)"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4608571",
+    "date": "2007-01-01T00:00:00Z",
+    "label": "2007 Gumball 3000 accident",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20997%20Turbo%202007%20Gumball%203000%20%282%29.jpg",
+    "article": "https://en.wikipedia.org/wiki/2007_Gumball_3000_collision",
+    "summary": "The Gumball 3000 Rally of 2007 ended early as the result of a traffic accident on May 2, 2007, in which two people were killed. The accident involved two vehicles, the first being a TechArt Porsche 997 Turbo that was participating in the Gumball 3000, and the second being a Volkswagen Golf. The latter was not involved in the Gumball 3000 event. Vladimir \u010cepunjoski, the driver of the Volkswagen, died at the scene. The passenger, Margit \u010cepunjoska, was rushed to hospital but died two days later as a result of the injuries sustained in the crash. The driver of the Porsche, Nicholas Morley, and co-driver, Matthew McConville, were not seriously injured.",
+    "statements": {
+      "country": [
+        "North Macedonia"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20997%20Turbo%202007%20Gumball%203000%20%282%29.jpg"
+      ],
+      "instance of": [
+        "traffic collision"
+      ],
+      "point in time": [
+        "2007-01-01T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(20.65724 41.17422)"
+      ],
+      "Freebase ID": [
+        "/m/04jknnc"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4621745",
+    "date": "2011-11-04T00:00:00Z",
+    "label": "2011 M5 motorway crash",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/M5%20motorway%20near%20Creech%20St.%20Michael%20-%20geograph.org.uk%20-%20174393.jpg",
+    "article": "https://en.wikipedia.org/wiki/2011_M5_motorway_crash",
+    "summary": "On 4 November 2011, a multiple-vehicle collision occurred on the M5 motorway near Taunton, Somerset, in South West England. The crash involved dozens of cars and articulated lorries, and a large fireball ensued.Seven people were killed and 51 others were injured, making the pile-up the deadliest on a British motorway since 13 people \u2013 12 of them children \u2013 died in a minibus crash on the M40 in 1993.\nIn October 2012, a man who had organised and was operating a fireworks display for Guy Fawkes Night at Taunton Rugby Club's ground, which is adjacent to the motorway, was charged with seven counts of manslaughter. In January 2013, the manslaughter charges were dropped and instead he faced a single charge under health and safety laws of failing to ensure the safety of others. In December 2013 he was found not guilty of the charge.\nIn April 2014, the West Somerset coroner concluded that the accident was caused by dense fog, and that smoke from fireworks may have been a contributory factor, but was not the prime cause of the incident.",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Taunton Deane"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/M5%20motorway%20near%20Creech%20St.%20Michael%20-%20geograph.org.uk%20-%20174393.jpg"
+      ],
+      "instance of": [
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "7"
+      ],
+      "number of injured": [
+        "51"
+      ],
+      "has effect": [
+        "conflagration"
+      ],
+      "investigated by": [
+        "Avon and Somerset Police"
+      ],
+      "location": [
+        "M5 motorway"
+      ],
+      "damaged": [
+        "M5 motorway",
+        "road vehicle"
+      ],
+      "point in time": [
+        "2011-11-04T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-3.0568 51.0239)"
+      ],
+      "Freebase ID": [
+        "/m/0hglfrw"
+      ],
+      "historic county": [
+        "Somerset"
+      ],
+      "has cause": [
+        "smoke",
+        "fog"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7126136",
+    "date": "1996-10-11T00:00:00Z",
+    "label": "Pala accident",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20bussi%C3%B5nnetuse%20m%C3%A4lestuskivi.jpg",
+    "article": "https://en.wikipedia.org/wiki/Pala_accident",
+    "summary": "The Pala accident (Estonian: Pala \u00f5nnetus) was a fatal traffic incident involving a school bus on 11 October 1996 in J\u00f5geva County, Estonia.  The bus was carrying 35 students of the Pala Comprehensive School and 2 adults; 8 people died.\nThe PAZ school bus met a Scania wood truck at the 3rd kilometre of S\u00f5\u00f5ru\u2013N\u00f5va road, a narrow unpaved road.  Having noticed each other, the drivers chose different strategies: the school bus driver, driving at a low speed, kept to the right side of the road in order to give the truck more space to pass; the truck, driving at about 70\u201380 km/h, began the manoeuvre by braking heavily.  On the unpaved road, braking led to cross-road oscillation of the truck, leading the truck driver to worry about a risk of falling off the road.  The truck driver compensated by temporarily unbraking and turning sharply left\u2014towards the axis of the road\u2014at an unfortunate time, leading the truck to drive into the school bus at an angle of about 30 degrees.  In the collision, the truck \"skinned\" off the school bus' left side, killing 8 students born in 1982\u20131986.\nEmergency response was delayed due to the accident site not being covered by GSM towers at that time as well as the lower-frequency emergency response dispatch radio transmitter being relatively far from the site, leading to several ambulances passing the accident site before finding it.  However, considering the nature of the deaths and injuries, medical experts believe the delays did not increase their number.",
+    "statements": {
+      "country": [
+        "Estonia"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20bussi%C3%B5nnetuse%20m%C3%A4lestuskivi.jpg"
+      ],
+      "instance of": [
+        "accident",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "8"
+      ],
+      "location": [
+        "Peipsi\u00e4\u00e4re Rural Municipality"
+      ],
+      "point in time": [
+        "1996-10-11T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(26.949061111 58.634422222)"
+      ],
+      "Freebase ID": [
+        "/m/064ktm_"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q30584372",
+    "date": "2017-06-25T00:00:00Z",
+    "label": "2017 Bahawalpur explosion",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2017%20Bahawalpur%20explosion.jpg",
+    "article": "https://en.wikipedia.org/wiki/2017_Bahawalpur_explosion",
+    "summary": "On 25 June 2017, a tanker truck exploded near Ahmedpur East in Pakistan's Bahawalpur District, killing 219 people and injuring at least 34 others. The truck overturned when its driver attempted to make a sharp turn on the N-5 National Highway. Once the news of the accident spread to nearby villages, hundreds of residents rushed to the scene to loot the truck of its cargo. The truck then exploded; early reports suggested the explosion was caused by someone lighting a cigarette.",
+    "statements": {
+      "item operated": [
+        "tank truck"
+      ],
+      "located in the administrative territorial entity": [
+        "Ahmedpur East"
+      ],
+      "country": [
+        "Pakistan"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/2017%20Bahawalpur%20explosion%202.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/2017%20Bahawalpur%20explosion.jpg"
+      ],
+      "instance of": [
+        "vehicle explosion",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "212"
+      ],
+      "number of injured": [
+        "34"
+      ],
+      "Google Knowledge Graph ID": [
+        "/g/11d_7xmfhk"
+      ],
+      "location": [
+        "Ahmedpur East"
+      ],
+      "point in time": [
+        "2017-06-25T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(71.2577 29.1412)"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q63380063",
+    "date": "2019-04-19T00:00:00Z",
+    "label": "Higashi-Ikebukuro runaway car accident",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cenotaph%20at%20Higashi%20Ikebukuro%202021-04-26.jpg",
+    "article": "https://en.wikipedia.org/wiki/Higashi-Ikebukuro_runaway_car_accident",
+    "summary": "The Higashi-Ikebukuro runaway car crash was a traffic crash that occurred on April 19, 2019, in Higashi Ikebukuro, Toshima, Tokyo, resulting in 2 deaths and 9 injuries.The crash occurred when an 87-year-old passenger car driver mistakenly stepped on the accelerator instead of the brake and entered an intersection hitting pedestrians and bicyclists. In the aftermath of the incident, there was widespread protest throughout Japan at what was seen as special treatment for the perpetrator due to his status as a retired and decorated senior bureaucrat.",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Higashi-Ikebukuro"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Cenotaph%20at%20Higashi%20Ikebukuro%202021-04-26.jpg"
+      ],
+      "instance of": [
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "2"
+      ],
+      "number of injured": [
+        "10"
+      ],
+      "penalty": [
+        "Q55521182"
+      ],
+      "Google Knowledge Graph ID": [
+        "/g/11h6vnz0kb"
+      ],
+      "location": [
+        "intersection"
+      ],
+      "number of perpetrators": [
+        "1"
+      ],
+      "located in time zone": [
+        "Japan Standard Time"
+      ],
+      "point in time": [
+        "2019-04-19T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(139.718888888 35.726055555)"
+      ],
+      "NicoNicoPedia ID": [
+        "\u6c60\u888b\u9ad8\u9f62\u8005\u30c9\u30e9\u30a4\u30d0\u30fc\u66b4\u8d70\u4e8b\u6545"
+      ],
+      "perpetrator": [
+        "Kozo Iizuka"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q101103974",
+    "date": "2020-11-02T00:00:00Z",
+    "label": "De Akkers metro station crash",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kunst%20en%20ontspanning%20en%20uitgaansmogelijkheden%20in%20Spijkenisse.jpg",
+    "article": "https://en.wikipedia.org/wiki/De_Akkers_metro_station_crash",
+    "summary": "",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Spijkenisse"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Kunst%20en%20ontspanning%20en%20uitgaansmogelijkheden%20in%20Spijkenisse.jpg"
+      ],
+      "instance of": [
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "0"
+      ],
+      "number of injured": [
+        "1"
+      ],
+      "Google Knowledge Graph ID": [
+        "/g/11mvnh941c"
+      ],
+      "location": [
+        "De Akkers"
+      ],
+      "point in time": [
+        "2020-11-02T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(4.312111111 51.832194444)"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q101717588",
+    "date": "1896-08-17T00:00:00Z",
+    "label": "death of Bridget Driscoll",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BDriscoll.jpeg",
+    "article": "https://en.wikipedia.org/wiki/Death_of_Bridget_Driscoll",
+    "summary": "The death of Bridget Driscoll (c. 1851 \u2013 17 August 1896) was the first recorded case of a pedestrian killed in a collision with a motor car in Great Britain. Driscoll, in the company of her teenage daughter May and her friend Elizabeth Murphy, was crossing Dolphin Terrace in the grounds of the Crystal Palace in London when she was struck by the driver of a car belonging to the Anglo-French Motor Carriage Company that was being used to give demonstration rides. One witness described the car as being driven at \"a reckless pace, in fact, like a fire engine\".Although the car's maximum speed was 8 miles per hour (13 km/h), it had been limited deliberately to 4 miles per hour (6.4 km/h), the speed at which the driver, Arthur James Edsall of Upper Norwood, claimed to have been travelling. His passenger, Alice Standing of Forest Hill, alleged he modified the engine to allow the car to go faster, but another taxicab driver examined the car and said it was incapable of exceeding 4.5 miles per hour (7.2 km/h) because of a low-speed engine belt. The collision happened just a few weeks after a new Act of Parliament had increased the speed limit for cars to 14 miles per hour (23 km/h), from 2 miles per hour in towns and 4 miles per hour in the countryside.The jury returned a verdict of \"accidental death\" after an inquest lasting some six hours. The coroner, Percy Morrison (Croydon division of Surrey), said he hoped \"such a thing would never happen again\". The Royal Society for the Prevention of Accidents estimated 550,000 people had been killed on UK roads by 2010.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/BDriscoll.jpeg"
+      ],
+      "instance of": [
+        "accidental death",
+        "traffic collision"
+      ],
+      "number of deaths": [
+        "1"
+      ],
+      "point in time": [
+        "1896-08-17T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/02dy__"
+      ],
+      "victim": [
+        "Bridget Driscoll"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1787420",
+    "date": "2010-09-30T00:00:00Z",
+    "label": "2010 Ecuador crisis",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rafael%20Correa%20presidenciagovar%2015ENE07.jpg",
+    "article": "https://en.wikipedia.org/wiki/2010_Ecuadorian_crisis",
+    "summary": "The 2010 Ecuadorian crisis took place on 30 September 2010, when National Police operatives blockaded highways, occupied the National Assembly, blocked Mariscal Sucre International Airport in Quito and Jos\u00e9 Joaqu\u00edn de Olmedo International Airport in Guayaquil, and took control of the premises of Ecuador TV, in what they claimed was a strike to oppose a government-sponsored law that supposedly reduced their benefits. Unrest and looting were reported in seven provinces of the country because of the lack of law enforcement.President Rafael Correa went to the police headquarters in Quito despite recommendations from his own security personnel not to attend and make things worse. He was ill-received, delivering a harsh speech in which he accused the police ranks of treason to the people and the country, and dared them to kill him. After he was pelted by the police ranks, and a tear gas canister went off, Correa was escorted to a hospital in the same compound. According to El Pa\u00eds, The New York Times, El Correo and Correa himself, the policemen then surrounded the building and prevented him from leaving. From the hospital, Correa declared a state of emergency and said that a \"coup d'\u00e9tat was taking place\", and attributed responsibility to the government's opposition. According to state news agency ANDES, police radio recordings from the night of 30 September revealed that the police intended to kill Correa. Thousands of civilians came out to support Correa and gathered around the hospital in which he was held hostage. Clashes occurred between rebellious police forces and loyal army and police forces, who successfully took Correa out of the hospital after he had allegedly been held for 10 hours.Ecuador's Health Minister said the events had left eight dead and 274 people wounded. Of the casualties, it is known that one was a university student, and that a police officer and two military personnel involved in the rescue operation were also among those killed.The Union of South American Nations (UNASUR), the Spanish Prime Minister Jos\u00e9 Luis Rodr\u00edguez Zapatero, and the Secretary General of the Organization of American States, Jos\u00e9 Miguel Insulza, referred to the events as an attempted coup d'\u00e9tat.\n\n",
+    "participants": [
+      "Rafael Correa Delgado"
+    ],
+    "statements": {
+      "country": [
+        "Ecuador"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Rafael%20Correa%20presidenciagovar%2015ENE07.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh2012001268"
+      ],
+      "instance of": [
+        "strike",
+        "political crisis"
+      ],
+      "number of deaths": [
+        "20"
+      ],
+      "Atlante Geopolitico ID": [
+        "ecuador-la-crisi-del-settembre-2010"
+      ],
+      "number of injured": [
+        "274"
+      ],
+      "point in time": [
+        "2010-09-30T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0dgqwdy"
+      ],
+      "participant": [
+        "Rafael Correa Delgado"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007583856905171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1804029",
+    "date": "1888-01-01T00:00:00Z",
+    "label": "Bryant & May workers' strike, 1888",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matchgirl%20strikers.PNG",
+    "article": "https://en.wikipedia.org/wiki/Matchgirls%27_strike",
+    "summary": "The matchgirls' strike of 1888 was an industrial action by the women and teenage girls working at the Bryant & May match factory in Bow, London, England.\nFollowing the strike's success, the Union of Women Matchmakers (later the Matchmakers' Union) was formed later in 1888. On its creation, it was the largest union of women and girls in the country, and inspired a wave of collective organising among industrial workers.\n\n",
+    "statements": {
+      "country": [
+        "United Kingdom of Great Britain and Ireland"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Matchgirl%20strikers.PNG"
+      ],
+      "instance of": [
+        "strike",
+        "organizational conflict"
+      ],
+      "location": [
+        "East End of London"
+      ],
+      "Commons category": [
+        "London matchgirls strike of 1888"
+      ],
+      "start time": [
+        "1888-01-01T00:00:00Z"
+      ],
+      "end time": [
+        "1888-01-01T00:00:00Z"
+      ],
+      "point in time": [
+        "1888-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0d7t6s"
+      ],
+      "related image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Women%20working%20in%20a%20match%20factory.jpg"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1985730",
+    "date": "1892-01-01T00:00:00Z",
+    "label": "Homestead Strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Homestead%20Strike%20-%2018th%20Regiment%20arrives%20cph.3b03430.jpg",
+    "article": "https://en.wikipedia.org/wiki/Homestead_strike",
+    "summary": "The Homestead strike, also known as the Homestead steel strike, Homestead massacre, or Battle of Homestead, was an industrial lockout and strike that began on July 1, 1892, culminating in a battle in which strikers defeated private security agents on July 6, 1892.   \nThe governor responded by sending in the National Guard to protect strikebreakers. The dispute occurred at the Homestead Steel Works in the Pittsburgh-area town of Homestead, Pennsylvania, between the Amalgamated Association of Iron and Steel Workers (the AA) and the Carnegie Steel Company. The final result was a major defeat for the union strikers and a setback for their efforts to unionize steelworkers. The battle was a pivotal event in U.S. labor history.",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Homestead"
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Homestead%20Strike%20-%2018th%20Regiment%20arrives%20cph.3b03430.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85061741"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "Encyclop\u00e6dia Britannica Online ID": [
+        "event/Homestead-Strike"
+      ],
+      "location": [
+        "Homestead"
+      ],
+      "Quora topic ID": [
+        "Homestead-Strike"
+      ],
+      "Commons category": [
+        "Homestead Strike"
+      ],
+      "start time": [
+        "1892-07-06T00:00:00Z"
+      ],
+      "end time": [
+        "1892-11-20T00:00:00Z"
+      ],
+      "point in time": [
+        "1892-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/01kmls"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007565423605171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q3118386",
+    "date": "1912-01-01T00:00:00Z",
+    "label": "1912 Lawrence Textile Strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1912%20Lawrence%20Textile%20Strike%201.jpg",
+    "article": "https://en.wikipedia.org/wiki/1912_Lawrence_textile_strike",
+    "summary": "The Lawrence Textile Strike, also known as the Bread and Roses Strike, was a strike of immigrant workers in Lawrence, Massachusetts, in 1912 led by the Industrial Workers of the World (IWW). Prompted by a two-hour pay cut corresponding to a new law shortening the workweek for women, the strike spread rapidly through the town, growing to more than twenty thousand workers and involving nearly every mill in Lawrence. On January 1, 1912, the Massachusetts government enforced a law that cut mill workers' hours in a single work week from 56 hours, to 54 hours. Ten days later, they found out that pay had been reduced along with the cut in hours.The strike united workers from more than 51 different nationalities many of whom knew little to no English. A large portion of the striking workers, including many of the leaders of the strike, were Italian immigrants. Carried on throughout a brutally cold winter, the strike lasted more than two months, from January to March, defying the assumptions of conservative trade unions within the American Federation of Labor (AFL) that immigrant, largely female and ethnically divided workers could not be organized. In late January, when a striker, Anna LoPizzo, was killed by police during a protest, IWW organizers Joseph Ettor and Arturo Giovannitti were framed and arrested on charges of being accessories to the murder.\nIWW leaders Bill Haywood and Elizabeth Gurley Flynn came to Lawrence to run the strike. Together they masterminded its signature move, sending hundreds of the strikers' hungry children to sympathetic families in New York, New Jersey, and Vermont. The move drew widespread sympathy, especially after police stopped a further exodus, leading to violence at the Lawrence train station. Congressional hearings followed, resulting in exposure of shocking conditions in the Lawrence mills and calls for investigation of the \"wool trust.\" Mill owners soon decided to settle the strike, giving workers in Lawrence and throughout New England raises of up to 20 percent. Within a year, however, the IWW had largely collapsed in Lawrence.The Lawrence strike is often referred to as the \"Bread and Roses\" strike. It has also been called the \"strike for three loaves\". The phrase \"bread and roses\" actually preceded the strike, appearing in a poem by James Oppenheim published in The American Magazine in December 1911. A 1915 labor anthology, The Cry for Justice: An Anthology of the Literature of Social Protest by Upton Sinclair, attributed the phrase to the Lawrence strike, and the association stuck. A popular rallying cry from the poem was interwoven with the memory of the strike: \"Hearts starve as well as bodies; give us bread, but give us roses!\"\n\n",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/1912%20Lawrence%20Textile%20Strike%201.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85134407"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "Commons category": [
+        "Lawrence Textile Strike"
+      ],
+      "point in time": [
+        "1912-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/030zd8"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007531717405171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1153853",
+    "date": "1913-01-01T00:00:00Z",
+    "label": "1913 Paterson silk strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haywood%203084407393%20962e87e46a%20o.jpg",
+    "article": "https://en.wikipedia.org/wiki/1913_Paterson_silk_strike",
+    "summary": "The 1913 Paterson silk strike was a work stoppage involving silk mill workers in Paterson, New Jersey. The strike involved demands for establishment of an eight-hour day and improved working conditions. The strike began in February 1913, and ended five months later, on July 28. During the course of the strike, approximately 1,850 strikers were arrested, including Industrial Workers of the World (IWW) leaders Bill Haywood and Elizabeth Gurley Flynn.\n\n",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Haywood%203084407393%20962e87e46a%20o.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85122560"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "location": [
+        "Paterson"
+      ],
+      "Commons category": [
+        "1913 Paterson silk strike"
+      ],
+      "point in time": [
+        "1913-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0fxjx1"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007543750305171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q185642",
+    "date": "1905-01-22T00:00:00Z",
+    "label": "Bloody Sunday, St Petersburg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BloodySunday1905b.jpg",
+    "article": "https://en.wikipedia.org/wiki/Bloody_Sunday_(1905)",
+    "summary": "Bloody Sunday or Red Sunday (Russian: \u041a\u0440\u043e\u0432\u0430\u0432\u043e\u0435 \u0432\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435, tr. Krovavoye voskresenye, IPA: [kr\u0250\u02c8vav\u0259\u026a v\u0259skr\u02b2\u026a\u02c8s\u02b2en\u02b2j\u026a]) was the series of events on Sunday, 22 January [O.S. 9 January] 1905 in St Petersburg, Russia, when unarmed demonstrators, led by Father Georgy Gapon, were fired upon by soldiers of the Imperial Guard as they marched towards the Winter Palace to present a petition to Tsar Nicholas II of Russia.\nBloody Sunday caused grave consequences for the Tsarist autocracy governing Imperial Russia: the events in St. Petersburg provoked public outrage and a series of massive strikes that spread quickly to the industrial centres of the Russian Empire. The massacre on Bloody Sunday is considered to be the start of the active phase of the Revolution of 1905. In addition to beginning the 1905 Revolution, historians such as Lionel Kochan in his book Russia in Revolution 1890\u20131918 view the events of Bloody Sunday to be one of the key events which led to the Russian Revolution of 1917.\n\n",
+    "statements": {
+      "country": [
+        "Russian Empire"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/BloodySunday1905b.jpg"
+      ],
+      "instance of": [
+        "mass shooting",
+        "strike"
+      ],
+      "described by source": [
+        "Armenian Soviet Encyclopedia"
+      ],
+      "Encyclop\u00e6dia Britannica Online ID": [
+        "event/Bloody-Sunday-Russia-1905"
+      ],
+      "different from": [
+        "Bloody Sunday"
+      ],
+      "location": [
+        "Saint Petersburg"
+      ],
+      "Great Russian Encyclopedia Online ID (old version)": [
+        "2113828"
+      ],
+      "part of": [
+        "Russian Revolution of 1905"
+      ],
+      "Commons category": [
+        "Bloody Sunday (1905)"
+      ],
+      "Store norske leksikon ID": [
+        "Den_blodige_s\u00f8ndagen_-_Russland"
+      ],
+      "Wolfram Language entity code": [
+        "Entity[\"HistoricalEvent\", \"1905BloodySundayOccurs\"]"
+      ],
+      "point in time": [
+        "1905-01-22T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/029651"
+      ],
+      "Online PWN Encyclopedia ID": [
+        "3927863"
+      ],
+      "has cause": [
+        "General strike in St. Petersburg 1905"
+      ],
+      "Den Store Danske ID": [
+        "Den_Blodige_S\u00f8ndag_-_i_Sankt_Petersborg"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q555511",
+    "date": "1929-01-01T00:00:00Z",
+    "label": "Lupeni Strike of 1929",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Istrati%20in%20Lupeni%2C%201929.jpg",
+    "article": "https://en.wikipedia.org/wiki/Lupeni_strike_of_1929",
+    "summary": "The Lupeni strike of 1929 took place on 5 and 6 August 1929 in the mining town of Lupeni, in the Jiu Valley of Transylvania, Romania.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Istrati%20in%20Lupeni%2C%201929.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85027362"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "point in time": [
+        "1929-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/02pyxcx"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007284065205171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q578858",
+    "date": "1912-04-04T00:00:00Z",
+    "label": "Lena massacre",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lena%2017%2004%201912.jpg",
+    "article": "https://en.wikipedia.org/wiki/Lena_massacre",
+    "summary": "The Lena Massacre or Lena Execution (Russian: \u041b\u0435\u043d\u0441\u043a\u0438\u0439 \u0440\u0430\u0441\u0441\u0442\u0440\u0435\u043b, Lenskiy rasstrel) refers to the shooting of goldfield workers on strike in northeast Siberia near the Lena River on 17 April [O.S. 4 April] 1912.\nThe strike had been provoked by exceptionally harsh working conditions, and when the strike committee was arrested, a large crowd marched in protest. They were fired on by soldiers of the Imperial Russian Army, causing hundreds of casualties. The incident did much to stimulate revolutionary feeling in Russia, and Alexander Kerensky's reporting of it in the Duma brought him to public notice for the first time.\n\n",
+    "statements": {
+      "country": [
+        "Russian Empire"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Lena%2017%2004%201912.jpg"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "described by source": [
+        "Great Soviet Encyclopedia (1926\u20131947)"
+      ],
+      "location": [
+        "Bodaybo"
+      ],
+      "Great Russian Encyclopedia Online ID (old version)": [
+        "2139918"
+      ],
+      "Commons category": [
+        "Lena massacre"
+      ],
+      "point in time": [
+        "1912-04-04T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(114.58361111 58.18527778)"
+      ],
+      "Freebase ID": [
+        "/m/07v3wj"
+      ],
+      "Enzyklop\u00e4die des europ\u00e4ischen Ostens ID": [
+        "ccb9"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q586082",
+    "date": "1941-02-01T00:00:00Z",
+    "label": "February strike",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Duitse%20razzia%20op%20het%20Jonas%20Dani%C3%ABl%20Meijerplein%20te%20Amsterdam.jpg",
+    "article": "https://en.wikipedia.org/wiki/February_strike",
+    "summary": "The February strike (Dutch: Februaristaking) was a general strike in the German-occupied Netherlands in 1941, during World War II. It was organised by the outlawed Communist Party of the Netherlands in defence of persecuted Dutch Jews and against the anti-Jewish measures and the activities of the Nazism in general.\nThe direct causes were a series of arrests and pogroms held by the Germans in the Jewish neighbourhood of Amsterdam, the Jodenbuurt. It started on 25 February 1941 and lasted for two days. On 26 February, 300,000 Amsterdam people joined the strike. The strike was harshly suppressed by the Germans after three days.The February strike is considered to be the first public protest against the Nazis in occupied Europe and the only mass protest against the deportation of Jews to be organized by non-Jews.\n\n",
+    "statements": {
+      "country": [
+        "Netherlands"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Duitse%20razzia%20op%20het%20Jonas%20Dani%C3%ABl%20Meijerplein%20te%20Amsterdam.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh2006000991"
+      ],
+      "instance of": [
+        "strike"
+      ],
+      "location": [
+        "Netherlands"
+      ],
+      "part of": [
+        "Dutch resistance during World War II"
+      ],
+      "Commons category": [
+        "February raids in Amsterdam"
+      ],
+      "start time": [
+        "1941-02-25T00:00:00Z"
+      ],
+      "end time": [
+        "1941-02-27T00:00:00Z"
+      ],
+      "point in time": [
+        "1941-02-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0b2xwf"
+      ],
+      "organizer": [
+        "Communist Party of the Netherlands"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007544724905171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q1090887",
+    "date": "2006-01-01T00:00:00Z",
+    "label": "2006 Oaxaca protests",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oaxaca%20protests.jpg",
+    "article": "https://en.wikipedia.org/wiki/2006_Oaxaca_protests",
+    "summary": "The Mexican state of Oaxaca was embroiled in a conflict that lasted more than seven months and resulted in at least seventeen deaths:\u200a195\u200a and the occupation of the capital city of Oaxaca by the Popular Assembly of the Peoples of Oaxaca (APPO). The conflict emerged in May 2006 with the police responding to a strike involving the local teachers' trade union by opening fire on non-violent protests.  It then grew into a broad-based movement pitting the Popular Assembly of the Peoples of Oaxaca (APPO) against the state's governor, Ulises Ruiz Ortiz. Protesters demanded the removal or resignation of Ortiz, whom they accused of political corruption and acts of repression.  Multiple reports, including from international human rights monitors, accused the Mexican government of using death squads, summary executions, and even violating Geneva Conventions standards that prohibit attacking and shooting at unarmed medics attending to the wounded.:\u200a197\u200a\nOne human rights observer claimed over twenty-seven were killed by the police violence.  The dead included Brad Will, Emilio Alonso Fabi\u00e1n, Jos\u00e9 Alberto L\u00f3pez Bernal, Fidel S\u00e1nchez Garc\u00eda, and Esteban Zurita L\u00f3pez.:\u200a280\u200a",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Oaxaca"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Oaxaca%20protests.jpg"
+      ],
+      "instance of": [
+        "protest",
+        "strike"
+      ],
+      "Commons category": [
+        "Protests by the Popular Assembly of the Peoples of Oaxaca (APPO) in Oaxaca (2006)"
+      ],
+      "point in time": [
+        "2006-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0268tvj"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q6743",
+    "date": "1968-01-01T00:00:00Z",
+    "label": "May 1968 protests in France",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%20July%201968.jpg",
+    "article": "https://en.wikipedia.org/wiki/May_68",
+    "summary": "Beginning in May 1968, a period of civil unrest occurred throughout France, lasting seven weeks and punctuated by demonstrations, general strikes, and the occupation of universities and factories. At the height of events, which have since become known as May 68 (French: Mai 68), the economy of France came to a halt. The protests reached a point that made political leaders fear civil war or revolution; the national government briefly ceased to function after President Charles de Gaulle secretly fled France to West Germany on the 29th. The protests are sometimes linked to similar movements around the same time worldwide that inspired a generation of protest art in the form of songs, imaginative graffiti, posters, and slogans.The unrest began with a series of far-left student occupation protests against capitalism, consumerism, American imperialism and traditional institutions. Heavy police repression of the protesters led France's trade union confederations to call for sympathy strikes, which spread far more quickly than expected to involve 11 million workers, more than 22% of France's population at the time. The movement was characterized by spontaneous and decentralized wildcat disposition; this created contrast and at times even conflict among the trade unions and leftist parties. It was the largest general strike ever attempted in France, and the first nationwide wildcat general strike.The student occupations and general strikes across France met with forceful confrontation by university administrators and police. The de Gaulle administration's attempts to quell the strikes by police action only inflamed the situation, leading to street battles with the police in Paris's Latin Quarter.\nBy late May the flow of events had changed. The Grenelle accords, concluded on 27 May between the government, trade unions and employers, won significant wage gains for workers. A counter-demonstration organised by the Gaullist party on 29 May in central Paris gave De Gaulle the confidence to dissolve the National Assembly and call parliamentary elections for 23 June 1968. Violence evaporated almost as quickly as it arose. Workers returned to their jobs, and after the June elections, the Gaullists emerged stronger than before.\nThe events of May 1968 continue to influence French society. The period is considered a cultural, social and moral turning point in the nation's history. Alain Geismar, who was one of the student leaders at the time, later said the movement had succeeded \"as a social revolution, not as a political one\".",
+    "participants": [
+      "Daniel Cohn-Bendit"
+    ],
+    "statements": {
+      "country": [
+        "France"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Situationist.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%20July%201968.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85053780"
+      ],
+      "instance of": [
+        "general strike",
+        "student protest",
+        "riot"
+      ],
+      "Encyclopedia of China (Third Edition) ID": [
+        "351035"
+      ],
+      "Great Russian Encyclopedia portal ID": [
+        "vseobshchaia-zabastovka-1968-vo-frantsii-974492"
+      ],
+      "Gran Enciclop\u00e8dia Catalana ID": [
+        "0039261"
+      ],
+      "different from": [
+        "May 1968"
+      ],
+      "uses": [
+        "Il est interdit d'interdire !"
+      ],
+      "location": [
+        "France"
+      ],
+      "Great Russian Encyclopedia Online ID (old version)": [
+        "2334534"
+      ],
+      "Encyclop\u00e6dia Universalis ID": [
+        "crise-de-mai-1968-en-france",
+        "mai-68-photographies-et-affiches",
+        "mai-68"
+      ],
+      "Zhihu topic ID": [
+        "19760999"
+      ],
+      "part of": [
+        "Q51100383"
+      ],
+      "Le Monde diplomatique subject ID": [
+        "sujet/mai"
+      ],
+      "Commons category": [
+        "May 1968 protests in France"
+      ],
+      "archives at": [
+        "E.J. Pratt Library"
+      ],
+      "on focus list of Wikimedia project": [
+        "Wikipedia:Vital articles/Level/4",
+        "Art+Feminism"
+      ],
+      "start time": [
+        "1968-05-02T00:00:00Z"
+      ],
+      "end time": [
+        "1968-06-23T00:00:00Z"
+      ],
+      "point in time": [
+        "1968-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/01t6ch"
+      ],
+      "participant": [
+        "Daniel Cohn-Bendit"
+      ],
+      "French Vikidia ID": [
+        "Mai_68"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007562703405171"
+      ],
+      "topic's main category": [
+        "Category:May 1968 events in France"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4582953",
+    "date": "1986-02-25T00:00:00Z",
+    "label": "1986 Egyptian Conscription Riot",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/04%20Zeitungsartikel%20von%20dem%20Aufstand.jpg",
+    "article": "https://en.wikipedia.org/wiki/1986_Egyptian_conscripts_riot",
+    "summary": "On 25 February 1986 around 25,000 conscripts of the Central Security Forces (CSF), Egyptian paramilitary force, staged violent protests in and around Cairo. The riot came as a reaction to the rumour that their three-year compulsory service would be prolonged by one additional year without any additional benefits or rank promotion.\nThe incited conscripts targeted tourist areas and destroyed two hotels. The regime of Mubarak relied on the Armed Forces to crush the mutiny, thus when the poorly paid and poorly armed CSF mutinied, the military was sent in to restore order. The Army deployed tanks and armoured personnel carriers and commando snipers to hunt down the rebelling conscripts, most of whom were unarmed or armed only with shields, batons, and assault rifles. In Upper Egypt and near Giza, the Army Aviation and the Air Force used helicopters and fighter jets to attack the rebelling conscripts, causing many deaths. At least four to five helicopters, and three fighter jets, were used in the operation. The Air Force officer in command of the operation was Ahmed Shafik, as commander of all MiG-21 fleets in the Central Military Zone.\nThe riot lasted for three days, more than 8000 died mostly CSF personnel, according to official reports. Over 20,000 conscripts were dismissed from service with no benefits, and the agitators received correctional punishment after being tried before State Security Court for arson, violent riots, and insubordination according to penal code. Some reports related that mutiny to a conspiracy against the Minister of Interior in charge by then (Gen. Ahmed Roshdy) due to his policies. After the suppression the government promised to overhaul the force by raising its entry standards, increasing payment and bettering living conditions in their camps.\n\n",
+    "statements": {
+      "country": [
+        "Egypt"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/04%20Zeitungsartikel%20von%20dem%20Aufstand.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh90001575"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "point in time": [
+        "1986-02-25T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0g9ysxh"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007549037505171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q4663118",
+    "date": "1929-11-01T00:00:00Z",
+    "label": "Aba Women's Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aba%20Women%20of%20Nigeria%20%28early%2020th%20century%29.jpg",
+    "article": "https://en.wikipedia.org/wiki/Women%27s_War",
+    "summary": "The Aba Women's Riots of 1929 (Igbo: Ogu Umunwanyi; Ibibio: Ekong Iban) was a period of unrest in colonial Nigeria over November 1929. The protests broke out when thousands of Igbo women from the Bende District, Umuahia and other places in southeastern Nigeria traveled to the town of Oloko to protest against the Warrant Chiefs, whom they accused of restricting the role of women in the government. The protest encompassed women from six ethnic groups (Igbo, Ibibio, Andoni, Ogoni, Efik, and Ijaw).It was organised and led by the rural women of Owerri and Calabar provinces. The modus operandi of the protests involved 'sit-in' by the women. During the events, many Warrant Chiefs were forced to resign and 16 Native Courts were attacked, most of which were destroyed. It was the first major revolt by women in West Africa. In 1930 the colonial government abolished the system of warrant chieftains, and appointed women to the Native Court system. These reforms were built upon by the African women and have been seen as a prelude to the emergence of mass African nationalism.",
+    "statements": {
+      "country": [
+        "Nigeria"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Aba%20Women%20of%20Nigeria%20%28early%2020th%20century%29.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh97007115"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "Encyclopedia of China (Third Edition) ID": [
+        "533122"
+      ],
+      "location": [
+        "Colonial Nigeria"
+      ],
+      "ASC Leiden Thesaurus ID": [
+        "294896139"
+      ],
+      "point in time": [
+        "1929-12-01T00:00:00Z",
+        "1929-11-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/08pz4m"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007544416005171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5031297",
+    "date": "1881-02-01T00:00:00Z",
+    "label": "Canboulay Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trinidad%20and%20Tobago-CIA%20WFB%20Map.png",
+    "article": "https://en.wikipedia.org/wiki/Canboulay_riots",
+    "summary": "The Canboulay riots were a series of disturbances in the British colony of Trinidad in 1881. The riots came about in response to efforts by the colonial police to restrict aspects of the island's annual Carnival festival. In Port of Spain, San Fernando and Princes Town, angered Trinidadians rioted in response to the actions of the police; several people were killed as a result of the riots. Canboulay music forms an important part the musical traditions of Trinidad. The \"chantwell\" or chantuelle who was also an integral part of the celebrations was the forerunner of the calypsonian and later soca music.",
+    "statements": {
+      "country": [
+        "British West Indies"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Trinidad%20and%20Tobago-CIA%20WFB%20Map.png"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "point in time": [
+        "1881-02-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/05bfhf"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5110707",
+    "date": "1933-08-16T00:00:00Z",
+    "label": "Christie Pits riot",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christie%20Pits%20riot.jpg",
+    "article": "https://en.wikipedia.org/wiki/Christie_Pits_riot",
+    "summary": "The Christie Pits riot occurred on 16 August 1933 at the Christie Pits (Willowvale Park) playground in Toronto, Ontario. The riot can be understood in the context of the Great Depression, antisemitism, \"Swastika Clubs\" and parades and resentment of \"foreigners\" in Toronto, and the rise of Adolf Hitler and the Nazis in Germany in 1933.\n\n",
+    "statements": {
+      "country": [
+        "Canada"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Christie%20Pits%20riot.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "point in time": [
+        "1933-08-16T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-79.420833333 43.664722222)"
+      ],
+      "Freebase ID": [
+        "/m/06zq6rr"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5120355",
+    "date": "1884-01-01T00:00:00Z",
+    "label": "Cincinnati riots of 1884",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cincinnati%20Riots%201884%20Courthouse%20after%20riot.jpg",
+    "article": "https://en.wikipedia.org/wiki/Cincinnati_riots_of_1884",
+    "summary": "The Cincinnati riots of 1884, also known as the Cincinnati Courthouse riots, were caused by public outrage over the decision of a jury to return a verdict of manslaughter in what was seen as a clear case of murder. A mob in Cincinnati, Ohio, United States, attempted to find and lynch the perpetrator. In the violence that followed over the next few days, more than 50 people died and the courthouse was destroyed. It was one of the most destructive riots in American history.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Cincinnati%20Riots%201884%20Courthouse%20after%20riot.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "Commons category": [
+        "Cincinnati Riots of 1884"
+      ],
+      "point in time": [
+        "1884-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0ds6bry"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5140843",
+    "date": "1899-01-01T00:00:00Z",
+    "label": "Coeur d'Alene, Idaho labor confrontation of 1899",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bunker%20Hill%20and%20Sullivan%20Mill%20sometime%20after%20the%201899%20Coeur%20d%27Alene%20explosion.jpg",
+    "article": "https://en.wikipedia.org/wiki/1899_Coeur_d%27Alene_labor_confrontation",
+    "summary": "The Coeur d'Alene, Idaho, labor riot of 1899 was the second of two major labor-management confrontations in the Coeur d'Alene mining district of northern Idaho in the 1890s. Like the first incident  seven years earlier, the 1899 confrontation was an attempt by union miners, led by the Western Federation of Miners to unionize non-union mines, and have them pay the higher union wage scale. As with the 1892 strike, the 1899 incident culminated in a dynamite attack that destroyed a non-union mining facility, the burning of multiple homes and outbuildings and two murders, followed by military occupation of the district.\nThe riot of 1899 resulted from the miners' frustrations with mine operators that paid lower wages, hired Pinkerton or Thiel operatives to infiltrate the union, and the refusal of non-union miners to join or strike.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Bunker%20Hill%20and%20Sullivan%20Mill%20sometime%20after%20the%201899%20Coeur%20d%27Alene%20explosion.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85027694"
+      ],
+      "instance of": [
+        "riot",
+        "military occupation"
+      ],
+      "location": [
+        "Silver Valley, Idaho"
+      ],
+      "Commons category": [
+        "1899 Coeur d'Alene labor confrontation"
+      ],
+      "point in time": [
+        "1899-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/05p1cfq"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007284039705171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5144758",
+    "date": "1873-04-13T00:00:00Z",
+    "label": "Colfax massacre",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ColfaxMassacre.jpg",
+    "article": "https://en.wikipedia.org/wiki/Colfax_massacre",
+    "summary": "The Colfax massacre, sometimes referred to as the Colfax riot, occurred on Easter Sunday, April 13, 1873, in Colfax, Louisiana, the parish seat of Grant Parish. An estimated 62\u2013153 Black militia men were murdered while surrendering to a mob of former Confederate soldiers and members of the Ku Klux Klan. Three white men also died during the confrontation.\nAfter the contested 1872 election for governor of Louisiana and local offices, a group of white men armed with rifles and a small cannon overpowered Black freedmen and state militia occupying the Grant Parish courthouse in Colfax. Most of the freedmen were killed after surrendering, and nearly another 50 were killed later that night after being held as prisoners for several hours. Estimates of the number of dead have varied over the years, ranging from 62 to 153; three whites died but the number of Black victims was difficult to determine because many bodies were thrown into the Red River or removed for burial, possibly at mass graves.Historian Eric Foner described the massacre as the worst instance of racial violence during Reconstruction. In Louisiana, it had the most fatalities of any of the numerous violent events occurring after the disputed gubernatorial contest in 1872 between Republicans and Democrats. Foner wrote, \"...every election [in Louisiana] between 1868 and 1876 was marked by rampant violence and pervasive fraud\". Although the Fusionist-dominated state \"returning board,\" which ruled on vote validity, initially declared John McEnery and his Democratic slate the winners, the board eventually divided, with a faction declaring Republican William P. Kellogg the victor. A Republican federal judge in New Orleans ruled that the Republican-majority legislature be seated.Federal prosecution and conviction of a few perpetrators at Colfax by the Enforcement Acts was appealed to the Supreme Court. In a major case, the court ruled in United States v. Cruikshank (1876) that protections of the Fourteenth Amendment did not apply to persons acting individually, but only to the actions of state governments. After this ruling, the federal government could no longer use the Enforcement Act of 1870 to prosecute actions by paramilitary groups such as the White League, which had chapters forming across Louisiana beginning in 1874. Intimidation, murders, and Black voter suppression by such paramilitary groups were instrumental to the Democratic Party regaining political control of the state legislature by the late 1870s.\nDuring the late 20th and early 21st centuries, historians have given renewed attention to the events at Colfax and the resulting Supreme Court case.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/ColfaxMassacre.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "number of victims of killer": [
+        "150"
+      ],
+      "location": [
+        "Colfax"
+      ],
+      "part of": [
+        "Reconstruction Era"
+      ],
+      "on focus list of Wikimedia project": [
+        "WikiProject African diaspora"
+      ],
+      "armament": [
+        "rifle"
+      ],
+      "Find a Grave memorial ID": [
+        "86852507"
+      ],
+      "point in time": [
+        "1873-04-13T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-92.71175 31.51691)"
+      ],
+      "Freebase ID": [
+        "/m/02q3vw"
+      ],
+      "BlackPast.org ID": [
+        "african-american-history/colfax-massacre-1873"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5245355",
+    "date": "1857-01-01T00:00:00Z",
+    "label": "Dead Rabbits Riot",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dead%20rabbits%20barricade%20new%20york.jpg",
+    "article": "https://en.wikipedia.org/wiki/Dead_Rabbits_riot",
+    "summary": "The Dead Rabbits riot was a two-day civil disturbance in New York City evolving from what was originally a small-scale street fight between members of the Dead Rabbits and the Bowery Boys into a citywide gang war, which occurred July 4\u20135, 1857. Taking advantage of the disorganized state of the city's police force\u2014brought about by the conflict between the Municipal and Metropolitan police\u2014the fighting spiraled into widespread looting and damage of property by gangsters and other criminals from all parts of the city. It is estimated that between 800 and 1,000 gang members took part in the riots, along with several hundred others who used the disturbance to loot the Bowery area. It was the largest disturbance since the Astor Place Riot in 1849 and the biggest scene of gang violence until the New York Draft Riots of 1863. Order was restored by the New York State Militia, supported by detachments of city police, under Major-General Charles W. Sandford.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Dead%20rabbits%20barricade%20new%20york.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "number of deaths": [
+        "8"
+      ],
+      "location": [
+        "Bowery"
+      ],
+      "point in time": [
+        "1857-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/051wn8g"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q2487",
+    "date": "1618-05-23T00:00:00Z",
+    "label": "Thirty Years' War",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Magdeburg%201631.jpg",
+    "article": "https://en.wikipedia.org/wiki/Thirty_Years%27_War",
+    "summary": "The Thirty Years' War was one of the longest and most destructive conflicts in European history, lasting from 1618 to 1648. Fought primarily in Central Europe, an estimated 4.5 to 8 million soldiers and civilians died as a result of battle, famine, and disease, while some areas of modern Germany experienced population declines of over 50%. Related conflicts include the Eighty Years' War, the War of the Mantuan Succession, the Franco-Spanish War, the Dutch-Portuguese War and the Portuguese Restoration War.\nThe war was traditionally viewed as a continuation of the religious conflict initiated by the 16th-century Reformation within the Holy Roman Empire. The 1555 Peace of Augsburg attempted to resolve this by dividing the Empire into Lutheran and Catholic states, but over the next 50 years the expansion of Protestantism beyond these boundaries destabilised the settlement. However, while modern commentators accept differences over religion and Imperial authority were important factors in causing the war, they argue its scope and extent were driven by the contest for European dominance between Habsburg-ruled Spain and Austria, and the French House of Bourbon.Its outbreak is generally traced to 1618, when Emperor Ferdinand II was deposed as king of Bohemia and replaced by the Protestant Frederick V of the Palatinate. Although Imperial forces quickly suppressed the Bohemian Revolt, his participation expanded the fighting into the Palatinate, whose strategic importance drew in the Dutch Republic and Spain, then engaged in the Eighty Years' War. Since rulers like Christian IV of Denmark and Gustavus Adolphus of Sweden also held territories within the Empire, this gave them and other foreign powers an excuse to intervene, turning an internal dynastic dispute into a broader European conflict.\nThe first phase from 1618 until 1635 was primarily a civil war between German members of the Holy Roman Empire, with support from external powers. After 1635, the Empire became one theatre in a wider struggle between France, supported by Sweden, and Emperor Ferdinand III, allied with Spain. This concluded with the 1648 Peace of Westphalia, whose provisions included greater autonomy within the Empire for states like Bavaria and Saxony, as well as acceptance of Dutch independence by Spain. The conflict shifted the balance of power in favour of France, and set the stage for the expansionist wars of Louis XIV which dominated Europe for the next sixty years.  \n\n",
+    "participants": [
+      "Kingdom of Scotland",
+      "Dutch Republic",
+      "Sweden",
+      "Duchy of Brunswick-L\u00fcneburg",
+      "Holy Roman Empire",
+      "Kingdom of England",
+      "Kingdom of Hungary",
+      "Electoral Palatinate",
+      "Spanish Empire",
+      "Principality of Transylvania",
+      "Electorate of Saxony",
+      "Brandenburg-Prussia",
+      "Denmark\u2013Norway",
+      "Lands of the Bohemian Crown",
+      "Kingdom of France"
+    ],
+    "statements": {
+      "country": [
+        "Holy Roman Empire"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Magdeburg%201631.jpg"
+      ],
+      "VIAF ID": [
+        "3712154387210930970006",
+        "307810184"
+      ],
+      "GND ID": [
+        "4012985-8"
+      ],
+      "Library of Congress authority ID": [
+        "sh85134910"
+      ],
+      "instance of": [
+        "war",
+        "religious war"
+      ],
+      "ScienceDirect topic ID": [
+        "social-sciences/thirty-years-war"
+      ],
+      "UK Archival Thesaurus ID": [
+        "f8/mt805/7007/18262"
+      ],
+      "Library of Congress Classification": [
+        "D251-D271"
+      ],
+      "Numista ruling authority ID": [
+        "8837"
+      ],
+      "KulturNav-ID": [
+        "f0a37482-3736-4dd0-b56c-c7d26fb32a95"
+      ],
+      "Gran Enciclop\u00e8dia Catalana ID": [
+        "0067335"
+      ],
+      "described by source": [
+        "The Nuttall Encyclop\u00e6dia",
+        "Small Brockhaus and Efron Encyclopedic Dictionary",
+        "Vlastensk\u00fd slovn\u00edk historick\u00fd",
+        "Brockhaus and Efron Encyclopedic Dictionary",
+        "Encyclop\u00e6dia Britannica 11th edition"
+      ],
+      "Encyclop\u00e6dia Britannica Online ID": [
+        "event/Thirty-Years-War"
+      ],
+      "end cause": [
+        "Peace of Westphalia"
+      ],
+      "BBC Things ID": [
+        "69ed6cb1-d064-4d41-81d2-b6214637c6c7"
+      ],
+      "distribution map": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Map%20Thirty%20Years%20War-en.svg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Map%20Thirty%20Years%20War-fr.svg"
+      ],
+      "YSO ID": [
+        "16496"
+      ],
+      "BabelNet ID": [
+        "00076971n"
+      ],
+      "Biblioth\u00e8que nationale de France ID": [
+        "119385761"
+      ],
+      "location": [
+        "Central Europe"
+      ],
+      "Great Russian Encyclopedia Online ID (old version)": [
+        "4203551"
+      ],
+      "Encyclop\u00e6dia Universalis ID": [
+        "guerre-de-trente-ans"
+      ],
+      "NE.se ID": [
+        "30-\u00e5riga-kriget",
+        "trettio\u00e5riga-kriget"
+      ],
+      "Catholic Encyclopedia ID": [
+        "14648b"
+      ],
+      "Treccani ID": [
+        "guerra-dei-trent-anni"
+      ],
+      "Quora topic ID": [
+        "Thirty-Years-War"
+      ],
+      "NDL Authority ID": [
+        "00570202"
+      ],
+      "Cultureel Woordenboek ID": [
+        "geschiedenis-1450-1815/dertigjarige-oorlog"
+      ],
+      "part of": [
+        "European wars of religion"
+      ],
+      "Commons category": [
+        "Thirty Years War"
+      ],
+      "Open Library subject ID": [
+        "thirty_years'_war_1618-1648"
+      ],
+      "Store norske leksikon ID": [
+        "tretti\u00e5rskrigen"
+      ],
+      "pronunciation audio": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/De-30-j%C3%A4hriger%20Krieg.ogg"
+      ],
+      "BVPB authority ID": [
+        "15189"
+      ],
+      "on focus list of Wikimedia project": [
+        "Wikipedia:List of articles all languages should have",
+        "Wikipedia:Vital articles/Level/4"
+      ],
+      "Brockhaus Enzyklop\u00e4die online ID": [
+        "dreissigj\u00e4hriger-krieg"
+      ],
+      "Interlingual Index ID": [
+        "i42235"
+      ],
+      "BNCF Thesaurus ID": [
+        "29267"
+      ],
+      "has part(s)": [
+        "Battle of Rakovn\u00edk",
+        "Torstenson War",
+        "Battle of Vlotho"
+      ],
+      "start time": [
+        "1618-01-01T00:00:00Z"
+      ],
+      "end time": [
+        "1648-01-01T00:00:00Z"
+      ],
+      "point in time": [
+        "1618-05-23T00:00:00Z"
+      ],
+      "Getty Iconography Authority ID": [
+        "901000210"
+      ],
+      "Krugosvet article": [
+        "istoriya/TRIDTSATILETNYAYA_VONA.html"
+      ],
+      "Treccani's Dizionario di Storia ID": [
+        "guerra-dei-trent-anni"
+      ],
+      "Freebase ID": [
+        "/m/07j9n"
+      ],
+      "Klexikon article ID": [
+        "Drei\u00dfigj\u00e4hriger_Krieg"
+      ],
+      "NicoNicoPedia ID": [
+        "\u4e09\u5341\u5e74\u6226\u4e89"
+      ],
+      "NL CR AUT ID": [
+        "ph126846"
+      ],
+      "participant": [
+        "Kingdom of Scotland",
+        "Dutch Republic",
+        "Sweden",
+        "Duchy of Brunswick-L\u00fcneburg",
+        "Holy Roman Empire",
+        "Kingdom of England",
+        "Kingdom of Hungary",
+        "Electoral Palatinate",
+        "Spanish Empire",
+        "Principality of Transylvania",
+        "Electorate of Saxony",
+        "Brandenburg-Prussia",
+        "Denmark\u2013Norway",
+        "Lands of the Bohemian Crown",
+        "Kingdom of France"
+      ],
+      "M\u00fcnchen Wiki article ID": [
+        "Drei\u00dfigj\u00e4hriger_Krieg"
+      ],
+      "Online PWN Encyclopedia ID": [
+        "3997523"
+      ],
+      "French Vikidia ID": [
+        "Guerre_de_Trente_Ans"
+      ],
+      "DigitaltMuseum ID": [
+        "029996972831"
+      ],
+      "category for maps": [
+        "Category:Maps of the Thirty Years' War"
+      ],
+      "Encyclopedia of \u010cesk\u00e9 Bud\u011bjovice ID": [
+        "tricetileta-valka"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007534009205171"
+      ],
+      "has cause": [
+        "Bohemian Revolt"
+      ],
+      "Den Store Danske ID": [
+        "Tredive\u00e5rskrigen"
+      ],
+      "WordNet 3.1 Synset ID": [
+        "01311600-n"
+      ],
+      "Namuwiki ID": [
+        "30\ub144 \uc804\uc7c1"
+      ],
+      "HDS ID": [
+        "008907"
+      ],
+      "BHCL UUID": [
+        "a98fc6a6-6a4e-4d9c-aadd-59e78a8964ca"
+      ],
+      "topic's main category": [
+        "Category:Thirty Years' War"
+      ],
+      "Provenio UUID": [
+        "75ec0398-483e-451b-b4c6-47b60f2fdcba"
+      ],
+      "page banner": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Battle%20of%20Lutzen%20banner.jpg"
+      ],
+      "Biblioteca Nacional de Espa\u00f1a ID": [
+        "XX529044"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q5894145",
+    "date": "1956-10-01T00:00:00Z",
+    "label": "Hong Kong 1956 riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1956riot%2004.jpg",
+    "article": "https://en.wikipedia.org/wiki/1956_Hong_Kong_riots",
+    "summary": "The 1956 Hong Kong riots, also known as the Double Ten riots (Chinese: \u96d9\u5341\u66b4\u52d5), were the result of escalating provocations between the pro-Kuomintang and pro-CCP camps on Double Ten Day, 10 October 1956.Most violence took place in the town of Tsuen Wan, five miles from central Kowloon. A mob stormed and ransacked a clinic and welfare centre, killing four civilians.The protests spread to other parts of Kowloon including along Nathan Road. By 11 October, some of the mob began targeting foreigners. Protesters in Kowloon turned over a taxi carrying the Swiss Vice Consul Fritz Ernst and his wife on Nathan Road. The rioters doused the cab in gasoline and lit it on fire resulting in the death of the driver and Mrs. Ernst who succumbed to her injuries two days later.To quell the riots, Colonial Secretary Edgeworth B. David ordered extra manpower from the British Forces Hong Kong, including armoured troops of  7th Hussars, to reinforce the Hong Kong Police Force in protecting civilians and dispersing the rioters.  In total, there were 59 deaths and approximately 500 injuries. Property damage was estimated at US$1,000,000.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/1956riot%2004.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "Hong Kong"
+      ],
+      "Commons category": [
+        "Hong Kong 1956 riots"
+      ],
+      "start time": [
+        "1956-10-10T00:00:00Z"
+      ],
+      "end time": [
+        "1956-10-12T00:00:00Z"
+      ],
+      "point in time": [
+        "1956-10-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/05xhhx"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q6658665",
+    "date": "1916-02-14T00:00:00Z",
+    "label": "Liverpool riot of 1916",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/News%20coverage%20of%20the%20Liverpool%20Riots%201916.jpg",
+    "article": "https://en.wikipedia.org/wiki/Liverpool_riot_of_1916",
+    "summary": "The Liverpool riot of 1916 also known as the battle of Central station was an event in Sydney, Australia where a large group of Australian soldiers rioted through the streets of Sydney and surrounding areas on 14 February 1916 and into the early morning of 15 February.",
+    "statements": {
+      "country": [
+        "Australia"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/News%20coverage%20of%20the%20Liverpool%20Riots%201916.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "Sydney"
+      ],
+      "Commons category": [
+        "Liverpool riot of 1916"
+      ],
+      "Dictionary of Sydney ID": [
+        "event/soldiers_riot_1916"
+      ],
+      "point in time": [
+        "1916-02-14T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0f_smn"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7013279",
+    "date": "1857-06-16T00:00:00Z",
+    "label": "New York City Police Riot",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NewYorkPoliceRiot.jpg",
+    "article": "https://en.wikipedia.org/wiki/New_York_City_Police_riot",
+    "summary": "The New York City Police Riot of 1857, known at the time as the Great Police Riot, was a conflict which occurred in front of New York City Hall between the recently-dissolved New York Municipal Police and the newly-formed Metropolitan Police on June 16, 1857. Arising over New York City Mayor Fernando Wood's appointment of Charles Devlin over Daniel Conover for the position of city street commissioner, amid rumors that Devlin purchased the office for $50,000 from Wood, Municipal police battled Metropolitan officers attempting to arrest Mayor Wood.\nTwo arrest warrants had been issued against the mayor following an altercation between him and Conover when arriving at City Hall to assume his office. The situation was resolved only with the intervention of the New York State Militia under Major General Charles W. Sandford.\n\n",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "New York"
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/NewYorkPoliceRiot.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "New York City"
+      ],
+      "part of": [
+        "history of New York City (1855\u201397)"
+      ],
+      "point in time": [
+        "1857-06-16T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-74.006 40.712)"
+      ],
+      "Freebase ID": [
+        "/m/0123hg41"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7085899",
+    "date": "1962-09-01T00:00:00Z",
+    "label": "Ole Miss riot of 1962",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/US%20Marshals%20at%20Ole%20Miss%20October%201962%20cph.3c35522.jpg",
+    "article": "https://en.wikipedia.org/wiki/Ole_Miss_riot_of_1962",
+    "summary": "The Ole Miss riot of 1962 (September 30 \u2013 October 1, 1962), also known as the Battle of Oxford, was a violent disturbance that occurred at the University of Mississippi\u2014commonly called Ole Miss\u2014in Oxford, Mississippi. Segregationist rioters sought to prevent the enrollment of African American veteran James Meredith, and President John F. Kennedy was forced to quell the riot  by mobilizing over 30,000 troops, the most for a single disturbance in American history.\nIn the wake of the Supreme Court's 1954 decision Brown v. Board of Education, Meredith tried to integrate Ole Miss by applying in 1961. When he informed the university that he was  African American, his admission was delayed and obstructed, first by school officials and then by Mississippi Governor Ross Barnett. In a bid to block his enrollment, Barnett even had Meredith temporarily jailed. Multiple attempts by Meredith, accompanied by federal officials, to enroll were physically blocked. Hoping to avoid violence and ensure Meredith's enrollment, President Kennedy and Attorney General Robert F. Kennedy had a series of unproductive telephone negotiations with Barnett.\nIn preparation for another registration attempt, federal law enforcement were dispatched to accompany Meredith to maintain order, but a riot erupted on campus. Partly incited by white supremacist General Edwin Walker, the mob assaulted reporters and federal officers, burned and looted property, and hijacked vehicles. Reporters, U.S. marshals, and the U.S. Deputy Attorney General Nicholas Katzenbach sheltered and were besieged in the Lyceum, the university's administrative building. Into the late morning of October 1, 27 marshals received gunshot wounds, and two civilians\u2014including a French journalist\u2014were murdered. Oblivious to the riot, President Kennedy made an Oval Office Address, saluting Mississippi's help in registering Meredith. Once informed, Kennedy invoked the Insurrection Act of 1807 and had U.S. Army units under Brigadier General Charles Billingslea quell the riot.\nThe riot and the federal crackdown were a major turning point in the civil rights movement and resulted in the desegregation of Ole Miss\u2014the first integration of any public educational facility in Mississippi. The final time troops were deployed during the civil rights movement, it is regarded as the end of the segregationist tactic of massive resistance. A statue of James Meredith now commemorates the event on campus, and the site of the riot is designated as a National Historic Landmark.\n\n",
+    "participants": [
+      "Mississippi",
+      "federal government of the United States"
+    ],
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Mississippi"
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/US%20Marshals%20at%20Ole%20Miss%20October%201962%20cph.3c35522.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "number of deaths": [
+        "2"
+      ],
+      "number of injured": [
+        "300"
+      ],
+      "location": [
+        "Oxford"
+      ],
+      "significant person": [
+        "John F. Kennedy",
+        "Robert F. Kennedy",
+        "Ross Barnett",
+        "James Meredith",
+        "Edwin Walker"
+      ],
+      "part of": [
+        "civil rights movement"
+      ],
+      "point in time": [
+        "1962-09-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/06w945f"
+      ],
+      "BlackPast.org ID": [
+        "african-american-history/ole-miss-riot-1962"
+      ],
+      "participant": [
+        "Mississippi",
+        "federal government of the United States"
+      ],
+      "has cause": [
+        "Brown v. Board of Education"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7099707",
+    "date": "1870-01-01T00:00:00Z",
+    "label": "Orange Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Orange%20Riot%201871%20crop.jpg",
+    "article": "https://en.wikipedia.org/wiki/Orange_Riots",
+    "summary": "The Orange Riots took place in Manhattan, New York City, in 1870 and 1871, and they involved violent conflict between Irish Protestants who were members of the Orange Order and hence called \"Orangemen\", and Irish Catholics, along with the New York City Police Department and the New York State National Guard. The riot caused the deaths of over 60 civilians \u2013 mostly Irish laborers \u2013 and three guardsmen.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Orange%20Riot%201871%20crop.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "Commons category": [
+        "Orange riots"
+      ],
+      "point in time": [
+        "1870-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0fq25fp"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7182755",
+    "date": "1844-01-01T00:00:00Z",
+    "label": "Philadelphia Nativist Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Riot%20in%20Philadelphia%2C%20June%20%28i.e.%20July%29%207th%201844%20-%20H.%20Bucholzer.%20LCCN2003654121.jpg",
+    "article": "https://en.wikipedia.org/wiki/Philadelphia_nativist_riots",
+    "summary": "The Philadelphia nativist riots (also known as the Philadelphia Prayer Riots, the Bible Riots and the Native American Riots) were a series of riots that took place on May 6\u20148 and July 6\u20147, 1844, in Philadelphia, Pennsylvania, United States and the adjacent districts of Kensington and Southwark. The riots were a result of rising anti-Catholic sentiment at the growing population of Irish Catholic immigrants. The government brought in over a thousand militia\u2014they confronted the nativist mobs and killed and wounded hundreds of anti-Catholic rioters.\nIn the five months leading to the riots, nativist groups had been spreading a false rumor that Catholics were trying to remove the Bible from public schools. A nativist rally in Kensington erupted in violence on May 6 and started a deadly riot that would result in the destruction of two Catholic churches and numerous other buildings. Riots erupted again in July after it was discovered that St. Philip Neri's Catholic Church in Southwark had armed itself for protection. Fierce fighting broke out between the nativists and the soldiers sent to protect the church, resulting in numerous deaths and injuries. Two of the 13 Catholic churches were burned. The Catholic Church sued the city and won some money for repairs. Civic leaders deplored the nativist attacks. Nationally, the riots helped fuel criticism of the nativist movement, despite denials of responsibility from nativist groups. The riots exposed deficiencies in law enforcement in Philadelphia and the surrounding districts, influencing various reforms in local police departments and the eventual consolidation of the city in 1854.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Riot%20in%20Philadelphia%2C%20June%20%28i.e.%20July%29%207th%201844%20-%20H.%20Bucholzer.%20LCCN2003654121.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "Kensington District",
+        "Philadelphia",
+        "Southwark"
+      ],
+      "Commons category": [
+        "Philadelphia Nativist Riots"
+      ],
+      "point in time": [
+        "1844-01-01T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-75.1386 39.9736)"
+      ],
+      "Freebase ID": [
+        "/m/01qmcn"
+      ],
+      "Encyclopedia of Greater Philadelphia ID": [
+        "nativist-riots-of-1844"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7231569",
+    "date": "1736-04-14T00:00:00Z",
+    "label": "Porteous Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/James%20Drummond%20The%20Porteous%20Mob%201855.jpg",
+    "article": "https://en.wikipedia.org/wiki/Porteous_Riots",
+    "summary": "The Porteous Riots surrounded the activities of Captain John Porteous (c. 1695\u20131736), Captain of the City Guard of Edinburgh, Scotland, who was lynched by a mob for his part in the killing of innocent civilians while ordering the men under his command to quell a disturbance during a public hanging in the Grassmarket, Edinburgh in April 1736. Although the rioters were generally supportive of the convicted smugglers, Porteous seems to have been a somewhat overbearing official, despised by the mob and the underclasses of Edinburgh society.\n\n",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/James%20Drummond%20The%20Porteous%20Mob%201855.jpg"
+      ],
+      "Library of Congress authority ID": [
+        "sh85105074"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "described by source": [
+        "The Nuttall Encyclop\u00e6dia"
+      ],
+      "Encyclop\u00e6dia Britannica Online ID": [
+        "event/Porteous-Riots"
+      ],
+      "significant person": [
+        "John Porteous"
+      ],
+      "point in time": [
+        "1736-04-14T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/027jd3"
+      ],
+      "Atlas Obscura ID": [
+        "site-of-the-porteous-riots"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007565595305171"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7300549",
+    "date": "1877-01-01T00:00:00Z",
+    "label": "Reading Railroad Massacre",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annals%20of%20the%20great%20strikes%20in%20the%20United%20States.%20A%20reliable%20history%20and%20graphic%20description%20of%20the%20causes%20and%20thrilling%20events%20of%20the%20labor%20strikes%20and%20riots%20of%201877%20%281877%29%20%2814781235923%29.jpg",
+    "article": "https://en.wikipedia.org/wiki/Reading_Railroad_Massacre",
+    "summary": "The Reading Railroad Massacre occurred on July 23, 1877, when strikes in Reading, Pennsylvania, led to an outbreak of violence, during which 10 to 16 people were killed and between 20 and 203 were injured. It was the climax of local events during the Great Railroad Strike of 1877 towards the end of the Long Depression of 1873\u20131879, following arson and riots against local facilities of the Philadelphia and Reading Railway.\nUnits of the Pennsylvania State Militia were brought in by train. Near nightfall, one unit was marched into the Seventh Street Cut, a man-made ravine three blocks long with 20-or-30-foot (6.1 or 9.1 m) walls, to free a train that had been stopped by rioters. The soldiers were bombarded from above with bricks, stones, and gunshots, and some of the soldiers fired rifle volleys into a crowd at the far end of the Cut. Between 10 and 16 civilian deaths resulted, along with dozens of injuries. Most rioting ended that night, and tense quiet prevailed the next day. Ultimately, the arrival of federal troops restored order to Reading. A coroner's inquest following the massacre did not blame the militia for the deaths, but pointed to the overall upheaval in the city at the time. Blame was laid upon the local sheriff for failing to keep the public order.",
+    "statements": {
+      "located in the administrative territorial entity": [
+        "Pennsylvania"
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Annals%20of%20the%20great%20strikes%20in%20the%20United%20States.%20A%20reliable%20history%20and%20graphic%20description%20of%20the%20causes%20and%20thrilling%20events%20of%20the%20labor%20strikes%20and%20riots%20of%201877%20%281877%29%20%2814781235923%29.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "Reading"
+      ],
+      "Commons category": [
+        "Reading Railroad Massacre"
+      ],
+      "point in time": [
+        "1877-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/02vmvrk"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q7901307",
+    "date": "1834-08-12T00:00:00Z",
+    "label": "Ursuline Convent Riots",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Conflagration%20of%20the%20Charlestown%20Nunnery%20%28page%2066%20crop%29.jpg",
+    "article": "https://en.wikipedia.org/wiki/Ursuline_Convent_riots",
+    "summary": "The Ursuline Convent riots occurred August 11 and 12, 1834, in Charlestown, Massachusetts, near Boston, in what is now Somerville, Massachusetts. During the riot, a convent of Roman Catholic Ursuline nuns was burned down by a Protestant mob. The event was triggered by reported abuse of a member of the order, and was fueled by the rebirth of extreme anti-Catholic sentiment in antebellum New England.",
+    "statements": {
+      "country": [
+        "United States of America"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Conflagration%20of%20the%20Charlestown%20Nunnery%20%28page%2066%20crop%29.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "location": [
+        "Charlestown"
+      ],
+      "Commons category": [
+        "Ursuline Convent riots"
+      ],
+      "point in time": [
+        "1834-08-12T00:00:00Z"
+      ],
+      "coordinate location": [
+        "Point(-71.084 42.389)"
+      ],
+      "Freebase ID": [
+        "/m/057rfp"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q8077838",
+    "date": "1650-01-01T00:00:00Z",
+    "label": "\u00c7\u0131nar Incident",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%87%C4%B1nar%20Vakas%C4%B1.jpg",
+    "article": "https://en.wikipedia.org/wiki/%C3%87%C4%B1nar_incident",
+    "summary": "\u00c7\u0131nar incident (Platanus Incident) is the name of a 17th-century rebellion in the Ottoman Empire. It is also sometimes known as \"The Event of the Vakvak\" (Vak\u02bfa-\u0131 Vakvakiye), named after a mythical tree on which human beings grew, as an analogy to the corpses hung from trees in the aftermath of the rebellion.",
+    "statements": {
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%87%C4%B1nar%20Vakas%C4%B1.jpg"
+      ],
+      "instance of": [
+        "riot"
+      ],
+      "point in time": [
+        "1650-01-01T00:00:00Z"
+      ],
+      "Freebase ID": [
+        "/m/0ddcfz7"
+      ],
+      "TDV \u0130slam Ansiklopedisi ID": [
+        "cinar-vakasi"
+      ]
+    }
+  },
+  {
+    "event": "http://www.wikidata.org/entity/Q51649",
+    "date": "1096-01-01T00:00:00Z",
+    "label": "First Crusade",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1099jerusalem.jpg",
+    "article": "https://en.wikipedia.org/wiki/First_Crusade",
+    "summary": "The First Crusade (1096\u20131099) was the first of a series of religious wars, or Crusades, initiated, supported and at times directed by the Latin Church in the medieval period. The objective was the recovery of the Holy Land from Islamic rule. While Jerusalem had been under Muslim rule for hundreds of years, by the 11th century the Seljuk takeover of the region threatened local Christian populations, pilgrimages from the West, and the Byzantine Empire itself. The earliest initiative for the First Crusade began in 1095 when Byzantine emperor Alexios I Komnenos requested military support from the Council of Piacenza in the empire's conflict with the Seljuk-led Turks. This was followed later in the year by the Council of Clermont, during which Pope Urban II supported the Byzantine request for military assistance and also urged faithful Christians to undertake an armed pilgrimage to Jerusalem.\nThis call was met with an enthusiastic popular response across all social classes in western Europe. Mobs of predominantly poor Christians numbering in the thousands, led by Peter the Hermit, a French priest, were the first to respond. What has become known as the People's Crusade passed through Germany and indulged in wide-ranging anti-Jewish activities, including the Rhineland massacres. On leaving Byzantine-controlled territory in Anatolia, they were annihilated in a Turkish ambush led by the Seljuk Kilij Arslan at the Battle of Civetot in October 1096.\nIn what has become known as the Princes' Crusade, members of the high nobility and their followers embarked in late-summer 1096 and arrived at Constantinople between November and April the following year. This was a large feudal host led by notable Western European princes: southern French forces under Raymond IV of Toulouse and Adhemar of Le Puy; men from Upper and Lower Lorraine led by Godfrey of Bouillon and his brother Baldwin of Boulogne; Italo-Norman forces led by Bohemond of Taranto and his nephew Tancred; as well as various contingents consisting of northern French and Flemish forces under Robert Curthose (Robert II of Normandy), Stephen of Blois, Hugh of Vermandois, and Robert II of Flanders. In total and including non-combatants, the forces are estimated to have numbered as many as 100,000.\nThe crusader forces gradually arrived in Anatolia. With Kilij Arslan absent, a Frankish attack and Byzantine naval assault during the Siege of Nicaea in June 1097 resulted in an initial crusader victory. In July, the crusaders won the Battle of Dorylaeum, fighting Turkish lightly armoured mounted archers. After a difficult march through Anatolia, the crusaders began the Siege of Antioch, capturing the city in June 1098. Jerusalem, under the Fatimids,  was reached in June 1099 and the Siege of Jerusalem resulted in the city being taken by assault from 7 June to 15 July 1099, during which its residents were ruthlessly massacred. A Fatimid counterattack was repulsed later that year at the Battle of Ascalon, ending the First Crusade. Afterwards the majority of the crusaders returned home.\nFour Crusader states were established in the Holy Land: the Kingdom of Jerusalem under Godfrey of Bouillon but not using the title king, the County of Edessa, the Principality of Antioch, and the County of Tripoli. The Crusader presence remained in the region in some form until the loss of the last major Crusader stronghold in the Siege of Acre in 1291. After this loss of all Crusader territory in the Levant, there were no further substantive attempts to recover the Holy Land.",
+    "participants": [
+      "Constantine I, Prince of Armenia",
+      "Al-Afdal Shahanshah",
+      "Eustace III, Count of Boulogne",
+      "Republic of Genoa",
+      "Godfrey of Bouillon",
+      "Danishmend Gazi",
+      "Lower Lotharingia",
+      "Fatimid Egypt Caliphate",
+      "Stephen",
+      "Danishmends",
+      "County of Flanders",
+      "Kilij Arslan I",
+      "Vermandois",
+      "Adhemar of Le Puy",
+      "Raymond IV, Count of Toulouse",
+      "Duqaq",
+      "Bohemond I of Antioch",
+      "Tancred, Prince of Galilee",
+      "Principality of Taranto",
+      "Abbasids",
+      "Armenian Kingdom of Cilicia",
+      "Iftikhar ad-Daula",
+      "County of Toulouse",
+      "County of Boulogne",
+      "Duchy of Brittany",
+      "Baldwin I of Jerusalem",
+      "Seljuk Empire",
+      "County of Sicily",
+      "Roman Catholic Diocese of Le Puy-en-Velay",
+      "Yaghi-Siyan",
+      "Tatikios",
+      "Guglielmo Embriaco",
+      "Fakhr al-Mulk Radwan",
+      "Kerbogha",
+      "Hugh I, Count of Vermandois",
+      "Counts of Blois",
+      "Alexios I Komnenos",
+      "Manuel Boutoumites",
+      "Robert Curthose",
+      "Duchy of Normandy",
+      "Robert II"
+    ],
+    "statements": {
+      "followed by": [
+        "Second Crusade"
+      ],
+      "image": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/1099jerusalem.jpg"
+      ],
+      "GND ID": [
+        "4073803-6"
+      ],
+      "Library of Congress authority ID": [
+        "sh85034381"
+      ],
+      "instance of": [
+        "religious war"
+      ],
+      "UK Archival Thesaurus ID": [
+        "f8/mt805/7007/first-crusade-(1095-1099)"
+      ],
+      "Encyclop\u00e6dia Britannica Online ID": [
+        "topic/First-Crusade"
+      ],
+      "FAST ID": [
+        "884405"
+      ],
+      "BabelNet ID": [
+        "00034766n"
+      ],
+      "Biblioth\u00e8que nationale de France ID": [
+        "11947239z"
+      ],
+      "IdRef ID": [
+        "027428966"
+      ],
+      "location": [
+        "Levant",
+        "Near East",
+        "Anatolia"
+      ],
+      "Quora topic ID": [
+        "First-Crusade"
+      ],
+      "part of": [
+        "Crusades"
+      ],
+      "Commons category": [
+        "First Crusade"
+      ],
+      "PACTOLS thesaurus ID": [
+        "crtucEBxMGX5M"
+      ],
+      "pronunciation audio": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/First%20Crusade-ar.ogg"
+      ],
+      "Interlingual Index ID": [
+        "i40477"
+      ],
+      "BNCF Thesaurus ID": [
+        "62284"
+      ],
+      "has part(s)": [
+        "Battle of Dorylaeum",
+        "Siege of Antioch",
+        "Siege of Ma'arra",
+        "Siege of Nicaea",
+        "Siege of Xerigordon",
+        "Siege of Jerusalem (1099)",
+        "Battle of Ascalon",
+        "Q54554836",
+        "Siege of Arqa"
+      ],
+      "start time": [
+        "1096-01-01T00:00:00Z"
+      ],
+      "end time": [
+        "1099-01-01T00:00:00Z"
+      ],
+      "point in time": [
+        "1096-01-01T00:00:00Z"
+      ],
+      "Getty Iconography Authority ID": [
+        "901001480"
+      ],
+      "Freebase ID": [
+        "/m/0ql76"
+      ],
+      "NicoNicoPedia ID": [
+        "\u7b2c\u4e00\u56de\u5341\u5b57\u8ecd"
+      ],
+      "NL CR AUT ID": [
+        "ph391066"
+      ],
+      "participant": [
+        "Constantine I, Prince of Armenia",
+        "Al-Afdal Shahanshah",
+        "Eustace III, Count of Boulogne",
+        "Republic of Genoa",
+        "Godfrey of Bouillon",
+        "Danishmend Gazi",
+        "Lower Lotharingia",
+        "Fatimid Egypt Caliphate",
+        "Stephen",
+        "Danishmends",
+        "County of Flanders",
+        "Kilij Arslan I",
+        "Vermandois",
+        "Adhemar of Le Puy",
+        "Raymond IV, Count of Toulouse",
+        "Duqaq",
+        "Bohemond I of Antioch",
+        "Tancred, Prince of Galilee",
+        "Principality of Taranto",
+        "Abbasids",
+        "Armenian Kingdom of Cilicia",
+        "Iftikhar ad-Daula",
+        "County of Toulouse",
+        "County of Boulogne",
+        "Baldwin I of Jerusalem",
+        "Seljuk Empire",
+        "Roman Catholic Diocese of Le Puy-en-Velay",
+        "Yaghi-Siyan",
+        "Tatikios",
+        "Guglielmo Embriaco",
+        "Fakhr al-Mulk Radwan",
+        "Kerbogha",
+        "Hugh I, Count of Vermandois",
+        "Counts of Blois",
+        "Alexios I Komnenos",
+        "Manuel Boutoumites",
+        "Robert Curthose",
+        "Duchy of Normandy",
+        "Robert II",
+        "Duchy of Brittany",
+        "County of Sicily"
+      ],
+      "Golden ID": [
+        "First_Crusade-W9NRA"
+      ],
+      "French Vikidia ID": [
+        "Premi\u00e8re_croisade"
+      ],
+      "National Library of Israel J9U ID": [
+        "987007535965105171"
+      ],
+      "KBpedia ID": [
+        "FirstCrusade"
+      ],
+      "WordNet 3.1 Synset ID": [
+        "00971191-n"
+      ],
+      "World History Encyclopedia ID": [
+        "First_Crusade"
+      ],
+      "topic's main category": [
+        "Category:First Crusade"
+      ],
+      "Biblioteca Nacional de Espa\u00f1a ID": [
+        "XX745911"
+      ],
+      "spoken text audio": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Wiki%20firstCrusade.ogg"
+      ]
+    }
+  }
+]
