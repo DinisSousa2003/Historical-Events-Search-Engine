@@ -137,16 +137,15 @@ def convert_files(input_file, output_file):
     else:
         print("Unsupported file conversion: Please provide valid input and output file extensions.")
 
-def get_json_ids(json_files, id_column):
+def get_json_ids(json_file, id_column='event'):
     try:
         ids = set()
-        for json_file in json_files:
-            with open(json_file, 'r') as file:
-                data = json.load(file)
-            
-            for record in data:
-                ids.add(record.get(id_column))
+        with open(json_file, 'r') as file:
+            data = json.load(file)
         
+        for record in data[0:10]:
+            if record.get(id_column):
+                ids.add(record.get(id_column))        
         return ids
 
     except Exception as e:
@@ -177,15 +176,17 @@ def get_wikipedia_summary(wikipedia_url):
         print(f"An error occurred: {str(e)}")
         return ''
     
-def get_wikipedia_summaries(event_data, wikipedia_column='article_en'):
-    size = len(event_data)
-    for idx, event in enumerate(event_data):
-        wikipedia_url = event.get(wikipedia_column)
-        if wikipedia_url:
-            summary = get_wikipedia_summary(wikipedia_url)
-            event["wikipedia_summary"] = summary
-            print(f"{idx}/{size}: Retrieved summary for {wikipedia_url}")
-    return event_data
+def get_wikipedia_summaries(uris):
+    summaries_list = []
+    size = len(uris)
+    for idx, uri in enumerate(uris):
+        dict = {}
+        summary = get_wikipedia_summary(uri)
+        dict['article_en'] = uri
+        dict['summary_wikipedia'] = summary
+        summaries_list.append(dict)
+        print(f"{idx}/{size}: Retrieved summary for {uri}")
+    return summaries_list
 
 def json_string_to_list(data, column_name, sep=';'):
     try:
@@ -193,6 +194,26 @@ def json_string_to_list(data, column_name, sep=';'):
             if record.get(column_name):
                 record[column_name] = record[column_name].split(sep)
         return data
+
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return []
+    
+def check_for_duplicates(json_file, column):
+    try:
+        with open(json_file, 'r') as file:
+            data = json.load(file)
+        
+        values = []
+        duplicates = []
+        for record in data:
+            value = record.get(column)
+            if value in values:
+                duplicates.append(value)
+            else:
+                values.append(value)
+        
+        return duplicates
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -205,30 +226,41 @@ if __name__ == '__main__':
     file1_path = 'wikidata/participants.json'
     file2_path = 'wikidata/event.json'
     file3_path = 'wikidata/eventwphoto.json'
-    output_path = 'wikidata/merged_data.json'
+    output_wikidata_path = 'wikidata/merged_data.json'
     wikipediafile_path = 'wikipedia/data_w_summaries.json'
     output_file = "data.json"
     output_file_csv = "data.csv"
 
     # Join the data from the two JSON files based on the 'event' column
-    merged_data = merge_json_files(file1_path, file2_path, 'event', output_path)
-    merged_data = merge_json_files(output_path, file3_path, 'event', output_path)
+    merge_json_files(file1_path, file2_path, 'event', output_wikidata_path)
+    merged_data = merge_json_files(output_wikidata_path, file3_path, 'event', output_wikidata_path)
 
     # Transform the participants column from a string to a list
-    merged_data = json_string_to_list(merged_data, 'participants')
+    json_string_to_list(merged_data, 'participants')
 
     # Transform the wikipedia_urls column to a readable format
-    merged_data = transform_uris_to_readable(merged_data, 'article_en')
+    transform_uris_to_readable(merged_data, 'article_en')
 
     # Save the merged data to a JSON file
-    save_to_json(merged_data, output_path)
+    save_to_json(merged_data, output_wikidata_path)
+    merge_json_files(output_wikidata_path, output_wikidata_path, 'event', output_wikidata_path)
 
+
+
+    wikipedia_urls = get_json_ids(output_wikidata_path, 'article_en')
     # Add the wikipedia summaries to the merged data
-    merged_data = get_wikipedia_summaries(merged_data)
+    wikipedia_info = get_wikipedia_summaries(wikipedia_urls)
 
     # Save the merged data to a JSON file
-    save_to_json(merged_data, wikipediafile_path)
+    save_to_json(wikipedia_info, wikipediafile_path)
 
-    convert_files(wikipediafile_path, output_file_csv)
-    convert_files(output_file_csv, output_file)
+    merge_json_files(wikipediafile_path, output_wikidata_path, 'article_en', output_file)
+
+    convert_files(output_file, output_file_csv)
+    
+    duplicates = check_for_duplicates(output_file, 'event')
+    if len(duplicates) != 0:
+        print(f"Found {len(duplicates)} duplicates in the event column")
+        print(f"Duplicate values: {duplicates}")
+
     print("Merged data saved to data.json and data.csv")
