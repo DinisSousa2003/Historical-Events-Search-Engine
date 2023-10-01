@@ -31,9 +31,15 @@ def merge_json_files(file1_path, file2_path, id_column_name='id', output_path='m
         print(f"An error occurred: {str(e)}")
         return []
 
-# Example usage:
-file1_path = 'file1.json'
-file2_path = 'file2.json'
-merged_data = merge_json_files(file1_path, file2_path, )
 
-print("Merged data saved to 'merged_data.json'")
+if __name__ == '__main__':
+    # Example usage:
+    file1_path = 'wikidata/participants.json'
+    file2_path = 'wikidata/eventwophoto.json'
+    file3_path = 'wikidata/eventwphoto.json'
+    output_path = 'wikidata/merged_data.json'
+
+    merged_data = merge_json_files(file1_path, file2_path, 'event', output_path)
+    merged_data = merge_json_files(output_path, file3_path, 'event', output_path)
+
+    print("Merged data saved to 'merged_data.json'")

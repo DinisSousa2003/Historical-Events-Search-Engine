@@ -1,4 +1,13 @@
 [
-    {"id": 2, "city": "New York", "country": "USA"},
-    {"id": 4, "city": "London", "country": "UK"}
+    {
+        "id": 2,
+        "city": "New York",
+        "name": "Bob",
+        "country": "USA"
+    },
+    {
+        "id": 4,
+        "city": "London",
+        "country": "UK"
+    }
 ]
