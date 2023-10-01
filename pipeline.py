@@ -99,7 +99,6 @@ def json_to_csv(json_file, csv_file):
             
             # Write the header row using the keys from the JSON
             header = get_unique_keys_from_json(json_file)
-            print(header)
             csv_writer.writerow(header)
             
             # Write the data rows
@@ -185,7 +184,7 @@ def get_wikipedia_summaries(event_data, wikipedia_column='article_en'):
         if wikipedia_url:
             summary = get_wikipedia_summary(wikipedia_url)
             event["wikipedia_summary"] = summary
-            #print(f"{idx}/{size}: Retrieved summary for {wikipedia_url}")
+            print(f"{idx}/{size}: Retrieved summary for {wikipedia_url}")
     return event_data
 
 def json_string_to_list(data, column_name, sep=';'):
@@ -207,8 +206,7 @@ if __name__ == '__main__':
     file2_path = 'wikidata/event.json'
     file3_path = 'wikidata/eventwphoto.json'
     output_path = 'wikidata/merged_data.json'
-    output_path_csv = 'wikidata/merged_data.csv'
-    wikipediafile_path = 'wikidata/wikipedia.json'
+    wikipediafile_path = 'wikipedia/data_w_summaries.json'
     output_file = "data.json"
     output_file_csv = "data.csv"
 
@@ -232,5 +230,5 @@ if __name__ == '__main__':
     save_to_json(merged_data, wikipediafile_path)
 
     convert_files(wikipediafile_path, output_file_csv)
-    convert_files(output_path, output_file_csv)
+    convert_files(output_file_csv, output_file)
     print("Merged data saved to data.json and data.csv")
