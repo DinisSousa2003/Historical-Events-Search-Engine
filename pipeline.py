@@ -35,7 +35,7 @@ def merge_json_files(file1_path, file2_path, id_column_name='id', output_path='m
 if __name__ == '__main__':
     # Example usage:
     file1_path = 'wikidata/participants.json'
-    file2_path = 'wikidata/eventwophoto.json'
+    file2_path = 'wikidata/event.json'
     file3_path = 'wikidata/eventwphoto.json'
     output_path = 'wikidata/merged_data.json'
 
