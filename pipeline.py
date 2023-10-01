@@ -143,7 +143,7 @@ def get_json_ids(json_file, id_column='event'):
         with open(json_file, 'r') as file:
             data = json.load(file)
         
-        for record in data[0:10]:
+        for record in data:
             if record.get(id_column):
                 ids.add(record.get(id_column))        
         return ids
@@ -243,24 +243,27 @@ if __name__ == '__main__':
 
     # Save the merged data to a JSON file
     save_to_json(merged_data, output_wikidata_path)
-    merge_json_files(output_wikidata_path, output_wikidata_path, 'event', output_wikidata_path)
 
 
-
+    # Get the wikipedia summaries for the events
     wikipedia_urls = get_json_ids(output_wikidata_path, 'article_en')
-    # Add the wikipedia summaries to the merged data
     wikipedia_info = get_wikipedia_summaries(wikipedia_urls)
 
-    # Save the merged data to a JSON file
+    # Save the wikipedia summaries data to a JSON file
     save_to_json(wikipedia_info, wikipediafile_path)
 
+    # Merge the wikidata and wikipedia data
     merge_json_files(wikipediafile_path, output_wikidata_path, 'article_en', output_file)
-
     convert_files(output_file, output_file_csv)
     
+    # Check for duplicates in the event column
     duplicates = check_for_duplicates(output_file, 'event')
     if len(duplicates) != 0:
         print(f"Found {len(duplicates)} duplicates in the event column")
         print(f"Duplicate values: {duplicates}")
+
+    more_complete = "data_more_complete.json"
+    merge_json_files(output_file, "query5.json", "event", more_complete)
+    merge_json_files(more_complete, "results_example.json", "event", more_complete)
 
     print("Merged data saved to data.json and data.csv")
