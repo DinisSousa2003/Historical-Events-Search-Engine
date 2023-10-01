@@ -8,7 +8,7 @@ This project folder contains the following files and directories:
 
 The "wikidata" directory contains data files obtained from Wikidata queries.
 
-- `eventphoto.json`: Contains data related to events without photos.
+- `eventphoto.json`: Contains data related to events.
 - `eventwphoto.json`: Contains data related to events with photos.
 - `merged_data.json`: Merged data from various sources.
 - `participants.json`: Contains data about event participants.
