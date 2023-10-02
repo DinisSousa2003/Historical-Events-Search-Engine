@@ -108,6 +108,32 @@ This directory contains JSON files obtained from Wikidata queries, along with th
      - `eventLabel` (string): Name of the event.
      - `image` (string): URL of the event photo.
      - `article_en` (string): URL of the event article in English.
+  
+5. `historicEvents.json`
+
+   - **Description**: Contains 9125 historic events from wikidata.
+
+   - **Schema**:
+     - `event` (string): Unique identifier for the event.
+     - `date` (string): Date of the event.
+     - `label` (string): Name of the event.
+     - `image` (string): URL of the event photo.
+     - `article` (string): URL of the event article in English wikipedia.
+
+   - **Query**:
+   
+        ```sql
+        SELECT ?event (SAMPLE(?date_) as ?date) ?label (SAMPLE(?image_) as ?image) ?article  WHERE {
+               ?event (wdt:P31/(wdt:P279*)) wd:Q13418847;
+                       wdt:P585 ?date_.
+               ?event rdfs:label ?label.
+                FILTER((LANG(?label)) = "en")
+               OPTIONAL {?event wdt:P18 ?image_.}
+               ?article schema:about ?event;
+               schema:isPartOf <https://en.wikipedia.org/>.
+               }
+        GROUP BY ?event ?label ?article
+        ```
 
 Feel free to replace "INSERT YOUR SPARQL QUERY HERE" with the actual SPARQL query that generated each JSON file. This README provides a clear description of each file along with its corresponding query.
 
