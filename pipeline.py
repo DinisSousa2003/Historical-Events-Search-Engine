@@ -3,6 +3,13 @@ import csv
 import os
 import wikipedia
 import urllib.parse
+import re
+import pandas as pd
+
+def read_json_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
 
 def transform_uri_to_readable(uri):
     try:
@@ -21,7 +28,6 @@ def transform_uris_to_readable(data, column):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return []
-
 
 def merge_json_files(file1_path, file2_path, id_column_name='id', output_path='merged_data.json'):
     try:
@@ -53,7 +59,6 @@ def merge_json_files(file1_path, file2_path, id_column_name='id', output_path='m
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return []
-    
 
 def get_unique_keys_from_json(json_file):
     try:
@@ -77,33 +82,32 @@ def get_unique_keys_from_json(json_file):
 def write_ordered_row(csv_writer, data, order):
     row = [data.get(key, '') for key in order]
     csv_writer.writerow(row)
-
     
 def save_to_json(data, output_path):
     try:
-        with open(output_path, 'w') as file:
-            json.dump(data, file, indent=4)
-        
+        with open(output_path, 'w',  encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)        
         print(f"Successfully saved data to {output_path}")
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     
 def json_to_csv(json_file, csv_file):
+
     try:
-        with open(json_file, 'r') as json_f:
-            data = json.load(json_f)
-        
-        with open(csv_file, 'w', newline='') as csv_f:
-            csv_writer = csv.writer(csv_f)
-            
-            # Write the header row using the keys from the JSON
-            header = get_unique_keys_from_json(json_file)
-            csv_writer.writerow(header)
-            
-            # Write the data rows
-            for row in data:
-                write_ordered_row(csv_writer, row, header)
+        # Load the JSON data
+        with open(json_file, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+
+        # Create a DataFrame from the JSON data
+        df = pd.DataFrame(data)
+
+        # Sort the columns by the number of entries
+        column_order = df.count().sort_values(ascending=False).index
+        df = df[column_order]
+
+        # Save the DataFrame to a CSV file
+        df.to_csv(csv_file, index=False, encoding='utf-8')
         
         print(f"Successfully converted {json_file} to {csv_file}")
 
@@ -218,52 +222,55 @@ def check_for_duplicates(json_file, column):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return []
+    
+def process_statements(entry):
+    new_entry = entry.copy()
+    statements = new_entry.pop('statements', {})
 
+    # Move each statement attribute one level up
+    for key, value in statements.items():
+        if key != 'summary':  # Exclude the "summary" column
+            if isinstance(value, list) and len(value) == 1:
+                new_entry[key] = value[0]
+            elif isinstance(value, str) and (';' in value or '\u003B' in value):
+                new_entry[key] = [item.strip() for item in re.split(r';|\u2013', value)]
+            else:
+                new_entry[key] = value
+
+    # Remove all other attributes
+    smaller_list = ['event', 'image', 'article', 'label', 'summary', 'date', 'participants', 'instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event', 'destroyed', 'said to be the same as', 'number of casualties', 'perpetrator', 'main subject', 'official name', 'located in/on physical feature', 'number of arrests', 'present in work', 'signatory', 'inception', 'in opposition to', 'day in year for periodic occurrence', 'organizer', 'start point', 'has immediate cause', "topic's main template", 'has goal', 'destination point', 'victory', 'category for maps', 'publication date', 'victim', 'located in the present-day administrative territorial entity', 'armament', 'location map', 'category of associated people', 'sport', 'award received', 'flag', 'winner', 'author', 'dissolved, abolished or demolished date', 'history of topic', 'hashtag', 'creator', 'title', 'operator', 'name', 'director / manager', 'movement', 'depicts', 'damaged', 'number of perpetrators', 'has contributing factor', 'immediate cause of', 'occupation', 'language of work or name', 'has quality', 'has edition or translation', 'has list', 'category for the view from the item', 'political ideology', 'subclass of', 'connects with', 'contributing factor of', 'archives at', 'list of monuments', 'category for people who died here', 'significant place', 'first line', 'elevation above sea level', 'form of creative work', 'opposite of', 'catchphrase', 'is a list of', 'country of citizenship', 'made from material', 'height', 'width', 'number of missing', 'sex or gender', 'date of birth', 'date of death', 'item operated', 'via', 'flight number', 'patronage', 'partially coincident with', 'enemy', 'uses', 'religious order', 'cause of destruction', 'member category', 'chairperson', 'notable work', 'medical evacuation to', 'end cause', 'opponent during disputation', 'feast day', 'genre', 'located in or next to body of water', 'languages spoken, written or signed', 'head of state', 'head of government', 'mountain range', 'related category', 'basic form of government', 'capital', 'official language', 'currency', 'motto text', 'editor', 'product or material produced or service provided', 'commemorates', 'participant in']
+    for key in list(new_entry.keys()):
+        if key not in smaller_list:
+            del new_entry[key]
+
+    return new_entry
+
+def process_statements_column(input_data):
+    return [process_statements(entry) for entry in input_data]
 
 
 if __name__ == '__main__':
-    # Example usage:
-    file1_path = 'wikidata/participants.json'
-    file2_path = 'wikidata/event.json'
-    file3_path = 'wikidata/eventwphoto.json'
-    output_wikidata_path = 'wikidata/merged_data.json'
-    wikipediafile_path = 'wikipedia/data_w_summaries.json'
-    output_file = "data.json"
-    output_file_csv = "data.csv"
+    query1_path = 'retrieved_queries/historicEvents_with_statements.json'
 
-    # Join the data from the two JSON files based on the 'event' column
-    merge_json_files(file1_path, file2_path, 'event', output_wikidata_path)
-    merged_data = merge_json_files(output_wikidata_path, file3_path, 'event', output_wikidata_path)
+    output_file = "outputs/data.json"
+    output_file_csv = "outputs/data.csv"
 
-    # Transform the participants column from a string to a list
-    json_string_to_list(merged_data, 'participants')
+    # Join the data from the three wikidata query files based on the 'event' column
+    with open(query1_path, 'r') as file:
+        data = json.load(file)
 
-    # Transform the wikipedia_urls column to a readable format
-    transform_uris_to_readable(merged_data, 'article_en')
-
-    # Save the merged data to a JSON file
-    save_to_json(merged_data, output_wikidata_path)
-
-
-    # Get the wikipedia summaries for the events
-    wikipedia_urls = get_json_ids(output_wikidata_path, 'article_en')
-    wikipedia_info = get_wikipedia_summaries(wikipedia_urls)
-
-    # Save the wikipedia summaries data to a JSON file
-    save_to_json(wikipedia_info, wikipediafile_path)
-
-    # Merge the wikidata and wikipedia data
-    merge_json_files(wikipediafile_path, output_wikidata_path, 'article_en', output_file)
-    convert_files(output_file, output_file_csv)
-    
     # Check for duplicates in the event column
-    duplicates = check_for_duplicates(output_file, 'event')
+    id_column = 'event';
+    duplicates = check_for_duplicates(query1_path, id_column)
     if len(duplicates) != 0:
         print(f"Found {len(duplicates)} duplicates in the event column")
         print(f"Duplicate values: {duplicates}")
 
-    more_complete = "data_more_complete.json"
-    merge_json_files(output_file, "query5.json", "event", more_complete)
-    merge_json_files(more_complete, "results_example.json", "event", more_complete)
 
-    print("Merged data saved to data.json and data.csv")
+    # Work on statements column (clean some topics and move columns outside to main level)
+    data = process_statements_column(data)
+
+    # Save the merged data to a JSON & CSV file
+    save_to_json(data, output_file)
+    convert_files(output_file, output_file_csv)
+    print("Finalized pipeline.py")
