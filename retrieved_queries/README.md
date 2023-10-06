@@ -4,9 +4,40 @@ This directory contains JSON files obtained from Wikidata queries, along with th
 
 ## Files Description
 
-1. `historicEvents_with_statements.json`
+1. `historicEvents.json`
 
    - **Description**: Contains data related to historic events.
+
+   - **Schema**:
+     - `event` (string): Unique identifier for the event.
+     - `date` (string): Date of the event.
+     - `label` (string): Name of the event.
+     - `article` (string): URL of the event article in English.
+     - `image` (string): URL of the event photo.
+
+   - **Query**:
+
+     Obtained through the run of query on Wikidata.
+
+      ```sql
+      SELECT ?event (SAMPLE(?date_) as ?date) ?label (SAMPLE(?image_) as ?image) ?article  WHERE {
+
+        ?event (wdt:P31/(wdt:P279*)) wd:Q13418847;
+          wdt:P585 ?date_.
+        #FILTER((YEAR(?date_)) > 1 )
+        ?event rdfs:label ?label.
+        FILTER((LANG(?label)) = "en")
+        OPTIONAL {?event wdt:P18 ?image_.}
+          ?article schema:about ?event;
+          schema:isPartOf <https://en.wikipedia.org/>.
+      }
+      GROUP BY ?event ?label ?article
+      LIMIT 10000
+      ```
+
+2. `historicEvents_with_statements.json`
+
+   - **Description**: Contains data related to historic events with data from wikidata and wikipedia.
 
    - **Schema**:
      - `event` (string): Unique identifier for the event.
@@ -25,21 +56,21 @@ This directory contains JSON files obtained from Wikidata queries, along with th
      Queries used to obtain the data in this file (each querie was run for each event to obtain the data):
 
      ```sql
-          SELECT ?pageid WHERE {
-            VALUES (?item) {(wd:""" + qid + """)}
+      SELECT ?pageid WHERE {
+        VALUES (?item) {(wd:""" + qid + """)}
 
-            [ schema:about ?item ; schema:name ?name ;
-              schema:isPartOf <https://en.wikipedia.org/> ]
+        [ schema:about ?item ; schema:name ?name ;
+          schema:isPartOf <https://en.wikipedia.org/> ]
 
-            SERVICE wikibase:mwapi {
-                bd:serviceParam wikibase:endpoint "en.wikipedia.org" .
-                bd:serviceParam wikibase:api "Generator" .
-                bd:serviceParam mwapi:generator "allpages" .
-                bd:serviceParam mwapi:gapfrom ?name .
-                bd:serviceParam mwapi:gapto ?name .
-                ?pageid wikibase:apiOutput "@pageid" .
-            }
-          }
+        SERVICE wikibase:mwapi {
+            bd:serviceParam wikibase:endpoint "en.wikipedia.org" .
+            bd:serviceParam wikibase:api "Generator" .
+            bd:serviceParam mwapi:generator "allpages" .
+            bd:serviceParam mwapi:gapfrom ?name .
+            bd:serviceParam mwapi:gapto ?name .
+            ?pageid wikibase:apiOutput "@pageid" .
+        }
+      }
      ```
 
      ```sql
