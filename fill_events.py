@@ -14,7 +14,7 @@ sparql = sparqlwrapper.SPARQLWrapper("https://query.wikidata.org/sparql", return
 def store_results():
     print(failed)
 
-    with open('withStatementsNew.json', 'w', encoding='utf-8') as outfile:
+    with open('historicEvents_with_statements.json', 'w', encoding='utf-8') as outfile:
         json.dump(results, outfile)
 
 
