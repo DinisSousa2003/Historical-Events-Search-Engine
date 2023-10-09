@@ -31,7 +31,7 @@ for event in data:
 plt.bar(histogram.keys(), histogram.values(), color='g')
 plt.xlabel('Century')
 plt.ylabel('Number of conflicts')
-# plt.show()
+plt.show()
 
 related_to_ww1 = 0
 related_to_ww2 = 0
@@ -86,12 +86,107 @@ print(entities)
 
 # for each label show a plot of the first 20 entities
 for label in entities:
-    plt.bar(list(entities[label].keys())[:20], list(entities[label].values())[:20], color='g')
+    # plt.bar(list(entities[label].keys())[:12], list(entities[label].values())[:12], color='g')
     plt.xlabel('Entity')
 
     # make the bars wider and separeted
-    plt.rcParams['figure.figsize'] = [30, 12]
-    plt.rcParams['figure.dpi'] = 60
+    plt.rcParams['figure.figsize'] = [15, 6]
+
+    # rotate the label, align to the center
+    fig, ax = plt.subplots()
+
+    ax.bar(list(entities[label].keys())[:12], list(entities[label].values())[:12], color='g')
+
+    fig.autofmt_xdate()
+
+
+    # plt.rcParams['figure.dpi'] = 600
     plt.ylabel('Number of conflicts')
     plt.title(label)
-    plt.show()
+    # plt.show()
+plt.show()
+
+# create a wordcloud for the summary of events
+from wordcloud import WordCloud, STOPWORDS
+
+# join all summaries
+# summary_text = ''
+# label_text = ''
+# for event in data:
+#     summary_text += event['summary'] + ' '
+#     label_text += event['label'] + ' '
+
+# create the wordcloud
+# wordcloud = WordCloud(width = 800, height = 800,
+#                 background_color ='white',
+#                 stopwords = STOPWORDS,
+#                 min_font_size = 10).generate(summary_text)
+#
+# wordcloud.to_file('outputs/wordcloud1.png')
+#
+#
+# # create the wordcloud for the labels
+# wordcloud = WordCloud(width = 800, height = 800,
+#                 background_color ='white',
+#                 stopwords = STOPWORDS,
+#                 min_font_size = 10).generate(label_text)
+#
+# # store the image in outputs/
+# wordcloud.to_file('outputs/wordcloud2.png')
+
+
+# categorize the events by type (war, battle, offensive, siege, etc)
+# create a dictionary with the types and the number of events of each type
+# infer the type from the label
+types = {'war', 'battle', 'offensive', 'siege', 'raid', 'attack', 'campaign', 'skirmish', 'conflict', 'operation', 'occupation',
+         'rebellion', 'revolt', 'uprising', 'mutiny', 'coup', 'insurgency', 'invasion', 'massacre',
+         'bombardment', 'assault', 'blockade', 'action', 'capture', 'conquest', 'expedition', 'bombing',
+         'insurrection', 'revolution', 'defense', 'storming', 'intervention', 'charge', 'ambush', 'stand-off',
+         'storm', 'liberation', 'unrest', 'incident', 'congress', 'conference', 'coronation', 'riot', 'combat', 'crisis', 'crossing'}
+histogram = {}
+other_types = []
+matched = False
+for event in data:
+    matched = False
+    for type_ in types:
+        if type_ in event['label'].lower():
+            matched = True
+            if type_ in histogram:
+                histogram[type_] += 1
+            else:
+                histogram[type_] = 1
+            break
+    if not matched:
+        if 'others' in histogram:
+            histogram['others'] += 1
+        else:
+            histogram['others'] = 1
+        other_types.append(event['label'])
+
+
+# add one entry to the histogram called 'others' that contains the number of events that do not belong to any of the types
+# others = len(data)
+# for type_ in histogram:
+#     others -= histogram[type_]
+# histogram['others'] = others
+
+print(other_types)
+
+# sort by count and plot the histogram
+histogram = {k: v for k, v in sorted(histogram.items(), key=lambda item: item[1], reverse=True)}
+
+# plot the histogram horizontally
+# plt.barh(list(histogram.keys())[:15], list(histogram.values())[:15], color='b')
+
+# fix the scaling
+# finish drawing the current figure
+plt.tight_layout()
+plt.rcParams['figure.figsize'] = [10, 8]
+plt.rcParams['figure.dpi'] = 600
+plt.bar(list(histogram.keys())[:15], list(histogram.values())[:15], color='b')
+plt.xlabel('Type')
+plt.ylabel('Number of conflicts')
+plt.show()
+
+
+
