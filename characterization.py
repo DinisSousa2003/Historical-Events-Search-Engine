@@ -36,7 +36,7 @@ def centuries_histogram(data):
     # plt.bar(histogram.keys(), histogram.values(), color='g')
     # make small numbers more visible
     # plt.yscale('log')
-    # plt.rcParams['figure.figsize'] = [10, 12]
+    plt.rcParams['figure.figsize'] = [20, 12]
     plt.xlabel('Century', fontsize=12, fontweight='bold')
     plt.ylabel('Number of conflicts', fontsize=12, fontweight='bold')
     plt.show()
@@ -198,7 +198,7 @@ with open('outputs/data.json', encoding='utf-8') as file:
 
 df = pd.DataFrame(data)
 
-# centuries_histogram(data)
+centuries_histogram(data)
 related_to_world_wars(data)
 
 # nlp_entity_analysis(data)
@@ -245,16 +245,42 @@ plt.show()
 # iterate over event 'number of deaths' property when it exists and create a histogram
 deaths = 0
 total_count = 0
+fatal_events = 0
+fatal_dict = {}
 for event in data:
     total_count += 1
     if 'number of deaths' in event:
+        fatal_events += 1
+        fatal_dict[event['label']] = 0
         if type(event['number of deaths']) == list:
             for number in event['number of deaths']:
                 #check if number is a number represenation
                 if number.isnumeric():
                     deaths += int(number)
+                    fatal_dict[event['label']] += int(number)
         else:
             if event['number of deaths'].isnumeric():
                 deaths += int(event['number of deaths'])
+                fatal_dict[event['label']] += int(event['number of deaths'])
 
 print('Deaths', deaths, 'Total number of conflicts', total_count, 'Ratio', deaths/total_count, 'dead per conflict')
+print('Fatal events', fatal_events, 'Ratio', fatal_events/total_count, 'fatal events per conflict')
+
+#sort by values
+fatal_dict = {k: v for k, v in sorted(fatal_dict.items(), key=lambda item: item[1], reverse=True)}
+print(fatal_dict)
+
+# plot 12 most fatal events
+plt.rcParams['figure.figsize'] = [12, 8]
+# plt.rcParams['figure.dpi'] = 600
+plt.title('Most fatal events', fontsize=18, fontweight='bold')
+fig, ax = plt.subplots()
+
+ax.bar(list(fatal_dict.keys())[:12], list(fatal_dict.values())[:12], color='g')
+
+fig.autofmt_xdate()
+# plt.bar(list(fatal_dict.keys())[:12], list(fatal_dict.values())[:12], color='g')
+plt.title('Most fatal conflicts', fontsize=18, fontweight='bold')
+plt.xlabel('Event', fontsize=12, fontweight='bold')
+plt.ylabel('Number of deaths', fontsize=12, fontweight='bold')
+plt.show()
