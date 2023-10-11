@@ -253,8 +253,8 @@ def process_statements_column(input_data):
 if __name__ == '__main__':
     query1_path = 'retrieved_queries/historicEvents_with_statements.json'
 
-    output_file = "outputs/data_v2.json"
-    output_file_csv = "outputs/data_v2.csv"
+    output_file = "outputs/data.json"
+    output_file_csv = "outputs/data.csv"
 
     # Join the data from the three wikidata query files based on the 'event' column
     with open(query1_path, 'r') as file:
