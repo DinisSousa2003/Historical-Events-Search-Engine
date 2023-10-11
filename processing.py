@@ -238,6 +238,7 @@ def process_statements(entry):
                 new_entry[key] = value
 
     # Remove all other attributes
+    #smaller_list = ['instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event']
     smaller_list = ['event', 'image', 'article', 'label', 'summary', 'date', 'participants', 'instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event', 'destroyed', 'said to be the same as', 'number of casualties', 'perpetrator', 'main subject', 'official name', 'located in/on physical feature', 'number of arrests', 'present in work', 'signatory', 'inception', 'in opposition to', 'day in year for periodic occurrence', 'organizer', 'start point', 'has immediate cause', "topic's main template", 'has goal', 'destination point', 'victory', 'category for maps', 'publication date', 'victim', 'located in the present-day administrative territorial entity', 'armament', 'location map', 'category of associated people', 'sport', 'award received', 'flag', 'winner', 'author', 'dissolved, abolished or demolished date', 'history of topic', 'hashtag', 'creator', 'title', 'operator', 'name', 'director / manager', 'movement', 'depicts', 'damaged', 'number of perpetrators', 'has contributing factor', 'immediate cause of', 'occupation', 'language of work or name', 'has quality', 'has edition or translation', 'has list', 'category for the view from the item', 'political ideology', 'subclass of', 'connects with', 'contributing factor of', 'archives at', 'list of monuments', 'category for people who died here', 'significant place', 'first line', 'elevation above sea level', 'form of creative work', 'opposite of', 'catchphrase', 'is a list of', 'country of citizenship', 'made from material', 'height', 'width', 'number of missing', 'sex or gender', 'date of birth', 'date of death', 'item operated', 'via', 'flight number', 'patronage', 'partially coincident with', 'enemy', 'uses', 'religious order', 'cause of destruction', 'member category', 'chairperson', 'notable work', 'medical evacuation to', 'end cause', 'opponent during disputation', 'feast day', 'genre', 'located in or next to body of water', 'languages spoken, written or signed', 'head of state', 'head of government', 'mountain range', 'related category', 'basic form of government', 'capital', 'official language', 'currency', 'motto text', 'editor', 'product or material produced or service provided', 'commemorates', 'participant in']
     for key in list(new_entry.keys()):
         if key not in smaller_list:
@@ -252,8 +253,8 @@ def process_statements_column(input_data):
 if __name__ == '__main__':
     query1_path = 'retrieved_queries/historicEvents_with_statements.json'
 
-    output_file = "outputs/data.json"
-    output_file_csv = "outputs/data.csv"
+    output_file = "outputs/data_v2.json"
+    output_file_csv = "outputs/data_v2.csv"
 
     # Join the data from the three wikidata query files based on the 'event' column
     with open(query1_path, 'r') as file:

@@ -14,11 +14,11 @@ sparql = sparqlwrapper.SPARQLWrapper("https://query.wikidata.org/sparql", return
 def store_results():
     print(failed)
 
-    with open('historicEvents_with_statements.json', 'w', encoding='utf-8') as outfile:
+    with open('./retrieved_queries/historicEvents_with_statements.json', 'w', encoding='utf-8') as outfile:
         json.dump(results, outfile)
 
 
-with open('./wikidata/historicEvents.json', encoding='utf-8') as json_file:
+with open('./retrieved_queries/historicEvents.json', encoding='utf-8') as json_file:
     data = json.load(json_file)
     i = 0
     for p in data:
