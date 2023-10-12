@@ -1,0 +1,5 @@
+- event name
+- truncated summary
+- image
+- map indicating conflict location
+- timeline that puts the event in context

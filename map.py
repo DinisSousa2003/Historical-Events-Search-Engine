@@ -76,4 +76,4 @@ colormap.caption = 'Cluster Size'
 colormap.add_to(m)
 
 # Save the map to an HTML file or display it in a Jupyter Notebook
-m.save('map.html')
+m.save('outputs/map.html')
