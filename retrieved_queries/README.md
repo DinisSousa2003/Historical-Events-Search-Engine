@@ -6,7 +6,7 @@ This directory contains JSON files obtained from Wikidata queries, along with th
 
 1. `historicEvents.json`
 
-   - **Description**: Contains data related to historic events.
+   - **Description**: Contains data related to historical events.
 
    - **Schema**:
      - `event` (string): Unique identifier for the event.
@@ -37,7 +37,7 @@ This directory contains JSON files obtained from Wikidata queries, along with th
 
 2. `historicEvents_with_statements.json`
 
-   - **Description**: Contains data related to historic events with data from wikidata and wikipedia.
+   - **Description**: Contains data related to historical events with data from wikidata and wikipedia.
 
    - **Schema**:
      - `event` (string): Unique identifier for the event.

@@ -10,8 +10,8 @@ This project folder contains the following files and directories:
 
 The "retrieved_queries" directory contains data files obtained from Wikidata queries.
 
-- `historicEvents.json`: Contains data related to historic events.
-- `historicEvents_with_statements.json`: Contains data related to historic events with data from wikidata and wikipedia.
+- `historicEvents.json`: Contains data related to historical events.
+- `historicEvents_with_statements.json`: Contains data related to historical events with data from wikidata and wikipedia.
 
 ## Outputs Directory
 
