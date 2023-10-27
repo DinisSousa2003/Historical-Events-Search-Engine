@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script expects a container started with the following command.
-# docker run -p 8983:8983 --name pri_44 -v ${PWD}:/data -d solr:9.3 solr-precreate historicalEvents
+docker run -p 8983:8983 --name pri_44 -v ${PWD}:/data -d solr:9.3 solr-precreate historicalEvents
 
 # Schema definition via API
 curl -X POST -H 'Content-type:application/json' \
