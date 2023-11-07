@@ -234,13 +234,12 @@ def process_statements(entry):
             if key not in ['event', 'image', 'article']:
                 if isinstance(value, list):
                     value = [item for item in value if not (urlparse(item).scheme == 'http' or urlparse(item).scheme == 'https')]
+                if value ==  []: continue
 
             if isinstance(value, list) and len(value) == 1: #and (key not in ['number of deaths', 'number of casualties', 'number of participants', 'part of']):
-                new_entry[key] = value
-            # elif isinstance(value, list) and (key in ['number of deaths', 'number of casualties', 'number of participants']):
-            #     for(item) in value:
-            #         if item.isdigit():
-            #             new_entry[key] += int(item)
+                new_entry[key] = value[0]
+            elif isinstance(value, list) and (key in ['number of deaths', 'number of casualties', 'number of participants', 'number of arrests', 'number of injured']):
+                value = sum([int(num) for num in value])
             elif isinstance(value, str) and (';' in value or '\u003B' in value):
                 new_entry[key] = [item.strip() for item in re.split(r';|\u2013', value)]
             else:
