@@ -5,7 +5,7 @@
 
 # Schema definition via API
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@./schema.json" \
+    --data-binary "@./solr/schema.json" \
     http://localhost:8983/solr/conflicts/schema
 
 curl -X POST -H 'Content-type:application/json' --data-binary "@./outputs/data.json" http://localhost:8983/solr/conflicts/update?commit=true
