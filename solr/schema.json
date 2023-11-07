@@ -1,0 +1,117 @@
+{
+	"add-field-type": [
+        {
+            "name":"courseTitle",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        }
+    ],
+
+  "add-field": [
+    {
+      "name": "event",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "date",
+      "type": "pdate",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "label",
+      "type": "text_general",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "image",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "article",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "summary",
+      "type": "text_general",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "participants",
+      "type": "strings",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "instance_of",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+        "multiValued": true
+    },
+    {
+      "name": "part_of",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "point_in_time",
+      "type": "pdate",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+
+    },
+    {
+      "name": "coordinate_location",
+      "type": "location_rpt",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+
+    }
+  ]
+}
+
