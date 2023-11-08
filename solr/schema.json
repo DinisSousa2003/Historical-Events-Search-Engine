@@ -1,65 +1,80 @@
 {
-	"add-field-type": [
-        {
-            "name":"courseTitle",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        }
-    ],
-
+  "add-field-type": [
+    {
+      "name": "courseTitle",
+      "class": "solr.TextField",
+      "indexAnalyzer": {
+        "tokenizer": {
+          "class": "solr.StandardTokenizerFactory"
+        },
+        "filters": [
+          {
+            "class": "solr.ASCIIFoldingFilterFactory",
+            "preserveOriginal": true
+          },
+          {
+            "class": "solr.LowerCaseFilterFactory"
+          }
+        ]
+      },
+      "queryAnalyzer": {
+        "tokenizer": {
+          "class": "solr.StandardTokenizerFactory"
+        },
+        "filters": [
+          {
+            "class": "solr.ASCIIFoldingFilterFactory",
+            "preserveOriginal": true
+          },
+          {
+            "class": "solr.LowerCaseFilterFactory"
+          }
+        ]
+      }
+    }
+  ],
   "add-field": [
     {
       "name": "event",
       "type": "string",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": false
     },
     {
       "name": "date",
       "type": "pdate",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": false
     },
     {
       "name": "label",
-      "type": "text_general",
+      "type": "text_en",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": false
     },
     {
       "name": "image",
       "type": "string",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": true
     },
     {
       "name": "article",
       "type": "string",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": false
     },
     {
       "name": "summary",
-      "type": "text_general",
+      "type": "text_en",
       "indexed": true,
-      "stored": true
+      "stored": true,
+      "multiValued": false
     },
     {
       "name": "participants",
@@ -87,7 +102,7 @@
       "type": "string",
       "indexed": true,
       "stored": true,
-        "multiValued": true
+      "multiValued": true
     },
     {
       "name": "part_of",
@@ -102,7 +117,6 @@
       "indexed": true,
       "stored": true,
       "multiValued": true
-
     },
     {
       "name": "coordinate_location",
@@ -110,7 +124,216 @@
       "indexed": true,
       "stored": true,
       "multiValued": true
-
+    },
+    {
+      "name": "day_in_year_for_periodic_occurrence",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "time_period",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "located_in_on_physical_feature",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "topics_main_category",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "main_subject",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "facet_of",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "named_after",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "significant_person",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "commanded_by",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "organizer",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "has_effect",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "follows",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "present_in_work",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "destroyed",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "perpetrator",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "in_opposition_to",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "signatory",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "inception",
+      "type": "pdate",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "short_name",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "start_time",
+      "type": "pdate",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "official_name",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "said_to_be_the_same_as",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "significant_event",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "followed_by",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "duration",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "depicted_by",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "has_cause",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "conflict",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "target",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
+    },
+    {
+      "name": "end_time",
+      "type": "pdate",
+      "indexed": true,
+      "stored": true,
+      "multiValued": true
     }
   ]
 }

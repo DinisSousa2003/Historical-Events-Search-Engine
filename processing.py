@@ -227,7 +227,6 @@ def check_for_duplicates(json_file, column):
 def process_statements(entry):
     new_entry = entry.copy()
     statements = new_entry.pop('statements', {})
-
     # Move each statement attribute one level up
     for key, value in statements.items():
         if key != 'summary':  # Exclude the "summary" column
@@ -236,12 +235,15 @@ def process_statements(entry):
                     value = [item for item in value if not (urlparse(item).scheme == 'http' or urlparse(item).scheme == 'https')]
                 if value ==  []: continue
 
-            if isinstance(value, list) and len(value) == 1: #and (key not in ['number of deaths', 'number of casualties', 'number of participants', 'part of']):
+            #and (key not in ['number of deaths', 'number of casualties', 'number of participants', 'part of']):
+            if isinstance(value, list) and len(value) == 1 and key == 'image':
                 new_entry[key] = value[0]
-            elif isinstance(value, list) and (key in ['number of deaths', 'number of casualties', 'number of participants', 'number of arrests', 'number of injured']):
+            if isinstance(value, list) and (key in ['number of deaths', 'number of casualties', 'number of participants', 'number of arrests', 'number of injured']):
                 value = sum([int(num) for num in value])
             elif isinstance(value, str) and (';' in value or '\u003B' in value):
                 new_entry[key] = [item.strip() for item in re.split(r';|\u2013', value)]
+            elif key == 'image' and isinstance(value, str):
+                new_entry[key] = [value]
             else:
                 new_entry[key] = value
 

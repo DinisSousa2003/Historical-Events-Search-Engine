@@ -23,3 +23,15 @@ types = {k: v for k, v in sorted(types.items(), key=lambda item: item[1], revers
 nottypes = {k: v for k, v in sorted(nottypes.items(), key=lambda item: item[1], reverse=True)}
 print('types')
 print(types, '\n\n')
+
+# open outputs/data.json and list every key type
+with open('outputs/data.json', encoding='utf-8') as json_file:
+    data = json.load(json_file)
+
+# list every key type
+types = set()
+for event in data:
+    for key in event.keys():
+        types.add(key)
+
+print(types)
