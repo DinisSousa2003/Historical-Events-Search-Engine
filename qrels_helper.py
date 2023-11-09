@@ -49,6 +49,36 @@ def destructive_europe_ww1():
         print("\n")
 
 
+def river_19th_century():
+    """
+    """
+
+    # open data.json
+    with open('outputs/data.json', encoding='utf-8') as f:
+        data = json.load(f)
+
+    search_terms = ['river', 'rivers']
+    results = []
+    for event in data:
+        if any(term in event["summary"].lower() or term in event["label"].lower() or 'location' in event and term in ' '.join(event["location"]).lower()
+                or 'part of' in event and term in ' '.join(event["part of"]).lower() for term in search_terms):
+            results.append(event)
+
+    results.sort(key=lambda x: x["date"])
+    results = [event for event in results if event["date"] < '1801']
+    results = [event for event in results if event["date"] >= '1701']
+
+    for event in results:
+
+        print(event["event"])
+        print(event["date"])
+        print(event["summary"])
+        if 'location' in event:
+            print(event["location"])
+        print("\n")
+
+
 if __name__ == "__main__":
     # economic_consequences_spanish_war()
-    destructive_europe_ww1()
+    # destructive_europe_ww1()
+    river_19th_century()

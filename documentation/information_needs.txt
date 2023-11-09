@@ -1,4 +1,6 @@
 - Which battles took place by a river in the 19th century?
+# can we change to 18th century? 19th has too many river mentions to manually validate for qrels
+# maybe even just until 1775.... too many afterwards
 - What were the destructive battles in Europe related to World War I?
 - In which battles did the Portuguese participate between 1300 and 1800 where Portugal was not a main participant?
 - What were the battles that had several economic consequences during the Spanish Civil War?
