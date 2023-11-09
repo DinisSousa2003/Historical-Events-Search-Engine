@@ -1,7 +1,26 @@
 # In which battles did the Portuguese participate between 1300 and 1800 where Portugal was not a main participant?
-M.EIC003 # Information Processing and Retrieval (PRI)
-M.EIC047 # Semantic Web and Linked Data (WSDL)
-M.EIC031 # Data Analysis and Integration (ADI)
-M.EIC028 # Database Technologies (TBD)
-M.EIC032 # Non Relational Databases (BDNR)
-M.EIC019 # Information Systems Management (GSSI)
+
+http://www.wikidata.org/entity/Q1792643 # *main but allied*  was a battle of the armies of King Afonso IV of Portugal and King Alfonso XI of Castile against those of Sultan Abu al-Hasan 'Ali of the Marinid dynasty and Yusuf I of Granada.
+http://www.wikidata.org/entity/Q4870420 #  and several others that had been sent by the Castilian-allied monarchs of Portugal and Granada,
+http://www.wikidata.org/entity/Q2734129 #  and the Portuguese-Castilian forces
+http://www.wikidata.org/entity/Q603279 # *indirect??*
+http://www.wikidata.org/entity/Q1881283 # Portuguese ships
+http://www.wikidata.org/entity/Q957263 # he combined army of Ethiopian and Portuguese troops defeated
+http://www.wikidata.org/entity/Q67212705 # *did not even participate
+http://www.wikidata.org/entity/Q2890640 #  A joint Spanish-Portuguese
+http://www.wikidata.org/entity/Q121296921 #  one held by Persians and the other by Portuguese.
+http://www.wikidata.org/entity/Q932845 # *??  The Portuguese and Spanish defenders
+http://www.wikidata.org/entity/Q2889383 # between Spanish and a combined Anglo-Portuguese force
+http://www.wikidata.org/entity/Q2889254 # The battle ended in an allied victory (English, Portuguese and Dutch)
+http://www.wikidata.org/entity/Q4870250 # Lord Galway led a force of British and Portuguese soldiers to attack the garrison at Alcántara.
+http://www.wikidata.org/entity/Q4870250 # *Portuguese main?? crushing defeat for the Anglo-Portuguese army
+http://www.wikidata.org/entity/Q697267 # an Allied force of British, Portuguese, Dutch and Austrian troops supporting Archduke Charles
+http://www.wikidata.org/entity/Q5049265 #  during the War of the Spanish Succession. Targeting English, Dutch, and Portuguese possessions,
+http://www.wikidata.org/entity/Q691729 #  Armada Grossa of the Republic of Venice, supported by a mixed squadron of allied ships from Portugal,
+http://www.wikidata.org/entity/Q2890281 # *kinda main?? when an Anglo Portuguese force led by John Burgoyne surprised and captured the town of Valencia de Alcántara from its Spanish defenders during the Seven Years' War. The town was taken on 27 August as part of the defence against the Spanish invasion of Portugal.
+http://www.wikidata.org/entity/Q335174 # *again just allies  Ródão took place in October 1762 when a British-Portuguese force led by John Burgoyne
+http://www.wikidata.org/entity/Q21905296 # *same
+http://www.wikidata.org/entity/Q2890743 #  attacking the joint Spanish-Portuguese Army of Catalonia under Luis Fermín de Carvajal,
+http://www.wikidata.org/entity/Q2399716 #  attacking Spanish–Portuguese
+http://www.wikidata.org/entity/Q16209172 # the army of the First French Republic and the allied armies of the Kingdom of Spain and the Kingdom of Portugal
+http://www.wikidata.org/entity/Q2890888 # side by a combined force of British, Portuguese and irregular  Maltese forces

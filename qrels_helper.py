@@ -49,7 +49,7 @@ def destructive_europe_ww1():
         print("\n")
 
 
-def river_19th_century():
+def river_18th_century():
     """
     """
 
@@ -78,7 +78,39 @@ def river_19th_century():
         print("\n")
 
 
+def portuguese_as_allies():
+    #         between 1300 and 1800
+    #         search for portuguese, portugal in summary and participants, but it may not appear in label
+
+    # open data.json
+    with open('outputs/data.json', encoding='utf-8') as f:
+        data = json.load(f)
+
+    search_terms = ['portuguese', 'portugal']
+    results = []
+    for event in data:
+        if any(term in event['label'].lower() for term in search_terms):
+            continue
+        if any(term in event["summary"].lower() or 'participants' in event and term in ' '.join(event["participants"]).lower() for term in search_terms):
+            results.append(event)
+
+    results.sort(key=lambda x: x["date"])
+    results = [event for event in results if event["date"] < '1801']
+    results = [event for event in results if event["date"] >= '1301']
+
+    for event in results:
+        print(event["event"])
+        print(event["label"])
+        print(event["date"])
+        print(event["summary"])
+        if 'participants' in event:
+            print(event["participants"])
+        print("\n")
+
+
+
 if __name__ == "__main__":
     # economic_consequences_spanish_war()
     # destructive_europe_ww1()
-    river_19th_century()
+    # river_18th_century()
+    portuguese_as_allies()
