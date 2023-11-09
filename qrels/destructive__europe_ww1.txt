@@ -1,0 +1,28 @@
+# What were the destructive battles in Europe related to World War I?
+# keywords too look, for, bombing, destruc*, tear* down, break* up, ruin*, wreck*, demolish*, destroy*, damag*
+# devast*
+
+http://www.wikidata.org/entity/Q4870916 #the destruction of the village.
+http://www.wikidata.org/entity/Q769377 # destruction of serb property
+http://www.wikidata.org/entity/Q472100 #  widespread destruction of Belgrade's infrastructure
+http://www.wikidata.org/entity/Q1028296 # The battle caused enormous destruction and casualties amongst the civilian population
+http://www.wikidata.org/entity/Q156554 # destruction of Allied and neutral shipping
+http://www.wikidata.org/entity/Q193689 # The shelling and resulting fires left parts of central Dublin in ruins.
+http://www.wikidata.org/entity/Q2657479 # The bombardments caused hundreds of civilian casualties and resulted in public outrage
+http://www.wikidata.org/entity/Q543048 # The fleet bombarded several of the Italian coastal cities and other targets in and around the Province of Ancona, especially damaging the city of Ancona.
+http://www.wikidata.org/entity/Q29075656 # Heavy artillery bombarded the ruins of Polderhoek Château and the pillboxes in the grounds on 28 and 30 November as howitzers fired a wire cutting bombardment. The attack on 3 December was made in daylight, as a ruse, in the hope that the unusual time would surprise the German defenders, who would be under cover sheltering from the bombardments being fired at the same time each day. The British planned smoke and gas bombardments on the Gheluvelt and Becelaere spurs on the flanks and the infantry attack began at the same time as the "routine" bombardment.
+http://www.wikidata.org/entity/Q1989637 # *bombardment appears twice*
+http://www.wikidata.org/entity/Q2890541 # *3x bombardment*
+http://www.wikidata.org/entity/Q426099 # A German bombardment of the Belgian fortifications with heavy and super-heavy artillery
+http://www.wikidata.org/entity/Q4087378 # turned the ground into a morass, which was worse for the British and French, who occupied lower-lying ground and attacked areas which had been frequently and severely bombarded.
+http://www.wikidata.org/entity/Q4871841 # while devastating aerial bombing of the Wadi el Fara road, blocked that line of retreat.
+http://www.wikidata.org/entity/Q1497886 #  A large scale artillery bombardment, followed by the assault of at least 150 Kaiserschützen of the 3rd KuK Kaiserjäger Regiment stationed in Dimaro, was eventually successful and the lost position was retaken. The Italians, who already considered the mountain lost, began a counter-bombardment of the fortified positions, causing many victims among both the defending Italian and the Austro-Hungarian troops.
+http://www.wikidata.org/entity/Q3636419 #  Most of the city was destroyed in the bombardment.
+http://www.wikidata.org/entity/Q671594 # Super-heavy siege guns arrived and destroyed the forts one by one
+http://www.wikidata.org/entity/Q2985003 # German artillery destroyed the bridge at Breuvanne
+http://www.wikidata.org/entity/Q543048 #  destroying a train and damaging a railway station and a bridge
+http://www.wikidata.org/entity/Q2634717 #  a faster-moving exploitation force, was badly delayed by the devastated ground, shell-holes and derelict trenches.
+http://www.wikidata.org/entity/Q2455332 # devastated terrain
+http://www.wikidata.org/entity/Q4871545 # to the front over the roads land devastated
+http://www.wikidata.org/entity/Q1144824 # which devastated it and left large craters
+http://www.wikidata.org/entity/Q4872039 # the area devastated by artillery fire and partly flooded by the unseasonable rain.

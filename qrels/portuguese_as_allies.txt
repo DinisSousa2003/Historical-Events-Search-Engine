@@ -1,0 +1,7 @@
+# In which battles did the Portuguese participate between 1300 and 1800 where Portugal was not a main participant?
+M.EIC003 # Information Processing and Retrieval (PRI)
+M.EIC047 # Semantic Web and Linked Data (WSDL)
+M.EIC031 # Data Analysis and Integration (ADI)
+M.EIC028 # Database Technologies (TBD)
+M.EIC032 # Non Relational Databases (BDNR)
+M.EIC019 # Information Systems Management (GSSI)
