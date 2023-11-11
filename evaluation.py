@@ -7,9 +7,7 @@ import requests
 import pandas as pd
 
 
-def run_evaluation(qrels_file, query_url):
-
-    info_need = qrels_file.split('/')[2].split('.')[0]
+def run_evaluation(qrels_file, query_url, description):
 
     # Read qrels to extract relevant documents
     # relevant = list(map(lambda el: el.strip(), open(QRELS_FILE).readlines()))
@@ -45,7 +43,7 @@ def run_evaluation(qrels_file, query_url):
     @metric
     def p10(results, relevant, n=10):
         """Precision at N"""
-        return len([doc for doc in results[:n] if doc['id'] in relevant])/n
+        return len([doc for doc in results[:n] if doc['event'] in relevant])/n
 
     def calculate_metric(key, results, relevant):
         return metrics[key](results, relevant)
@@ -64,7 +62,7 @@ def run_evaluation(qrels_file, query_url):
         ]
     )
 
-    with open('./evaluation_results/results_' + info_need + '.tex','w') as tf:
+    with open('./evaluation_results/results_' + description + '.tex','w') as tf:
         tf.write(df.to_latex())
 
 
@@ -103,15 +101,19 @@ def run_evaluation(qrels_file, query_url):
 
     disp = PrecisionRecallDisplay([precision_recall_match.get(r) for r in recall_values], recall_values)
     disp.plot()
-    plt.savefig('./evaluation_results/precision_recall_' + info_need + '.pdf')
+    plt.savefig('./evaluation_results/precision_recall_' + description + '.pdf')
 
 if __name__ == '__main__':
-    qrels_files = ['./qrels/river_18th_century.txt', './qrels/destructive_europe_ww1.txt', './qrels/portuguese_as_allies.txt']
-    query_urls = ['http://localhost:8983/solr/conflicts/query?q=label:river%20location:river%20summary:river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&qf=location%5E2%20summary&bq=location:river%5E3&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
-    'http://localhost:8983/solr/conflicts/query?q=label:river%20location:river%20summary:river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&qf=location%5E2%20summary&bq=location:river%5E3&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
-    'http://localhost:8983/solr/conflicts/query?q=label:river%20location:river%20summary:river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&qf=location%5E2%20summary&bq=location:river%5E3&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=']
+    descriptions = ['river_18th_century_boosted', 'river_18th_century_base','portuguese_as_allies', 'destructive_europe_ww1']  # just to keep track of what is what
+    qrels_files = ['./qrels/river_18th_century.txt', './qrels/river_18th_century.txt',  './qrels/portuguese_as_allies.txt', './qrels/destructive_europe_ww1.txt']
+    query_urls = ['http://localhost:8983/solr/conflicts/query?q=label:river%20location:river%20summary:river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&qf=location%5E2%20summary&bq=location:river%5E3&rows=57&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
+    'http://localhost:8983/solr/conflicts/query?q=label:river%20location:river%20summary:river&q.op=OR&indent=true&fl=*,%20score&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&rows=57&useParams=',
+
+    'http://localhost:8983/solr/conflicts/query?q=summary:portug*%20participants:Portug*&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=200&bq=summary:%5C-portug*%20summary:ally%5E5%20summary:allie*%5E5%20summary:portug*%5C-&facet=true&fq=date:%5B1300-01-01T00:00:00Z%20TO%201801-01-01T00:00:00Z%5D&useParams=',
+    'http://localhost:8983/solr/conflicts/query?q=summary:destruct*%20%7C%7C%20bomb*%20%7C%7C%20devast*%20%7C%7C%20ruin*%20%7C%7C%20destroy*%20%7C%7C%20damag*&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=57&df=summary&fq=date:%5B1914-01-01T00:00:00Z%20TO%201920-01-01T00:00:00Z%5D&fq=summary:engl*%20%7C%7C%20german*%20%7C%7C%20fr*&useParams='
+                  ]
 
     # the queries are all the same, it is still needed to form good queries for each info need, the river one seems alright but check
 
-    for qrels_file, query_url in zip(qrels_files, query_urls):
-        run_evaluation(qrels_file, query_url)
+    for qrels_file, query_url, description in zip(qrels_files, query_urls, descriptions):
+        run_evaluation(qrels_file, query_url, description)

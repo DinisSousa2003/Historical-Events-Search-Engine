@@ -112,5 +112,5 @@ def portuguese_as_allies():
 if __name__ == "__main__":
     # economic_consequences_spanish_war()
     # destructive_europe_ww1()
-    river_18th_century()
-    # portuguese_as_allies()
+    # river_18th_century()
+    portuguese_as_allies()
