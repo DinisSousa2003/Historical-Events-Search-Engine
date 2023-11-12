@@ -114,7 +114,7 @@ def revolutions_economic_consequences():
         data = json.load(f)
 
     search_terms = ['revolution']
-    extra_search_terms = ['economic', 'economy', 'rich', 'poor', 'wealth', 'poverty',
+    extra_search_terms = ['economic', 'economy', 'rich ', 'riches', 'poor', 'wealth', 'poverty',
                             'prosperity', 'depression', 'recession', 'inflation', 'deflation', 'debt',
                             'bankrupt', 'market','trade', 'trading', 'commerce', 'commercial', 'merch',
                             'industrial', 'industry', 'industries', 'industrialization', 'industrialisation']
@@ -122,7 +122,7 @@ def revolutions_economic_consequences():
     results = []
     for event in data:
         if any(term in event["summary"].lower() or term in event["label"].lower() or 'part of' in event and term in ' '.join(event["part of"]).lower() for term in search_terms):
-            if any(term in event["summary"].lower() or term in event["label"].lower() or 'part of' in event and term in ' '.join(event["part of"]).lower() for term in extra_search_terms):
+            if any(term in event["summary"].lower() for term in extra_search_terms):
                 results.append(event)
 
 
@@ -143,15 +143,15 @@ def revolutions_economic_consequences():
 
         #     print 200 chracters either side of the extra search terms and ask if it is relevant, if it is, append to outputs as a tuple (event, sentences with search terms
 
-        for term in extra_search_terms:
-            if term in event["summary"].lower():
-                index = event["summary"].lower().index(term)
-                print("\n:::")
-                print(event["summary"][index-200:index+200])
-                print("Is this relevant? (y/n)")
-                if input() == 'y':
-                    outputs.append((event['event'], event["summary"][index-200:index+200]))
-                    break
+        # for term in extra_search_terms:
+        #     if term in event["summary"].lower():
+        #         index = event["summary"].lower().index(term)
+        #         print("\n:::")
+        #         print(event["summary"][index-200:index+200])
+        #         print("Is this relevant? (y/n)")
+        #         if input() == 'y':
+        #             outputs.append((event['event'], event["summary"][index-200:index+200]))
+        #             break
 
         print("\n")
 
