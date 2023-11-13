@@ -109,10 +109,33 @@ def run_evaluation(qrels_file, query_url, description):
     # disp = PrecisionRecallDisplay(precision_values, recall_values)
     # disp.plot()
     plt.clf()
+    plt.title('Precision-Recall Curve')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.plot(recall_values, precision_values, linestyle='-', marker='.',)
     plt.savefig('./evaluation_results/precision_recall_' + description + '.pdf')
+
+    # interpolated
+
+    # interpolate the precision value
+    interpolated_precision_values = []
+    for idx, step in enumerate(recall_values):
+        if idx == 0:
+            interpolated_precision_values.append(precision_values[idx])
+        else:
+            interpolated_precision_values.append(max(precision_values[idx:]))
+
+    plt.clf()
+    plt.title('Interpolated Precision-Recall Curve')
+    plt.xlabel('Recall')
+    plt.ylabel('Precision')
+    # plot the markers using the old precision values
+
+    plt.plot(recall_values, interpolated_precision_values, linestyle='-')
+    # add the markers
+    for idx, step in enumerate(recall_values):
+        plt.plot(step, precision_values[idx], marker='.', color='#7aa0ac')
+    plt.savefig('./evaluation_results/precision_recall_interpolated_' + description + '.pdf')
 
 if __name__ == '__main__':
     descriptions = ['river_18th_century_boosted', 'river_18th_century_base', 'portuguese_as_allies', 'destructive_europe_ww1', 'economic_consequences_revolutions']  # just to keep track of what is what
