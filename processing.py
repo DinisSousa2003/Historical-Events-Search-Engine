@@ -249,10 +249,13 @@ def process_statements(entry):
 
     # Remove all other attributes
     #smaller_list = ['instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event']
-    smaller_list = ['event', 'image', 'article', 'label', 'summary', 'date', 'participants', 'instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event', 'destroyed', 'said to be the same as', 'number of casualties', 'perpetrator', 'main subject', 'official name', 'located in/on physical feature', 'number of arrests', 'present in work', 'signatory', 'inception', 'in opposition to', 'day in year for periodic occurrence', 'organizer']
+    smaller_list = ['event', 'image', 'article', 'label', 'summary', 'date', 'participants', 'participants_count', 'instance of', 'point in time', 'location', 'part of', 'coordinate location', 'country', 'start time', 'end time', "topic's main category", 'named after', 'time period', 'conflict', 'number of deaths', 'followed by', 'follows', 'has effect', 'number of injured', 'has cause', 'facet of', 'significant person', 'depicted by', 'commanded by', 'number of participants', 'target', 'duration', 'short name', 'significant event', 'destroyed', 'said to be the same as', 'number of casualties', 'perpetrator', 'main subject', 'official name', 'located in/on physical feature', 'number of arrests', 'present in work', 'signatory', 'inception', 'in opposition to', 'day in year for periodic occurrence', 'organizer']
     for key in list(new_entry.keys()):
         if key not in smaller_list:
             del new_entry[key]
+
+    if 'participants' in new_entry:
+        new_entry['participants_count'] = len(new_entry['participants'])
 
     return new_entry
 

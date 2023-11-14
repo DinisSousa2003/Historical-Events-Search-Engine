@@ -34,4 +34,7 @@ http://www.wikidata.org/entity/Q1546173
 http://www.wikidata.org/entity/Q4872073
 http://www.wikidata.org/entity/Q20988614
 http://www.wikidata.org/entity/Q2456110
-http://www.wikidata.org/entity/Q2342985
+#
+http://www.wikidata.org/entity/Q4870505
+http://www.wikidata.org/entity/Q4204344
+

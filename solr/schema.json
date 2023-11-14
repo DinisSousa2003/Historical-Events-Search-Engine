@@ -88,6 +88,15 @@
             }
           }
         ]
+      } ,
+       "queryAnalyzer": {
+        "tokenizer": {
+          "class": "solr.StandardTokenizerFactory"
+        },
+        "filters": [
+          { "class": "solr.EnglishMinimalStemFilterFactory" },
+          { "class": "solr.LowerCaseFilterFactory" }
+        ]
       }
     }
   ],
@@ -147,10 +156,19 @@
       "stored": true,
       "multiValued": true,
       "required": false
+
+    },
+    {
+      "name": "participants_count",
+        "type": "pint",
+        "indexed": true,
+        "stored": true,
+        "multiValued": false,
+        "required": false
     },
     {
       "name": "country",
-      "type": "string",
+      "type": "caseInsensitiveString",
       "indexed": true,
       "stored": true,
       "multiValued": true,
@@ -167,7 +185,7 @@
     },
     {
       "name": "location",
-      "type": "string",
+      "type": "caseInsensitiveString",
       "indexed": true,
       "stored": true,
       "multiValued": true,

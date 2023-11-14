@@ -70,6 +70,7 @@ def river_18th_century():
 
     for event in results:
 
+        print(event["label"])
         print(event["event"])
         print(event["date"])
         print(event["summary"])
@@ -160,11 +161,97 @@ def revolutions_economic_consequences():
     output_file.close()
 
 
+def river_review():
+    # open the river qrels file
+    relevant = [line.strip() for line in open('qrels/river_18th_century.txt', encoding='utf-8').readlines() if
+                not line.startswith('#') and not line.startswith('\n')]
+    relevant = [line.split(' ')[0] for line in relevant]
+
+    # open data.json
+    with open('outputs/data.json', encoding='utf-8') as f:
+        data = json.load(f)
+    #     for event add to a counter if it has river in the label or location but it not in relevant
+    label_counter = 0
+    location_counter = 0
+    both_counter = 0
+    river_synonyms = {'stream', 'creek', 'waterway'}
+    for event in data:
+        first = False
+        if event["event"] in relevant:
+            continue
+
+        if event['date'] > '1776' or event['date'] < '1700':
+            continue
+
+        if any(term in event['label'].lower() or term in event['summary'].lower() or ('location' in event and term in ' '.join(event['location']).lower()) for term in river_synonyms):
+            print(event['event'], '\n')
+            print(event['summary'], '\n')
+            relevant.append(event['event'])
+        if 'label' in event and 'river' in event['label'].lower():
+            label_counter += 1
+            first = True
+            # print(event['summary'], '\n')
+            relevant.append(event['event'])
+        if 'location' in event and 'river' in ' '.join(event['location']).lower():
+            location_counter += 1
+            if first:
+                both_counter += 1
+            else:
+                # print(event['summary'], '\n')
+                relevant.append(event['event'])
+
+
+
+    # [print(event) for event in relevant]
+    print(label_counter)
+    print(location_counter)
+    print(both_counter)
+
+def ww1_review():
+    # open the river qrels file
+    relevant = [line.strip() for line in open('qrels/destructive_europe_ww1.txt', encoding='utf-8').readlines() if
+                not line.startswith('#') and not line.startswith('\n')]
+    relevant = [line.split(' ')[0] for line in relevant]
+
+    # open data.json
+    with open('outputs/data.json', encoding='utf-8') as f:
+        data = json.load(f)
+    #     for event add to a counter if it has river in the label or location but it not in relevant
+    label_counter = 0
+    location_counter = 0
+    both_counter = 0
+    countries = {'europe' , 'germany' , 'france' , 'britain' , 'united kingdom' , 'belgium' , 'poland' , 'austria' , 'hungary' , 'russia'}
+    for event in data:
+        if event["event"] not in relevant:
+            continue
+
+        new_location = False
+        if 'location' in event:
+            if not any(country in ' '.join(event['location']).lower() for country in countries):
+                print(event['event'], '\n')
+                print(event['label'], '\n')
+                print(event['summary'], '\n')
+                print(event['location'], '\n')
+                relevant.append(event['event'])
+                new_location = True
+
+        if 'country' in event:
+            if not any(country in ' '.join(event['country']).lower() for country in countries):
+                if not new_location:
+                    print(event['event'], '\n')
+                    print(event['label'], '\n')
+                    print(event['summary'], '\n')
+                print(event['country'], '\n')
+                relevant.append(event['event'])
+
 
 
 if __name__ == "__main__":
+    pass
     # economic_consequences_spanish_war()
     # destructive_europe_ww1()
     # river_18th_century()
     # portuguese_as_allies()
-    revolutions_economic_consequences()
+    # revolutions_economic_consequences()
+    # river_review()
+    ww1_review()

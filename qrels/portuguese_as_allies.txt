@@ -23,3 +23,4 @@ http://www.wikidata.org/entity/Q2890743 #  attacking the joint Spanish-Portugues
 http://www.wikidata.org/entity/Q2399716 #  attacking Spanish–Portuguese
 http://www.wikidata.org/entity/Q16209172 # the army of the First French Republic and the allied armies of the Kingdom of Spain and the Kingdom of Portugal
 http://www.wikidata.org/entity/Q2890888 # side by a combined force of British, Portuguese and irregular  Maltese forces
+http://www.wikidata.org/entity/Q4677341 #
