@@ -218,7 +218,7 @@
     {
       "name": "day_in_year_for_periodic_occurrence",
       "type": "string",
-      "indexed": true,
+      "indexed": false,
       "stored": false,
       "multiValued": true,
       "required": false
@@ -234,7 +234,7 @@
     {
       "name": "located_in_on_physical_feature",
       "type": "string",
-      "indexed": true,
+      "indexed": false,
       "stored": false,
       "multiValued": true,
       "required": false
