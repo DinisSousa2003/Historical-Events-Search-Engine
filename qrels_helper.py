@@ -167,6 +167,11 @@ def river_review():
                 not line.startswith('#') and not line.startswith('\n')]
     relevant = [line.split(' ')[0] for line in relevant]
 
+    instance_of_dict = {}
+
+
+
+
     # open data.json
     with open('outputs/data.json', encoding='utf-8') as f:
         data = json.load(f)
@@ -178,7 +183,11 @@ def river_review():
     for event in data:
         first = False
         if event["event"] in relevant:
-            continue
+            if event['instance of'][0] in instance_of_dict:
+                instance_of_dict[event['instance of'][0]] += 1
+            else:
+                instance_of_dict[event['instance of'][0]] = 1
+        continue
 
         if event['date'] > '1776' or event['date'] < '1700':
             continue
@@ -200,8 +209,8 @@ def river_review():
                 # print(event['summary'], '\n')
                 relevant.append(event['event'])
 
-
-
+    print(instance_of_dict)
+    return
     # [print(event) for event in relevant]
     print(label_counter)
     print(location_counter)
@@ -253,5 +262,5 @@ if __name__ == "__main__":
     # river_18th_century()
     # portuguese_as_allies()
     # revolutions_economic_consequences()
-    # river_review()
-    ww1_review()
+    river_review()
+    # ww1_review()

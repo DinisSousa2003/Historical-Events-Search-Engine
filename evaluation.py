@@ -229,10 +229,12 @@ def plot_system_comparison(qrels_files, query_urls):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Average Precision-Recall Curves')
+    plt.xlim(0, 1.01)
+    plt.ylim(0, 1.01)
     plot_pr_curve_of_system(qrels_files[::2], query_urls[::2], 'Boosted')
     plot_pr_curve_of_system(qrels_files[1::2], query_urls[1::2], 'Base', color='#e83d2a')
     plt.legend(['Boosted system', 'Base system'])
-    # plt.show()
+    plt.show()
     plt.savefig('./evaluation_results/systems_comparison.pdf')
 
 
