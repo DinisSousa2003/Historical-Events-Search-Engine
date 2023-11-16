@@ -91,6 +91,17 @@ def run_evaluation(qrels_file, query_url, description):
     with open('./evaluation_results/tables/results_' + description + '.tex', 'w') as tf:
         tf.write(df.to_latex())
 
+    # write to latex table a table with headers Rank Base if base in description else boosted
+    # rank is the order from 1 to 0
+    # each row contains if theretrieved document is relevant or not
+
+    df2 = pd.DataFrame([['Rank', 'Base' if 'base' in description else 'Boosted']] + [
+        [idx + 1, 'Relevant' if doc['event'] in relevant else 'Not relevant'] for idx, doc in enumerate(results)
+    ])
+
+    with open('./evaluation_results/tables/rankings_' + description + '.tex', 'w') as tf:
+        tf.write(df2.to_latex())
+
     # PRECISION-RECALL CURVE
     # Calculate precision and recall values as we move down the ranked list
     recall_values, precision_values = calculate_pr_values(results, relevant)
@@ -112,7 +123,7 @@ def run_evaluation(qrels_file, query_url, description):
 def plot_interpolated_pr_curve(precision_values, recall_values, color='#1f77b4'):
     # extend only after the last recall value if it is less than 1
     interpolated_precision_values, extended = interpolate_precision_values(precision_values, recall_values)
-    plt.title('Interpolated Precision-Recall Curve')
+    plt.title('Interpolated Precision-Recall Curves', fontweight='bold')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     # plot the markers using the old precision values
@@ -139,7 +150,7 @@ def interpolate_precision_values(precision_values, recall_values):
 
 
 def plot_pr_curve(precision_values, recall_values, color='#1f77b4'):
-    plt.title('Precision-Recall Curve')
+    plt.title('Precision-Recall Curves')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     # define y axis from 0 to 1
@@ -182,7 +193,7 @@ def plot_both_pr_curves(description1, description2, qrels_file, query_url1, quer
     plt.xlim(0, 1.05)
     plot3 = plot_interpolated_pr_curve(precision_values1, recall_values1)
     plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
-    plt.legend([plot3, plot4], ['Boosted', 'Base'])
+    plt.legend([plot3, plot4], ['Boosted system', 'Base system'])
     plt.savefig('./evaluation_results/precision_recall_interpolated_both_' + description1.replace('_boosted', '') + '.pdf')
 
 
@@ -234,7 +245,7 @@ def plot_system_comparison(qrels_files, query_urls):
     plot_pr_curve_of_system(qrels_files[::2], query_urls[::2], 'Boosted')
     plot_pr_curve_of_system(qrels_files[1::2], query_urls[1::2], 'Base', color='#e83d2a')
     plt.legend(['Boosted system', 'Base system'])
-    plt.show()
+    # plt.show()
     plt.savefig('./evaluation_results/systems_comparison.pdf')
 
 
@@ -250,23 +261,25 @@ if __name__ == '__main__':
                    './qrels/economic_consequences_revolutions.txt', './qrels/economic_consequences_revolutions.txt'
                    ]
     query_urls = [
-        'http://localhost:8983/solr/#/conflicts/query?q=river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&qf=summary%20location%5E2%20label%5E2&wt=json&debugQuery=true&debug.explain.structured=true&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
-        'http://localhost:8983/solr/#/conflicts/query?q=river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=57&qf=summary%20location%20label&wt=json&debugQuery=true&debug.explain.structured=true&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
+        'http://localhost:8983/solr/#/conflicts/query?q=river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&df=summary&qf=summary%20participants%5E2%20%20location%5E2%20label%5E2&wt=json&debugQuery=true&debug.explain.structured=true&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
+        'http://localhost:8983/solr/#/conflicts/query?q=river&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=57&df=summary&qf=summary%20location%20label%20participants&wt=json&debugQuery=true&debug.explain.structured=true&fq=date:%5B1700-01-01T00:00:00Z%20TO%201776-01-01T00:00:00Z%5D&useParams=',
 
-        'http://localhost:8983/solr/#/conflicts/query?q=portugal&q.op=OR&defType=edismax&indent=true&rows=200&bq=allied~3%5E3%20participants_count:%5B3%20TO%20*%5D%5E7&wt=json&qf=participants%5E2%20%20summary&fl=*,%20score&debugQuery=true&debug.explain.structured=true&df=summary&fq=date:%5B1300-01-01T00:00:00Z%20TO%201801-01-01T00:00:00Z%5D&useParams=&qt=',
-        'http://localhost:8983/solr/#/conflicts/query?q=portugal&q.op=OR&defType=edismax&indent=true&rows=200&wt=json&qf=participants%20%20summary&fl=*,%20score&debugQuery=true&debug.explain.structured=true&df=summary&fq=date:%5B1300-01-01T00:00:00Z%20TO%201801-01-01T00:00:00Z%5D&useParams=&qt=',
+        'http://localhost:8983/solr/#/conflicts/query?q=portugal&q.op=OR&defType=edismax&indent=true&rows=200&bq=allied~3%5E3%20participants_count:%5B3%20TO%20*%5D%5E7&wt=json&qf=summary%20participants%5E2%20%20location%5E2%20label%5E2&fl=*,%20score&debugQuery=true&debug.explain.structured=true&df=summary&fq=date:%5B1300-01-01T00:00:00Z%20TO%201801-01-01T00:00:00Z%5D&useParams=&qt=',
+        'http://localhost:8983/solr/#/conflicts/query?q=portugal&q.op=OR&defType=edismax&indent=true&rows=200&wt=json&qf=summary%20location%20label%20participants&fl=*,%20score&debugQuery=true&debug.explain.structured=true&df=summary&fq=date:%5B1300-01-01T00:00:00Z%20TO%201801-01-01T00:00:00Z%5D&useParams=&qt=',
 
-        'http://localhost:8983/solr/#/conflicts/query?q=destruction%20ruins%20bomb*%20devastat*%20destroy*%20damaging&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&bq=fort*%5E3%20bombard*%5E5%20bridge%5E5%20city%5E5%20terrain%5E4%20village%5E5%20devastated%5E7%20ruins%5E7%20severely%5E2%20enormous%5E2&qf=summary&df=summary&fq=date:%5B1914-01-01T00:00:00Z%20TO%201920-01-01T00:00:00Z%5D&fq=part_of:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)%20OR%20summary:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)&fq=summary:(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20OR%20location:%20(europe%20OR%20italy%20%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20%20%20%20OR%20country:%20(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)&useParams=',
-        'http://localhost:8983/solr/#/conflicts/query?q=destruction%20ruins%20bomb*%20devastat*%20destroy*%20damaging&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&qf=summary&fq=date:%5B1914-01-01T00:00:00Z%20TO%201920-01-01T00:00:00Z%5D&fq=part_of:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)%20OR%20summary:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)&fq=summary:(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20OR%20location:%20(europe%20OR%20italy%20%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20%20%20%20OR%20country:%20(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)&useParams=',
+        'http://localhost:8983/solr/#/conflicts/query?q=destruction%20ruins%20bomb*%20devastat*%20destroy*%20damaging&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&bq=fort*%5E3%20bombard*%5E5%20bridge%5E5%20city%5E5%20terrain%5E4%20village%5E5%20devastated%5E7%20ruins%5E7%20severely%5E2%20enormous%5E2&qf=summary%20participants%5E2%20%20location%5E2%20label%5E2&df=summary&fq=date:%5B1914-01-01T00:00:00Z%20TO%201920-01-01T00:00:00Z%5D&fq=part_of:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)%20OR%20summary:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)&fq=summary:(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20OR%20location:%20(europe%20OR%20italy%20%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20%20%20%20OR%20country:%20(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)&useParams=',
+        'http://localhost:8983/solr/#/conflicts/query?q=destruction%20ruins%20bomb*%20devastat*%20destroy*%20damaging&q.op=OR&defType=edismax&indent=true&fl=*,%20score&rows=100&qf=summary%20location%20label%20participants&fq=date:%5B1914-01-01T00:00:00Z%20TO%201920-01-01T00:00:00Z%5D&df=summary&fq=part_of:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)%20OR%20summary:(%22war%201%22%20OR%20%22war%20I%22%20OR%20%22great%20war%22%20OR%20%22world%20war%22)&fq=summary:(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20OR%20location:%20(europe%20OR%20italy%20%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)%20%20%20%20%20OR%20country:%20(europe%20OR%20italy%20OR%20germany%20OR%20france%20OR%20britain%20OR%20united%20kingdom%20OR%20belgium%20OR%20poland%20OR%20austria%20OR%20hungary%20OR%20russia)&useParams=',
 
-        'http://localhost:8983/solr/#/conflicts/query?q=economy&q.op=OR&defType=edismax&indent=true&rows=250&fl=*,%20score&bq=part_of:Revolution%5E3%20instance_of:revolution%5E3%20label:Revolution%5E3%20summary:consequence&df=summary&wt=json&fq=label:revolution*%20OR%20summary:revolution*%20OR%20part_of:revolution*%20OR%20part_of:Revolution*&useParams=',
-        'http://localhost:8983/solr/conflicts/query?q=summary:(econom*%5E4%20OR%20rich%20OR%20poor*%20OR%20wealth%20OR%20prosperity%20OR%20depression%5E2%20OR%20recession%5E2%20OR%20inflation%5E2%20OR%20deflation%5E2%20OR%20debt%5E2%20OR%20bankrupt%5E2%20OR%20market*%20OR%20trade*%20OR%20trading%20OR%20commerce%20OR%20commercial%20OR%20merch*%20OR%20industrial%20OR%20industry%20OR%20industries%20OR%20industrialization%20OR%20industrialisation)%0A%0AAND%20(label:revolution*%20OR%20summary:revolution*%20OR%20part_of:revolution*%20OR%20part_of:Revolution*)&q.op=OR&defType=edismax&indent=true&rows=250&fl=*,%20score&qf=part_of%5E2%20label%5E3&bq=part_of:Revolution%5E3%20instance_of:revolution%5E3%20label:Revolution%5E3%20summary:econ*&useParams='
+        'http://localhost:8983/solr/#/conflicts/query?q=economy&q.op=OR&defType=edismax&indent=true&rows=250&fl=*,%20score&qf=summary%20participants%5E2%20%20location%5E2%20label%5E2&df=summary&bq=part_of:Revolution%5E3%20instance_of:revolution%5E3%20label:Revolution%5E3%20summary:consequence&wt=json&fq=label:revolution*%20OR%20summary:revolution*%20OR%20part_of:revolution*%20OR%20part_of:Revolution*&useParams=',
+        'http://localhost:8983/solr/#/conflicts/query?q=economy&q.op=OR&defType=edismax&indent=true&rows=250&fl=*,%20score&qf=summary%20location%20label%20participants&df=summary&wt=json&fq=label:revolution*%20OR%20summary:revolution*%20OR%20part_of:revolution*%20OR%20part_of:Revolution*&useParams='
 
     ]
     # for qrels_file, query_url, description in zip(qrels_files, query_urls, descriptions):
     #     run_evaluation(qrels_file, query_url, description)
-
+    #
     # for i in range(0, len(descriptions), 2):
     #     plot_both_pr_curves(descriptions[i], descriptions[i + 1], qrels_files[i], query_urls[i], query_urls[i + 1])
 
     plot_system_comparison(qrels_files, query_urls)
+
+

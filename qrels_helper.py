@@ -183,10 +183,10 @@ def river_review():
     for event in data:
         first = False
         if event["event"] in relevant:
-            if event['instance of'][0] in instance_of_dict:
-                instance_of_dict[event['instance of'][0]] += 1
+            if ' '.join(event['instance of']) in instance_of_dict:
+                instance_of_dict[' '.join(event['instance of'])] += 1
             else:
-                instance_of_dict[event['instance of'][0]] = 1
+                instance_of_dict[' '.join(event['instance of'])] = 1
         continue
 
         if event['date'] > '1776' or event['date'] < '1700':
