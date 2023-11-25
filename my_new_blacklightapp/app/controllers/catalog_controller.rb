@@ -12,11 +12,12 @@ class CatalogController < ApplicationController
   
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
-      :qt => 'search',
-      :rows => 10 
+      :rows => 10,
+      :fl => '*,score',
+      :qf => 'label^10 summary',
+      :defType => 'edismax',
+      :wt => 'json',
     }
-
-    private
 
     # solr field configuration for search results/index views
     config.index.title_field = 'label'
