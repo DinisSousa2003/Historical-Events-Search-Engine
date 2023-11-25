@@ -30,6 +30,9 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
+# Add execute permissions to the Rails script
+RUN chmod +x ./bin/rails
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 

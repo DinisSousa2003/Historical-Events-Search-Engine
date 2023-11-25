@@ -23,5 +23,12 @@ module MyNewBlacklightapp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.mapbox_api_key = 'pk.eyJ1IjoicHJpMjM0NCIsImEiOiJjbHBlbm8wMjYxZW5tMmtwYnBuMWlycWwxIn0.RwIPprTcrdIWKlQwnfDQcw'
+
+    config.geocoder = {
+      api_key: 'pk.eyJ1IjoicHJpMjM0NCIsImEiOiJjbHBlbm8wMjYxZW5tMmtwYnBuMWlycWwxIn0.RwIPprTcrdIWKlQwnfDQcw',
+      timeout: 5,
+      units: :km
+    }
   end
 end

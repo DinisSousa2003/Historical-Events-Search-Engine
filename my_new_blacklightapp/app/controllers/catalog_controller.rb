@@ -4,11 +4,15 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightMaps::Controller
 
 
   configure_blacklight do |config|
     
     config.bootstrap_version = 5
+
+    # Field that contains geospatial information
+    config.view.maps.geojson_field = 'coordinate_location'
   
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
