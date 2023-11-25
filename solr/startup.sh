@@ -16,9 +16,7 @@ docker exec -it pri_44 cp /data/related_terms.txt /var/solr/data/conflicts/relat
 
 
 # Schema definition via API
-curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@./schema.json" \
-    http://localhost:8983/solr/conflicts/schema
+curl -X POST -H 'Content-type:application/json' --data-binary "@./schema.json" http://localhost:8983/solr/conflicts/schema
 
 #,!!! data.json is a copy of the file from /outputs, the relative path was not working
 curl -X POST -H 'Content-type:application/json' --data-binary "@./data.json" http://localhost:8983/solr/conflicts/update?commit=true
