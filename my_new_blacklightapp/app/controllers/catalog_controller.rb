@@ -4,7 +4,7 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
-  include BlacklightMaps::Controller
+  # include BlacklightMaps::Controller
 
 
   configure_blacklight do |config|
