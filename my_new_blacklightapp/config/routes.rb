@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
   mount Blacklight::Engine => '/'
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
+  
+  #IF WE WANT TO HAD A STATIC PAGE, SWITCH FOR THIS
+  #root to: "static_pages#home"
   root to: "catalog#index"
   concern :searchable, Blacklight::Routes::Searchable.new
 

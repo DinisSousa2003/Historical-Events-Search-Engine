@@ -1,0 +1,6 @@
+// application.scss
+$navbar-padding-y: 24px; // Set a custom navbar padding to increase the size of the navbar
+$dark: rgb(222, 144, 0); // Set the dark variable to a custom one
+$link-color:rgb(222, 144, 0); // Also change the link-color to use the same color
+
+@import 'blacklight';

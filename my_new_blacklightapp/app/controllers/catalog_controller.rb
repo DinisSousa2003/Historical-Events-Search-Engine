@@ -4,12 +4,15 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
-  include BlacklightMaps::Controller
+  #include BlacklightMaps::Controller
 
 
   configure_blacklight do |config|
     
     config.bootstrap_version = 5
+
+    #Add advanced search fields
+    config.advanced_search.enabled = true
 
     # Field that contains geospatial information
     config.view.maps.geojson_field = 'coordinate_location'
@@ -18,10 +21,12 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :rows => 10,
       :fl => '*,score',
-      :qf => 'label^10 summary',
+      qf: 'label^100 participants^80 country^50 location^50 part_of^50 summary^20',
       :defType => 'edismax',
       :wt => 'json',
+      :qt => 'conflicts'  # Make sure this points to the correct Solr core
     }
+    
 
     # solr field configuration for search results/index views
     config.index.title_field = 'label'
@@ -82,39 +87,41 @@ class CatalogController < ApplicationController
     config.add_show_field 'end_time', label: 'End Time'
 
     # Search fields
-    config.add_search_field 'all_fields', label: 'All Fields'
+    config.add_search_field 'all_fields' do |field|
+      field.label = 'All Fields'
+      field.solr_parameters = {
+        qf: 'label^100 participants^80 country^50 location^50 part_of^50 summary^20',
+      }
+    end
 
     config.add_search_field('label') do |field|
       field.label = 'Label'
       field.solr_parameters = {
-        'spellcheck.dictionary': 'label',
-        qf: '${label_qf}',
-        pf: '${label_pf}'
-      }
-      field.clause_params = {
-        edismax: field.solr_parameters.dup # use the same title fields for advanced title search as for regular title search
+        qf: 'label',
       }
     end
 
     config.add_search_field('summary') do |field|
       field.label = 'Summary'
       field.solr_parameters = {
-        'spellcheck.dictionary': 'summary',
-        qf: '${summary_qf}',
-        pf: '${summary_pf}'
+        qf: 'summary',
       }
     end
 
     # Facet fields
     configure_blacklight do |config|
-      config.add_facet_field 'part_of', label: 'Part Of', show:true, collapsing: true
+      config.add_facet_field 'example_query_facet_field', label: 'Date', query:{
+        years_100: {label: 'Last 100 Years', fq: "date:[#{Time.now.year - 100} TO *]"},
+        years_500: {label: 'Last 500 Years', fq: "date:[#{Time.now.year - 500} TO *]"},
+        years_1000: {label: 'Last 1000 Years', fq: "date:[#{Time.now.year - 1000} TO *]"},
+        years_5000: {label: 'Last 5000 Years', fq: "date:[#{Time.now.year - 5000} TO *]"}
+      }
     end
 
     # Sort fields
     configure_blacklight do |config|
       config.add_sort_field 'relevance', sort: 'score desc, date desc, label asc', label: 'Relevance'
-      config.add_sort_field 'date-desc', sort: 'date desc, label asc', label: 'Date'
-      config.add_sort_field 'date-asc', sort: 'date asc, label asc', label: 'Date'
+      config.add_sort_field 'date-desc', sort: 'date desc, label asc', label: 'Date Descending'
     end
 
     # Solr fields to be displayed in the index (search results) view
