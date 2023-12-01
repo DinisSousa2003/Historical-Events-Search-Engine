@@ -7,4 +7,15 @@ module ApplicationHelper
         options.merge(alt: presenter(document).document_heading)
         )
     end
+
+    def extract_year_from_date(date_string)
+        # Convert the date string to a Ruby DateTime object
+        date_time = Date.parse(date_string)
+      
+        # Extract the year from the DateTime object
+        year = date_time.year
+      
+        # Return the year
+        year
+      end
 end

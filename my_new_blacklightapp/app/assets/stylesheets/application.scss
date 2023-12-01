@@ -3,4 +3,13 @@ $navbar-padding-y: 24px; // Set a custom navbar padding to increase the size of 
 $dark: rgb(222, 144, 0); // Set the dark variable to a custom one
 $link-color:rgb(222, 144, 0); // Also change the link-color to use the same color
 
+.document-thumbnail {
+    img {
+      width: 50px;
+      height: 50px;
+      // You can add additional styles if needed, such as border-radius, margin, etc.
+    }
+  }
+  
+
 @import 'blacklight';

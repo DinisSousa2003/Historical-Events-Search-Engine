@@ -4,6 +4,10 @@
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
+  include BlacklightRangeLimit::ControllerOverride
+
   # include BlacklightMaps::Controller
 
 
@@ -13,6 +17,9 @@ class CatalogController < ApplicationController
 
     #Add advanced search fields
     config.advanced_search.enabled = true
+    config.advanced_search[:url_key] ||= 'advanced'
+    config.advanced_search[:query_parser] ||= 'edismax'
+    config.advanced_search[:form_solr_parameters] ||= {}
 
     # Field that contains geospatial information
     config.view.maps.geojson_field = 'coordinate_location'
@@ -21,29 +28,44 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :rows => 10,
       :fl => '*,score',
-      qf: 'label^100 participants^80 country^50 location^50 part_of^50 summary^20',
       :defType => 'edismax',
       :wt => 'json',
       :qt => 'conflicts'  # Make sure this points to the correct Solr core
     }
+
+    # Maximum number of results to show per page
+    config.max_per_page = 20
+    # Options for the user for number of results to show per page
+    config.per_page = [10, 20, 30, 40]
     
 
     # solr field configuration for search results/index views
     config.index.title_field = 'label'
-    config.index.display_type_field = 'format'
+    config.index.display_type_field = 'display_type'
     config.index.thumbnail_field = 'image'
     config.index.thumbnail_size = '50x50' # Set the size you want here
-    #config.index.thumbnail_method = :render_thumbnail
 
     # Solr field configuration for document/show views
     config.show.title_field = 'label'
-    config.show.display_type_field = 'format'
+    config.show.display_type_field = 'display_type'
     config.show.thumbnail_field = 'image'
     config.show.thumbnail_size = '50x50'
 
+    # Solr fields to be displayed in the index (search results) view
+
+    config.add_index_field 'date', label: 'Date', date: {format: :short}
+    config.add_index_field 'article', label: 'Article'
+    config.add_index_field 'summary', label: 'Summary'
+    config.add_index_field 'participants', label: 'Participants'
+    config.add_index_field 'participants_count', label: 'Participants Count'
+    config.add_index_field 'country', label: 'Country'
+    config.add_index_field 'instance_of', label: 'Instance Of'
+    config.add_index_field 'location', label: 'Location'
+    config.add_index_field 'part_of', label: 'Part Of'
+
     # Solr fields to be displayed in the show (single result) view
     config.add_show_field 'event', label: 'Event'
-    config.add_show_field 'date', label: 'Date', date: true
+    config.add_show_field 'date', label: 'Date', date: true 
     config.add_show_field 'label', label: 'Label'
     config.add_show_field 'article', label: 'Article'
     config.add_show_field 'summary', label: 'Summary'
@@ -109,31 +131,22 @@ class CatalogController < ApplicationController
     end
 
     # Facet fields
-    configure_blacklight do |config|
-      config.add_facet_field 'example_query_facet_field', label: 'Date', query:{
-        years_100: {label: 'Last 100 Years', fq: "date:[#{Time.now.year - 100} TO *]"},
-        years_500: {label: 'Last 500 Years', fq: "date:[#{Time.now.year - 500} TO *]"},
-        years_1000: {label: 'Last 1000 Years', fq: "date:[#{Time.now.year - 1000} TO *]"},
-        years_5000: {label: 'Last 5000 Years', fq: "date:[#{Time.now.year - 5000} TO *]"}
-      }
-    end
+    #For this to work, we will probably need to add a year field to the data, type int, in Solr
+    #config.add_facet_field 'date', label: 'Date Year', **default_range_config
 
-    # Sort fields
-    configure_blacklight do |config|
-      config.add_sort_field 'relevance', sort: 'score desc, date desc, label asc', label: 'Relevance'
-      config.add_sort_field 'date-desc', sort: 'date desc, label asc', label: 'Date Descending'
-    end
+    config.add_facet_field :date, label: 'Date',
+    query: {
+      last_50_years: { label: 'Last 50 Years', fq: 'date:[NOW-50YEAR/DAY TO NOW/DAY]' },
+      last_100_years: { label: 'Last 100 Years', fq: 'date:[NOW-100YEAR/DAY TO NOW/DAY]' },
+      last_500_years: { label: 'Last 500 Years', fq: 'date:[NOW-500YEAR/DAY TO NOW/DAY]' },
+      last_1000_years: { label: 'Last 1000 Years', fq: 'date:[NOW-1000YEAR/DAY TO NOW/DAY]' }
+    }
 
-    # Solr fields to be displayed in the index (search results) view
 
-    config.add_index_field 'date', label: 'Date', date: {format: :short}
-    config.add_index_field 'article', label: 'Article'
-    config.add_index_field 'summary', label: 'Summary'
-    config.add_index_field 'participants', label: 'Participants'
-    config.add_index_field 'participants_count', label: 'Participants Count'
-    config.add_index_field 'country', label: 'Country'
-    config.add_index_field 'instance_of', label: 'Instance Of'
-    config.add_index_field 'location', label: 'Location'
-    config.add_index_field 'part_of', label: 'Part Of'
+    config.add_facet_field 'label', limit: 20, index_range: 'A'..'Z', limit: true
+
+    config.add_facet_field 'country', label: 'Country', limit: 20, index_range: 'A'..'Z', limit: true
+    
+    config.add_facet_fields_to_solr_request!
   end
 end

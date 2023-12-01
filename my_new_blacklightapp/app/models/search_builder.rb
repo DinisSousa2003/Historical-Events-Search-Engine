@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
+  include BlacklightRangeLimit::RangeLimitBuilder
+
 
   self.default_processor_chain += [:add_custom_data_to_query]
 
