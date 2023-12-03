@@ -34,12 +34,55 @@ module ApplicationHelper
     def link_to_event(document)
         source_hash = document[:document]._source
         event_value = source_hash['event']
-        link_to event_value, event_value, target: '_blank'
+        event_name = source_hash['label']
+        link_name = "#{event_name} on Wikidata"
+        link_to link_name, event_value, target: '_blank'
     end
       
     def link_to_article(document)
         source_hash = document[:document]._source
         event_value = source_hash['article']
-        link_to event_value, event_value, target: '_blank'
+        event_name = source_hash['label']
+        link_name = "#{event_name} on Wikipedia"
+        link_to link_name, event_value, target: '_blank'
+    end
+
+    def link_to_part_of(document)
+        source_hash = document[:document]._source
+        event_value = source_hash['part_of']
+        #value of part of is an array, for every element call link_to_search
+        event_value.map { |search_term| link_to_search(search_term) }.join(', ').html_safe
+    end
+
+    def link_to_search(search_term)
+        base_url = 'http://127.0.0.1:3000/'
+        search_path = '?search_field=part_of&q='
+    
+        link_to(search_term, "#{base_url}#{search_path}#{CGI.escape(search_term)}")
+    end
+
+    def link_to_coordinate_location(document)
+        source_hash = document[:document]._source
+        coordinate_location = source_hash['coordinate_location']
+        parse_and_generate_map_link(coordinate_location)
+    end
+
+    def parse_and_generate_map_link(coordinate_location)
+        coordinate_location = coordinate_location.to_s
+        match_data = coordinate_location.match(/Point\((?<lat>[-+]?\d*\.\d+)\s(?<lng>[-+]?\d*\.\d+)\)/)
+    
+        if match_data
+          lat = match_data[:lat]
+          lng = match_data[:lng]
+          link_to_map(lat, lng)
+        else
+          "Invalid coordinate location format"
+        end
+      end
+    
+    def link_to_map(lat, lng)
+        link = "https://www.openstreetmap.org/?mlat=#{lat}&mlon=#{lng}#map=5/#{lat}/#{lng}"
+        name_of_link = "#{lat}, #{lng}"
+        link_to name_of_link, link, target: '_blank'
     end
 end

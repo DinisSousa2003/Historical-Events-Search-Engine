@@ -60,7 +60,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'country', label: 'Country'
     config.add_index_field 'instance_of', label: 'Instance Of'
     config.add_index_field 'location', label: 'Location'
-    config.add_index_field 'part_of', label: 'Part Of'
+    config.add_index_field 'part_of', label: 'Part Of', helper_method: :link_to_part_of
+    config.add_index_field 'coordinate_location', label: 'Coordinate Location', helper_method: :link_to_coordinate_location
 
     # Solr fields to be displayed in the show (single result) view
     config.add_show_field 'event', label: 'Event', helper_method: :link_to_event
@@ -73,8 +74,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'country', label: 'Country'
     config.add_show_field 'instance_of', label: 'Instance Of'
     config.add_show_field 'location', label: 'Location'
-    config.add_show_field 'part_of', label: 'Part Of'
-    config.add_show_field 'coordinate_location', label: 'Coordinate Location'
+    config.add_show_field 'part_of', label: 'Part Of', helper_method: :link_to_part_of
+    config.add_show_field 'coordinate_location', label: 'Coordinate Location', helper_method: :link_to_coordinate_location
     config.add_show_field 'day_in_year_for_periodic_occurrence', label: 'Day In Year for Periodic Occurrence'
     config.add_show_field 'time_period', label: 'Time Period'
     config.add_show_field 'located_in_on_physical_feature', label: 'Located In on Physical Feature'
@@ -94,7 +95,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'signatory', label: 'Signatory'
     config.add_show_field 'inception', label: 'Inception'
     config.add_show_field 'short_name', label: 'Short Name'
-    config.add_show_field 'start_time', label: 'Start Time'
+    #config.add_show_field 'start_time', label: 'Start Time'
     config.add_show_field 'official_name', label: 'Official Name'
     config.add_show_field 'said_to_be_the_same_as', label: 'Said To Be The Same As'
     config.add_show_field 'significant_event', label: 'Significant Event'
@@ -110,7 +111,7 @@ class CatalogController < ApplicationController
     config.add_search_field 'all_fields' do |field|
       field.label = 'All Fields'
       field.solr_parameters = {
-        qf: 'label^100 participants^80 country^50 location^50 part_of^50 summary^20',
+        qf: 'label^100 participants^80 part_of^80 country^50 location^50  summary^20',
       }
     end
 
@@ -118,6 +119,13 @@ class CatalogController < ApplicationController
       field.label = 'Label'
       field.solr_parameters = {
         qf: 'label',
+      }
+    end
+
+    config.add_search_field('part_of') do |field|
+      field.label = 'Part Of'
+      field.solr_parameters = {
+        qf: 'part_of',
       }
     end
 
