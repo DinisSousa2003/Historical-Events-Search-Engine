@@ -54,7 +54,6 @@ class CatalogController < ApplicationController
     # Solr fields to be displayed in the index (search results) view
 
     config.add_index_field 'date', label: 'Date', date: {format: :short}
-    config.add_index_field 'article', label: 'Article'
     config.add_index_field 'summary', label: 'Summary'
     config.add_index_field 'participants', label: 'Participants'
     config.add_index_field 'participants_count', label: 'Participants Count'
@@ -64,10 +63,10 @@ class CatalogController < ApplicationController
     config.add_index_field 'part_of', label: 'Part Of'
 
     # Solr fields to be displayed in the show (single result) view
-    config.add_show_field 'event', label: 'Event'
-    config.add_show_field 'date', label: 'Date', date: true 
+    config.add_show_field 'event', label: 'Event', helper_method: :link_to_event
+    config.add_show_field 'date', label: 'Date', helper_method: :show_date
     config.add_show_field 'label', label: 'Label'
-    config.add_show_field 'article', label: 'Article'
+    config.add_show_field 'article', label: 'Article', helper_method: :link_to_article
     config.add_show_field 'summary', label: 'Summary'
     config.add_show_field 'participants', label: 'Participants'
     config.add_show_field 'participants_count', label: 'Participants Count'
@@ -75,7 +74,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'instance_of', label: 'Instance Of'
     config.add_show_field 'location', label: 'Location'
     config.add_show_field 'part_of', label: 'Part Of'
-    config.add_show_field 'point_in_time', label: 'Point In Time', date: true
     config.add_show_field 'coordinate_location', label: 'Coordinate Location'
     config.add_show_field 'day_in_year_for_periodic_occurrence', label: 'Day In Year for Periodic Occurrence'
     config.add_show_field 'time_period', label: 'Time Period'
@@ -106,7 +104,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'has_cause', label: 'Has Cause'
     config.add_show_field 'conflict', label: 'Conflict'
     config.add_show_field 'target', label: 'Target'
-    config.add_show_field 'end_time', label: 'End Time'
+    #config.add_show_field 'end_time', label: 'End Time'
 
     # Search fields
     config.add_search_field 'all_fields' do |field|

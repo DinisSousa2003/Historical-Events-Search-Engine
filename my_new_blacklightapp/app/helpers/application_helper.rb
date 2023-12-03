@@ -18,4 +18,28 @@ module ApplicationHelper
         # Return the year
         year
       end
+
+    def show_date(document)
+        source_hash = document[:document]._source
+        date_value = source_hash['date']
+        format_date(date_value)
+    end
+
+    def format_date(date_string)
+        date_object = Date.parse(date_string)
+        date_object.strftime("%Y-%m-%d")
+    end
+
+    # Define a helper method to generate clickable links for any attribute
+    def link_to_event(document)
+        source_hash = document[:document]._source
+        event_value = source_hash['event']
+        link_to event_value, event_value, target: '_blank'
+    end
+      
+    def link_to_article(document)
+        source_hash = document[:document]._source
+        event_value = source_hash['article']
+        link_to event_value, event_value, target: '_blank'
+    end
 end
