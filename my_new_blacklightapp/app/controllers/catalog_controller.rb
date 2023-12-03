@@ -53,7 +53,7 @@ class CatalogController < ApplicationController
 
     # Solr fields to be displayed in the index (search results) view
 
-    config.add_index_field 'date', label: 'Date', date: {format: :short}
+    config.add_index_field 'date', label: 'Date', helper_method: :show_date
     config.add_index_field 'summary', label: 'Summary'
     config.add_index_field 'participants', label: 'Participants'
     config.add_index_field 'participants_count', label: 'Participants Count'
