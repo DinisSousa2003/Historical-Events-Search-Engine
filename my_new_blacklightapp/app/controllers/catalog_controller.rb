@@ -54,7 +54,7 @@ class CatalogController < ApplicationController
     # Solr fields to be displayed in the index (search results) view
 
     config.add_index_field 'date', label: 'Date', helper_method: :show_date
-    config.add_index_field 'summary', label: 'Summary'
+    config.add_index_field 'summary', label: 'Summary', helper_method: :summarize_summary
     config.add_index_field 'participants', label: 'Participants'
     config.add_index_field 'participants_count', label: 'Participants Count'
     config.add_index_field 'country', label: 'Country'
@@ -64,10 +64,9 @@ class CatalogController < ApplicationController
     config.add_index_field 'coordinate_location', label: 'Coordinate Location', helper_method: :link_to_coordinate_location
 
     # Solr fields to be displayed in the show (single result) view
-    config.add_show_field 'event', label: 'Event', helper_method: :link_to_event
     config.add_show_field 'date', label: 'Date', helper_method: :show_date
-    config.add_show_field 'label', label: 'Label'
-    config.add_show_field 'article', label: 'Article', helper_method: :link_to_article
+    config.add_show_field 'article', label: 'Wikipedia Article', helper_method: :link_to_article
+    config.add_show_field 'event', label: 'Wikidata Event', helper_method: :link_to_event
     config.add_show_field 'summary', label: 'Summary'
     config.add_show_field 'participants', label: 'Participants'
     config.add_show_field 'participants_count', label: 'Participants Count'
@@ -147,11 +146,8 @@ class CatalogController < ApplicationController
       last_500_years: { label: 'Last 500 Years', fq: 'date:[NOW-500YEAR/DAY TO NOW/DAY]' },
       last_1000_years: { label: 'Last 1000 Years', fq: 'date:[NOW-1000YEAR/DAY TO NOW/DAY]' }
     }
-
-
-    config.add_facet_field 'label', limit: 20, index_range: 'A'..'Z', limit: true
-
-    config.add_facet_field 'country', label: 'Country', limit: 20, index_range: 'A'..'Z', limit: true
+    config.add_facet_field 'label', index_range: 'A'..'Z', limit: true
+    config.add_facet_field 'country', label: 'Country', index_range: 'A'..'Z', limit: true
     
     config.add_facet_fields_to_solr_request!
   end
