@@ -2,18 +2,14 @@
 
 # This script expects a container started with the following command.
 # docker run -p 8983:8983 --name pri_44 -v ${PWD}:/data -d solr:9.3 solr-precreate conflicts
-#
+# sleep 10
 
 
-#remove its schema and documents
+# #remove its schema and documents
 docker exec -it pri_44 bin/solr delete -c conflicts
-
-#create core conflicts
 docker exec -it pri_44 bin/solr create -c conflicts
 
 docker exec -it pri_44 cp /data/related_terms.txt /var/solr/data/conflicts/related_terms.txt
-
-
 
 # Schema definition via API
 curl -X POST -H 'Content-type:application/json' --data-binary "@./schema.json" http://localhost:8983/solr/conflicts/schema
