@@ -261,6 +261,6 @@ if __name__ == "__main__":
     # destructive_europe_ww1()
     # river_18th_century()
     # portuguese_as_allies()
-    # revolutions_economic_consequences()
-    river_review()
+    revolutions_economic_consequences()
+    # river_review()
     # ww1_review()

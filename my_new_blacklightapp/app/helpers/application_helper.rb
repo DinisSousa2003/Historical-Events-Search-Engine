@@ -17,7 +17,21 @@ module ApplicationHelper
       
         # Return the year
         year
-      end
+    end
+
+    def summarize_summary(document, max_length = 800)
+        source_hash = document[:document]._source
+        summary = source_hash['summary']
+        if summary.length > max_length
+            truncated_summary = "#{summary[0, max_length]}..."
+            read_more = link_to_page(document)
+            "#{truncated_summary} #{read_more}".html_safe
+        else
+          summary
+        end
+    end
+
+
 
     def show_date(document)
         source_hash = document[:document]._source
@@ -55,11 +69,18 @@ module ApplicationHelper
     end
 
     def link_to_search(search_term)
-        base_url = 'http://127.0.0.1:3000/'
+        base_url = 'http://127.0.0.1:3000/catalog/'
         search_path = '?search_field=part_of&q='
     
         link_to(search_term, "#{base_url}#{search_path}#{CGI.escape(search_term)}")
     end
+
+    def link_to_page(document)
+        base_url = 'http://127.0.0.1:3000/catalog/'
+        id = document[:document].id
+        link_to('Read More', "#{base_url}#{id}")
+    end
+        
 
     def link_to_coordinate_location(document)
         source_hash = document[:document]._source
