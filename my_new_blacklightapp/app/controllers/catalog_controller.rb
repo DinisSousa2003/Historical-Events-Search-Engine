@@ -17,9 +17,6 @@ class CatalogController < ApplicationController
 
     #Add advanced search fields
     config.advanced_search.enabled = true
-    config.advanced_search[:url_key] ||= 'advanced'
-    config.advanced_search[:query_parser] ||= 'edismax'
-    config.advanced_search[:form_solr_parameters] ||= {}
 
     # Field that contains geospatial information
     config.view.maps.geojson_field = 'coordinate_location'

@@ -69,7 +69,7 @@ module ApplicationHelper
     end
 
     def link_to_search(search_term)
-        base_url = 'http://127.0.0.1:3000/'
+        base_url = 'http://127.0.0.1:3000/catalog/'
         search_path = '?search_field=part_of&q='
     
         link_to(search_term, "#{base_url}#{search_path}#{CGI.escape(search_term)}")
