@@ -70,8 +70,7 @@ def text_to_embedding(text):
     return embedding_str
 
 
-def run_evaluation(qrels_file, query_url, description):
-    # if /solr/#/ in query_url: remove the #
+def run_evaluation(qrels_file, query_url, description, mode='normal'):
     if '/solr/#/' in query_url:
         query_url = query_url.replace('/solr/#/', '/solr/')
     # Read qrels to extract relevant documents
@@ -82,7 +81,13 @@ def run_evaluation(qrels_file, query_url, description):
     relevant = [line.split(' ')[0] for line in relevant]
 
     # Get query results from Solr instance
-    results = requests.get(query_url).json()['response']['docs']
+    if mode == 'ltr': # assume interleaved
+        query_url = query_url + '&rq={!ltr%20model=myModel%20model=_OriginalRanking_%20reRankDocs=8000}'
+
+    if mode == 'semantic':
+        results = get_semantic_search_results(query_url)
+    else:
+        results = requests.get(query_url).json()['response']['docs']
 
     # Define metrics to be calculated
     evaluation_metrics = {
@@ -111,6 +116,8 @@ def run_evaluation(qrels_file, query_url, description):
 
     with open('./evaluation_results/tables/rankings_' + description + '.tex', 'w') as tf:
         tf.write(df2.to_latex())
+
+    return
 
     # PRECISION-RECALL CURVE
     # Calculate precision and recall values as we move down the ranked list
@@ -213,7 +220,6 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
     if '/solr/#/' in query_url:
         query_url = query_url.replace('/solr/#/', '/solr/')
 
-    post_url ='http://localhost:8983/solr/conflicts/select'
 
     relevant = [line.strip() for line in open(qrels_file, encoding='utf-8').readlines() if
                 not line.startswith('#') and not line.startswith('\n')]
@@ -225,58 +231,20 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
     # for results2, extract the parameters from the get url used above to send a post request.
     # In the "q" field create the embedding with text_to_embedding
 
-    get_query_params = query_url.split('?')[1].split('&')
-    params = {}
-    for param in get_query_params:
-        key, value = param.split('=')
-        if not value:
-            continue
-        # decode value if it is URL encoded
-        if '%' in value:
-            value = requests.utils.unquote(value)
-        params[key] = value
+    results2 = get_semantic_search_results(query_url)
 
-    if description == 'destructive_europe_ww1_boosted':
-        # params['q'] = 'destruction ruins bomb devastated destroy damaging'
-        embedding = text_to_embedding('destruction')
-    else:
-        embedding = text_to_embedding(params['q'])
+    # print(description)
+    # dd = data.copy()
+    # del dd['q']
+    # print(dd)
+    # print('\n')
 
-    # rq = {!rerank reRankQuery=$rqq reRankDocs=4 reRankWeight = 1}
-    # rqq = {!knn f = vector topK = 10}
-    data = {
-        "rq": "{!rerank reRankQuery=$rqq reRankDocs=400 reRankWeight=5}",
-        "rqq": f"{{!knn f=vector topK=400}}{embedding}"
-    }
-
-
-    for key, value in params.items():
-        # if key != 'q':
-        data[key] = value
-
-    print(description)
-    dd = data.copy()
-    del dd['q']
-    print(dd)
-    print('\n')
-
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
-
-    # convert post url back to get url and print it
-    get_url = post_url + '?' + '&'.join([key + '=' + value for key, value in data.items()])
-    get_url = get_url.replace('/select', '/query')
-    # print(get_url)
-
-    results2 = requests.post(post_url, data=data, headers=headers).json()['response']['docs']
-
-    print(list(map(lambda x: x['label'], results2)))
+    # print(list(map(lambda x: x['label'], results2)))
 
 
     # PRECISION-RECALL CURVE
     # Calculate precision and recall values as we move down the ranked list
-    recall_values1, precision_values1= calculate_pr_values(results1, relevant)
+    recall_values1, precision_values1 = calculate_pr_values(results1, relevant)
     recall_values2, precision_values2 = calculate_pr_values(results2, relevant)
 
     plt.clf()
@@ -296,6 +264,39 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
     plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
     plt.legend([plot3, plot4], ['Boosted', 'Semantic'])
     plt.savefig('./evaluation_results/precision_recall_interpolated_with_semantic_' + description + '.pdf')
+
+
+def get_semantic_search_results(query_url):
+    get_query_params = query_url.split('?')[1].split('&')
+    post_url = 'http://localhost:8983/solr/conflicts/select'
+    params = {}
+    for param in get_query_params:
+        key, value = param.split('=')
+        if not value:
+            continue
+        # decode value if it is URL encoded
+        if '%' in value:
+            value = requests.utils.unquote(value)
+        params[key] = value
+    if 'bomb' in query_url:
+        # params['q'] = 'destruction ruins bomb devastated destroy damaging'
+        embedding = text_to_embedding('destruction')
+    else:
+        embedding = text_to_embedding(params['q'])
+    # rq = {!rerank reRankQuery=$rqq reRankDocs=4 reRankWeight = 1}
+    # rqq = {!knn f = vector topK = 10}
+    data = {
+        "rq": "{!rerank reRankQuery=$rqq reRankDocs=400 reRankWeight=5}",
+        "rqq": f"{{!knn f=vector topK=400}}{embedding}"
+    }
+    for key, value in params.items():
+        # if key != 'q':
+        data[key] = value
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    results2 = requests.post(post_url, data=data, headers=headers).json()['response']['docs']
+    return results2
 
 
 def plot_against_reranked(description, qrels_file, query_url, interleaved, boosted=True):
@@ -382,6 +383,86 @@ def plot_pr_curve_of_system(qrels_files, query_urls, system, color='#1f77b4'):
     # Plot the average precision-recall curve
     plt.plot(all_recall_values, average_precision, color=color)
 
+def plot_pr_curve_of_semantic_system(qrels_files, query_urls, color='#2dda86'):
+    precision_lists = []
+    recall_lists = []
+    for qrels_file, query_url in zip(qrels_files, query_urls):
+        if '/solr/#/' in query_url:
+            query_url = query_url.replace('/solr/#/', '/solr/')
+        relevant = [line.strip() for line in open(qrels_file, encoding='utf-8').readlines() if
+                    not line.startswith('#') and not line.startswith('\n')]
+        relevant = [line.split(' ')[0] for line in relevant]
+
+        # Get query results from Solr instance
+        results = get_semantic_search_results(query_url)
+
+        # PRECISION-RECALL CURVE
+        # Calculate precision and recall values as we move down the ranked list
+        recall_values, precision_values = calculate_pr_values(results, relevant)
+        precision_lists.append(interpolate_precision_values(precision_values, recall_values)[0])
+        recall_lists.append(recall_values)
+
+    # Initialize arrays to store interpolated precision values for each query
+    interpolated_precision_lists = []
+
+    all_recall_values = np.unique(np.concatenate(recall_lists))
+
+    # Interpolate precision values for each query based on the common recall values
+    for precision, recall in zip(precision_lists, recall_lists):
+        interpolated_precision = np.interp(all_recall_values, recall, precision)
+        interpolated_precision_lists.append(interpolated_precision)
+
+    # Calculate average precision for each recall value
+    average_precision = np.mean(interpolated_precision_lists, axis=0)
+
+    # Calculate area under the curve (AUC)
+
+    # Plot the average precision-recall curve
+    plt.plot(all_recall_values, average_precision, color=color)
+
+def plot_pr_curve_of_ltr_system(qrels_files, query_urls, color='#9619b2'):
+    precision_lists = []
+    recall_lists = []
+    interleaved = True
+    for qrels_file, query_url in zip(qrels_files, query_urls):
+        if '/solr/#/' in query_url:
+            query_url = query_url.replace('/solr/#/', '/solr/')
+        relevant = [line.strip() for line in open(qrels_file, encoding='utf-8').readlines() if
+                    not line.startswith('#') and not line.startswith('\n')]
+        relevant = [line.split(' ')[0] for line in relevant]
+
+        # Get query results from Solr instance
+        if interleaved:
+            reranked_url = query_url + '&rq={!ltr%20model=myModel%20model=_OriginalRanking_%20reRankDocs=8000}'
+        else:
+            reranked_url = query_url + '&rq={!ltr%20model=myModel%20reRankDocs=8000}'
+
+        results = requests.get(reranked_url).json()['response']['docs']
+
+        # PRECISION-RECALL CURVE
+        # Calculate precision and recall values as we move down the ranked list
+        recall_values, precision_values = calculate_pr_values(results, relevant)
+        precision_lists.append(interpolate_precision_values(precision_values, recall_values)[0])
+        recall_lists.append(recall_values)
+
+    # Initialize arrays to store interpolated precision values for each query
+    interpolated_precision_lists = []
+
+    all_recall_values = np.unique(np.concatenate(recall_lists))
+
+    # Interpolate precision values for each query based on the common recall values
+    for precision, recall in zip(precision_lists, recall_lists):
+        interpolated_precision = np.interp(all_recall_values, recall, precision)
+        interpolated_precision_lists.append(interpolated_precision)
+
+    # Calculate average precision for each recall value
+    average_precision = np.mean(interpolated_precision_lists, axis=0)
+
+    # Calculate area under the curve (AUC)
+
+    # Plot the average precision-recall curve
+    plt.plot(all_recall_values, average_precision, color=color)
+
 
 def plot_system_comparison(qrels_files, query_urls):
     plt.xlabel('Recall')
@@ -391,7 +472,9 @@ def plot_system_comparison(qrels_files, query_urls):
     plt.ylim(0, 1.01)
     plot_pr_curve_of_system(qrels_files[::2], query_urls[::2], 'Boosted')
     plot_pr_curve_of_system(qrels_files[1::2], query_urls[1::2], 'Base', color='#e83d2a')
-    plt.legend(['Boosted system', 'Base system'])
+    plot_pr_curve_of_semantic_system(qrels_files[::2], query_urls[::2], color='#2dda86')
+    plot_pr_curve_of_ltr_system(qrels_files[::2], query_urls[::2], color='#9619b2')
+    plt.legend(['Boosted system', 'Base system', 'Semantic system', 'Interleaved LTR system'])
     # plt.show()
     plt.savefig('./evaluation_results/systems_comparison.pdf')
 
@@ -421,14 +504,16 @@ if __name__ == '__main__':
         'http://localhost:8983/solr/#/conflicts/query?q=economy&q.op=OR&defType=edismax&indent=true&rows=250&fl=*,%20score&qf=summary%20location%20label%20participants&df=summary&wt=json&fq=label:revolution*%20OR%20summary:revolution*%20OR%20part_of:revolution*%20OR%20part_of:Revolution*&useParams='
 
     ]
-    # for qrels_file, query_url, description in zip(qrels_files, query_urls, descriptions):
-    #     run_evaluation(qrels_file, query_url, description)
+    for qrels_file, query_url, description in zip(qrels_files[::2], query_urls[::2], descriptions[::2]):
+        run_evaluation(qrels_file, query_url, 'interleaved_ltr_' + description, mode='ltr')
+        run_evaluation(qrels_file, query_url, 'semantic_' + description, mode='semantic')
+
     #
     # for i in range(0, len(descriptions), 2):
     #     plot_both_pr_curves(descriptions[i], descriptions[i + 1], qrels_files[i], query_urls[i], query_urls[i + 1])
 
-    for i in range(0, len(descriptions), 2):
-        plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
+    # for i in range(0, len(descriptions), 2):
+    #     plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
 
     # for i in range(0, len(descriptions), 2):
     #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=False)
@@ -440,5 +525,5 @@ if __name__ == '__main__':
 
 
     # plot_system_comparison(qrels_files, query_urls)
-
+#
 
