@@ -142,9 +142,9 @@ class CatalogController < ApplicationController
       last_100_years: { label: 'Last 100 Years', fq: 'date:[NOW-100YEAR/DAY TO NOW/DAY]' },
       last_500_years: { label: 'Last 500 Years', fq: 'date:[NOW-500YEAR/DAY TO NOW/DAY]' },
       last_1000_years: { label: 'Last 1000 Years', fq: 'date:[NOW-1000YEAR/DAY TO NOW/DAY]' }
-    }
-    config.add_facet_field 'label', index_range: 'A'..'Z', limit: true
-    config.add_facet_field 'country', label: 'Country', index_range: 'A'..'Z', limit: true
+    }, collapse: false
+    config.add_facet_field 'label', index_range: 'A'..'Z', limit: 5, collapse: false
+    config.add_facet_field 'country', label: 'Country', index_range: 'A'..'Z', limit: 5, collapse: false
     
     config.add_facet_fields_to_solr_request!
   end
