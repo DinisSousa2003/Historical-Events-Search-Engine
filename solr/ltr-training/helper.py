@@ -1,4 +1,8 @@
-# Which battles took place by a river in the 18th century?
+import json
+
+
+# input data
+data = """
 http://www.wikidata.org/entity/Q4871024 #  on the banks of the Flint River
 http://www.wikidata.org/entity/Q820263 # near the Sestra River
 http://www.wikidata.org/entity/Q696945 # It had taken just two hours to secure the bridgehead over the river in a hard-fought contest,
@@ -36,4 +40,42 @@ http://www.wikidata.org/entity/Q20988614
 http://www.wikidata.org/entity/Q2456110
 http://www.wikidata.org/entity/Q4870505
 http://www.wikidata.org/entity/Q4204344
+"""
+# load data from the file ../../qrels/destructive_europe_ww1.json
+with open('../../qrels/portuguese_as_allies.txt', encoding='utf-8') as f:
+    data = f.read()
+# print(data)
+with open('../data.json', encoding='utf-8') as f:
+    documents = json.load(f)
 
+
+# Function to extract relevant information from a line
+def extract_info(line):
+    parts = line.split('#')
+    url = parts[0].strip()
+    if not url:
+        return None, None
+    # print label and summary of the document from data with document['event'] == url
+    for document in documents:
+        if document['event'] == url:
+            print("label: ", document['label'])
+            print("summary: ", document['summary'])
+            if 'participants' in document:
+                print("participants: ", document['participants'])
+            break
+    relevance = input(
+        "Enter a relevance score for {}: ".format(url))  # You can replace this with your own relevance scoring logic
+    return url, relevance.strip()
+
+
+# Process each line of the input data
+output_rows = []
+for line in data.split('\n'):
+    if line.strip():  # Skip empty lines
+        url, relevance = extract_info(line)
+        if url and relevance:
+            output_rows.append(f"portugal|{url}|{relevance}|HUMAN_JUDGEMENT")
+
+# Output the formatted rows
+for row in output_rows:
+    print(row)

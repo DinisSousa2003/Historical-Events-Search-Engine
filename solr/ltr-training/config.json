@@ -8,10 +8,10 @@
   "userQueriesFile":          "user_queries.txt",
   "trainingFile":             "exampleTrainingFile.txt",
   "trainedModelFile":         "exampleTrainedModel.txt",
-  "trainingLibraryLocation":  "liblinear/train",
+  "trainingLibraryLocation":  "liblinear-2.47/windows/train.exe",
   "trainingLibraryOptions":   "-q",
-  "solrFeaturesFile":         "exampleFeatures.json",
-  "solrFeatureStoreName":     "exampleFeatureStore",
-  "solrModelFile":            "exampleModel.json",
-  "solrModelName":            "exampleModel"
+  "solrFeaturesFile":         "features.json",
+  "solrFeatureStoreName":     "FeaturesStoreV1",
+  "solrModelFile":            "myModel.json",
+  "solrModelName":            "myModel"
 }

@@ -13,10 +13,10 @@ class LibSvmFormatter:
         self.featureNameToId = None
 
     def processQueryDocFeatureVector(self, docClickInfo, trainingFile):
-        '''Expects as input a sorted by queries list or generator that provides the context 
+        """Expects as input a sorted by queries list or generator that provides the context
         for each query in a tuple composed of: (query , docId , relevance , source , featureVector).
         The list of documents that are part of the same query will generate comparisons
-        against each other for training. '''
+        against each other for training. """
         with open(trainingFile, "w") as output:
             self.featureNameToId = {}
             self.featureIdToName = {}
@@ -30,7 +30,7 @@ class LibSvmFormatter:
                     curListOfFv = []
                     curQueryAndSource = query + source
                 curListOfFv.append((relevance, self._makeFeaturesMap(featureVector)))
-            _writeRankSVMPairs(curListOfFv, output);  # This catches the last list of comparisons
+            _writeRankSVMPairs(curListOfFv, output) # This catches the last list of comparisons
 
     def _makeFeaturesMap(self, featureVector):
         '''expects a list of strings with "feature name":"feature value" pairs. Outputs a map of map[key] = value.
@@ -100,13 +100,13 @@ def _writeRankSVMPairs(listOfFeatures, output):
             fv1, fv2 = doc1[1], doc2[1]
             d1Relevance, d2Relevance = float(doc1[0]), float(doc2[0])
             if d1Relevance - d2Relevance > PAIRWISE_THRESHOLD:  # d1Relevance > d2Relevance
-                outputLibSvmLine("+1", subtractFvMap(fv1, fv2), output);
-                outputLibSvmLine("-1", subtractFvMap(fv2, fv1), output);
+                outputLibSvmLine("+1", subtractFvMap(fv1, fv2), output)
+                outputLibSvmLine("-1", subtractFvMap(fv2, fv1), output)
             elif d1Relevance - d2Relevance < -PAIRWISE_THRESHOLD:  # d1Relevance < d2Relevance:
-                outputLibSvmLine("+1", subtractFvMap(fv2, fv1), output);
-                outputLibSvmLine("-1", subtractFvMap(fv1, fv2), output);
+                outputLibSvmLine("+1", subtractFvMap(fv2, fv1), output)
+                outputLibSvmLine("-1", subtractFvMap(fv1, fv2), output)
             else:  # Must be approximately equal relevance, in which case this is a useless signal and we should skip
-                continue;
+                continue
 
 
 def subtractFvMap(fv1, fv2):
@@ -119,21 +119,23 @@ def subtractFvMap(fv1, fv2):
         else:
             subVal = -fv2[featInd]
         if abs(subVal) > FEATURE_DIFF_THRESHOLD:  # This ensures everything is in sparse format, and removes useless signals
-            retFv[featInd] = subVal;
+            retFv[featInd] = subVal
         else:
             retFv.pop(featInd, None)
-    return retFv;
+    return retFv
 
 
 def outputLibSvmLine(sign, fvMap, outputFile):
     outputFile.write(sign)
     for feat in fvMap.keys():
-        outputFile.write(" " + str(feat) + ":" + str(fvMap[feat]));
+        outputFile.write(" " + str(feat) + ":" + str(fvMap[feat]))
     outputFile.write("\n")
 
 
 def trainLibSvm(libraryLocation, libraryOptions, trainingFileName, trainedModelFileName):
+
+
     if os.path.isfile(libraryLocation):
         call([libraryLocation, libraryOptions, trainingFileName, trainedModelFileName])
     else:
-        raise Exception("NO LIBRARY FOUND: " + libraryLocation);
+        raise Exception("NO LIBRARY FOUND: " + libraryLocation)

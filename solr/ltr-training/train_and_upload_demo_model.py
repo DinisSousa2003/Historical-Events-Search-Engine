@@ -1,13 +1,15 @@
 import sys
 import json
 import http.client
-import urllib
 import libsvm_formatter
 
 from optparse import OptionParser
 
 solrQueryUrl = ""
 
+def quote_plus(s):
+    return s.replace(" ", "%20").replace(":", "%3A").replace("=", "%3D").replace(",", "%2C").replace("[", "%5B").replace(
+        "]", "%5D").replace("(", "%28").replace(")", "%29")
 
 def setupSolr(collection, host, port, featuresFile, featureStoreName):
     '''Sets up solr with the proper features for the test'''
@@ -48,13 +50,13 @@ def generateQueries(userQueriesFile, collection, requestHandler, solrFeatureStor
         solrQueryUrls = []  # A list of tuples with solrQueryUrl,solrQuery,docId,scoreForPQ,source
 
         for line in input:
-            line = line.strip();
-            searchText, docId, score, source = line.split("|");
+            line = line.strip()
+            searchText, docId, score, source = line.split("|")
             solrQuery = generateHttpRequest(collection, requestHandler, solrFeatureStoreName, efiParams, searchText,
                                             docId)
             solrQueryUrls.append((solrQuery, searchText, docId, score, source))
 
-    return solrQueryUrls;
+    return solrQueryUrls
 
 
 def generateHttpRequest(collection, requestHandler, solrFeatureStoreName, efiParams, searchText, docId):
@@ -62,15 +64,15 @@ def generateHttpRequest(collection, requestHandler, solrFeatureStoreName, efiPar
     if len(solrQueryUrl) < 1:
         solrQueryUrl = "/".join(["", "solr", collection, requestHandler])
         solrQueryUrl += ("?fl=" + ",".join(
-            ["id", "score", "[features store=" + solrFeatureStoreName + " " + efiParams + "]"]))
+            ["event", "score", "[features store=" + solrFeatureStoreName + " " + efiParams + "]"]))
         solrQueryUrl += "&q="
         solrQueryUrl = solrQueryUrl.replace(" ", "+")
-        solrQueryUrl += urllib.quote_plus("id:")
+        solrQueryUrl += quote_plus("event:")
 
-    userQuery = urllib.quote_plus(searchText.strip().replace("'", "\\'").replace("/", "\\\\/"))
-    solrQuery = solrQueryUrl + '"' + urllib.quote_plus(docId) + '"'  # + solrQueryUrlEnd
+    userQuery = quote_plus(searchText.strip().replace("'", "\\'").replace("/", "\\\\/"))
+    solrQuery = solrQueryUrl + '"' + quote_plus(docId) + '"'  # + solrQueryUrlEnd
     solrQuery = solrQuery.replace("%24USERQUERY", userQuery).replace('$USERQUERY',
-                                                                     urllib.quote_plus("\\'" + userQuery + "\\'"))
+                                                                     quote_plus("\\'" + userQuery + "\\'"))
 
     return solrQuery
 
@@ -165,7 +167,7 @@ def main(argv=None):
     print("Running Solr queries to extract features")
     fvGenerator = generateTrainingData(reRankQueries, config["host"], config["port"])
     formatter = libsvm_formatter.LibSvmFormatter();
-    formatter.processQueryDocFeatureVector(fvGenerator, config["trainingFile"]);
+    formatter.processQueryDocFeatureVector(fvGenerator, config["trainingFile"])
 
     print("Training model using '" + config["trainingLibraryLocation"] + " " + config["trainingLibraryOptions"] + "'")
     libsvm_formatter.trainLibSvm(config["trainingLibraryLocation"], config["trainingLibraryOptions"],

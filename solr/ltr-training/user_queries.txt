@@ -1,8 +1,124 @@
-hard drive|SP2514N|0.6|CLICK_LOGS
-hard drive|6H500F0|0.3|CLICK_LOGS
-hard drive|F8V7067-APL-KIT|0.0|CLICK_LOGS
-hard drive|IW-02|0.0|CLICK_LOGS
-ipod|MA147LL/A|1.0|HUMAN_JUDGEMENT
-ipod|F8V7067-APL-KIT|0.5|HUMAN_JUDGEMENT
-ipod|IW-02|0.5|HUMAN_JUDGEMENT
-ipod|6H500F0|0.0|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4871024|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q820263|0.6|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q696945|0.9|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q316139|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q15838566|0.4|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q554462|0.2|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q15905209|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q638374|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2888243|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4502462|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2652964|0.9|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4871908|0.9|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q1536983|0.8|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q5757855|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4870138|0.75|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4870217|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2889605|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4873031|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q203233|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4870504|0.6|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q7588920|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q328447|0.7|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q7587989|0.6|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q17346979|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4870948|0|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q315310|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2890697|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q117289979|0.3|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2342985|0.3|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2113284|0.5|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2425434|0.6|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q1546173|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4872073|0.6|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q20988614|0.7|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q2456110|1|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4870505|0.4|HUMAN_JUDGEMENT
+river|http://www.wikidata.org/entity/Q4204344|0.8|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q4870916|0.8|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q769377|00.4|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q472100|1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q1028296|1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q156554|0.2|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q193689|0.85|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q2657479|0.1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q543048|0.25|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q29075656|1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q1989637|0.9|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q2890541|0.8|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q426099|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q4087378|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q4871841|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q1497886|0.9|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q3636419|1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q671594|0.95|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q2985003|0.9|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q543048|0.85|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q2634717|0.1|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q2455332|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q4871545|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q1144824|0.6|HUMAN_JUDGEMENT
+destruction ruins bomb|http://www.wikidata.org/entity/Q4872039|0.6|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q18920213|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q2574010|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q3062432|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q6534|1|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q377542|0.9|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q7639108|0.9|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4677382|0.75|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4555138|0.75|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q1083872|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q19902501|0.65|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4677298|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q19870870|0.8|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q1728621|0.6|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q20011866|0.65|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4871314|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q18920216|0.65|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q20036667|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q15178081|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q20870437|0.78|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4677365|0.75|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q18920215|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q133132|1|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q5722885|0.6|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q2590269|0.8|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q11061722|0.8|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q866901|1|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4438492|0.9|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q208300|1|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q254599|0.6|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q3380689|0.6|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q4569951|0.85|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q162401|1|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q760002|0.9|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q221382|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q8868|0.7|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q33761|0.8|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q210005|0.8|HUMAN_JUDGEMENT
+economy|http://www.wikidata.org/entity/Q114065797|0.4|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q1792643|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q4870420|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2734129|0.9|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q603279|0.8|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q1881283|0.9|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q957263|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q67212705|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2890640|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q121296921|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q932845|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2889383|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2889254|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q4870250|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2890537|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q697267|0.9|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q5049265|0.7|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q691729|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2890281|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q335174|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q21905296|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2890743|0.8|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2399716|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q16209172|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q2890888|1|HUMAN_JUDGEMENT
+portugal|http://www.wikidata.org/entity/Q4677341|1|HUMAN_JUDGEMENT

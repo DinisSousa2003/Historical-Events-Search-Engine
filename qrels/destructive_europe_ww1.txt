@@ -1,10 +1,7 @@
 # What were the destructive battles in Europe related to World War I?
 # maybe should be relaxed to include destruction of ships, enemy forces, etc.
 # keywords too look, for, bombing, destruc*, tear* down, break* up, ruin*, wreck*, demolish*, destroy*, damag*
-# devast*
-
-
-destruction, ruins, bombardments, bombarded, bbombing, devastating, destroyed, destroying, damaging, devastated
+# devast* destruction, ruins, bombardments, bombarded, bbombing, devastating, destroyed, destroying, damaging, devastated
 
 http://www.wikidata.org/entity/Q4870916 #the destruction of the village.
 http://www.wikidata.org/entity/Q769377 # destruction of serb property

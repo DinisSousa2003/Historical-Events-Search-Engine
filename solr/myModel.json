@@ -3,12 +3,24 @@
   "name" : "myModel",
   "features" : [
     { "name" : "isBattle" },
-    { "name" : "originalScore" }
+    { "name" : "isWar" },
+    { "name" : "isRevolution" },
+    { "name" : "originalScore" },
+    { "name" : "instance_type" },
+    { "name" : "event_date" },
+    { "name" : "part_of_length" },
+    { "name" : "summary_length" },
+    { "name" : "participants_count" }
+
   ],
   "params" : {
     "weights" : {
       "isBattle" : 0.1,
-      "originalScore" : 0.5
+      "originalScore" : 0.5,
+      "instance_type" : 1.0,
+      "event_date" : 1.0,
+      "part_of_length" : 1.0,
+        "summary_length" : 1.0
     }
   }
 }

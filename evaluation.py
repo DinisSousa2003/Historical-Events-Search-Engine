@@ -266,7 +266,7 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
 
     plot1 = plot_pr_curve(precision_values1, recall_values1)
     plot2 = plot_pr_curve(precision_values2, recall_values2, color='#e83d2a')
-    plt.legend([plot1, plot2],['Semantic', 'Boosted'])
+    plt.legend([plot1, plot2],['Boosted', 'Semantic'])
     plt.savefig('./evaluation_results/precision_recall_with_semantic_' + description + '.pdf')
 
     plt.clf()
@@ -276,6 +276,53 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
     plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
     plt.legend([plot3, plot4], ['Boosted', 'Semantic'])
     plt.savefig('./evaluation_results/precision_recall_interpolated_with_semantic_' + description + '.pdf')
+
+
+def plot_boosted_against_reranked(description, qrels_file, query_url, interleaved):
+
+    if '/solr/#/' in query_url:
+        query_url = query_url.replace('/solr/#/', '/solr/')
+
+    relevant = [line.strip() for line in open(qrels_file, encoding='utf-8').readlines() if
+                not line.startswith('#') and not line.startswith('\n')]
+    relevant = [line.split(' ')[0] for line in relevant]
+
+    # Get query results from Solr instance
+    results1 = requests.get(query_url).json()['response']['docs']
+
+    if interleaved:
+        reranked_url = query_url + '&rq={!ltr%20model=myModel%20model=_OriginalRanking_%20reRankDocs=8000}'
+    else:
+        reranked_url = query_url + '&rq={!ltr%20model=myModel%20reRankDocs=8000}'
+
+    results2 = requests.get(reranked_url).json()['response']['docs']
+
+
+
+    # PRECISION-RECALL CURVE
+    # Calculate precision and recall values as we move down the ranked list
+    recall_values1, precision_values1= calculate_pr_values(results1, relevant)
+    recall_values2, precision_values2 = calculate_pr_values(results2, relevant)
+
+    plt.clf()
+    plt.ylim(0, 1.05)
+    plt.xlim(0, 1.05)
+    # set color
+
+    name = 'Interleaved Reranked' if interleaved else 'Reranked'
+
+    plot1 = plot_pr_curve(precision_values1, recall_values1)
+    plot2 = plot_pr_curve(precision_values2, recall_values2, color='#e83d2a')
+    plt.legend([plot1, plot2],['Boosted', name])
+    plt.savefig('./evaluation_results/precision_recall_with_' + name + description + '.pdf')
+
+    plt.clf()
+    plt.ylim(0, 1.05)
+    plt.xlim(0, 1.05)
+    plot3 = plot_interpolated_pr_curve(precision_values1, recall_values1)
+    plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
+    plt.legend([plot3, plot4], ['Boosted', name])
+    plt.savefig('./evaluation_results/precision_recall_interpolated_with_' + name + description + '.pdf')
 
 def plot_pr_curve_of_system(qrels_files, query_urls, system, color='#1f77b4'):
     precision_lists = []
@@ -362,6 +409,11 @@ if __name__ == '__main__':
 
     for i in range(0, len(descriptions), 2):
         plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
+
+    for i in range(0, len(descriptions), 2):
+        plot_boosted_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=False)
+    for i in range(0, len(descriptions), 2):
+        plot_boosted_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=True)
 
     # plot_system_comparison(qrels_files, query_urls)
 

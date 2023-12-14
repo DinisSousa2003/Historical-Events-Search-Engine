@@ -1,10 +1,12 @@
 [
   {
+    "store" : "FeaturesStoreV1",
     "name" : "originalScore",
     "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
     "params" : {}
   },
    {
+     "store" : "FeaturesStoreV1",
     "name" : "isBattle",
     "class" : "org.apache.solr.ltr.feature.SolrFeature",
     "params" : {
@@ -12,6 +14,7 @@
     }
   },
     {
+      "store" : "FeaturesStoreV1",
         "name" : "isWar",
         "class" : "org.apache.solr.ltr.feature.SolrFeature",
         "params" : {
@@ -19,6 +22,7 @@
         }
     },
     {
+      "store" : "FeaturesStoreV1",
         "name" : "isRevolution",
         "class" : "org.apache.solr.ltr.feature.SolrFeature",
         "params" : {
@@ -26,6 +30,7 @@
         }
     },
   {
+    "store" : "FeaturesStoreV1",
       "name": "summary_length",
       "class": "org.apache.solr.ltr.feature.FieldLengthFeature",
       "params": {
@@ -33,6 +38,7 @@
       }
     },
     {
+      "store" : "FeaturesStoreV1",
       "name": "part_of_length",
       "class": "org.apache.solr.ltr.feature.FieldLengthFeature",
       "params": {
@@ -41,6 +47,7 @@
     },
 
     {
+      "store" : "FeaturesStoreV1",
       "name": "participants_count",
       "class": "org.apache.solr.ltr.feature.FieldValueFeature",
       "params": {
@@ -48,6 +55,7 @@
       }
     },
     {
+      "store" : "FeaturesStoreV1",
       "name": "event_date",
       "class": "org.apache.solr.ltr.feature.FieldValueFeature",
       "params": {
@@ -55,6 +63,7 @@
       }
     },
     {
+      "store" : "FeaturesStoreV1",
       "name": "instance_type",
       "class": "org.apache.solr.ltr.feature.FieldLengthFeature",
       "params": {
