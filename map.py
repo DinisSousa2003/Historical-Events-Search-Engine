@@ -16,7 +16,7 @@ coordinates = []
 
 for entry in data:
     if "coordinate location" in entry:
-        coordinate_location = entry["coordinate location"]
+        coordinate_location = entry["coordinate location"][0]
         point = wkt.loads(coordinate_location)
 
         if hasattr(point, 'geom_type') and point.geom_type == "Point":
@@ -74,6 +74,8 @@ for label, count in cluster_counts.items():
 # Add the colormap to the map
 colormap.caption = 'Cluster Size'
 colormap.add_to(m)
+
+m.add_child(folium.LatLngPopup())
 
 # Save the map to an HTML file or display it in a Jupyter Notebook
 m.save('outputs/map.html')
