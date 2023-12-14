@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # This script expects a container started with the following command.
-# docker run -p 8983:8983 --name pri_44_semantic -v ${PWD}:/data -d solr:9.3 solr-precreate conflicts
-
+docker run -p 8983:8983 --name pri_44_semantic -v ${PWD}:/data -d solr:9.3 solr-precreate conflicts
+sleep 5
 
 
 #remove its schema and documents
-#docker exec -it pri_44_semantic bin/solr delete -c conflicts
+docker exec -it pri_44_semantic bin/solr delete -c conflicts
 
 #create core conflicts
 docker exec -it pri_44_semantic bin/solr create -c conflicts

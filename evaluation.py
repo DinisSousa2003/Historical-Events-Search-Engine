@@ -234,24 +234,44 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
         # decode value if it is URL encoded
         if '%' in value:
             value = requests.utils.unquote(value)
-
         params[key] = value
 
-    embedding = text_to_embedding(params['q'])
+    if description == 'destructive_europe_ww1_boosted':
+        # params['q'] = 'destruction ruins bomb devastated destroy damaging'
+        embedding = text_to_embedding('destruction')
+    else:
+        embedding = text_to_embedding(params['q'])
+
+    # rq = {!rerank reRankQuery=$rqq reRankDocs=4 reRankWeight = 1}
+    # rqq = {!knn f = vector topK = 10}
     data = {
-        "q": f"{{!knn f=vector topK=10}}{embedding}",
+        "rq": "{!rerank reRankQuery=$rqq reRankDocs=400 reRankWeight=5}",
+        "rqq": f"{{!knn f=vector topK=400}}{embedding}"
     }
 
+
     for key, value in params.items():
-        if key != 'q':
-            data[key] = value
+        # if key != 'q':
+        data[key] = value
+
+    print(description)
+    dd = data.copy()
+    del dd['q']
+    print(dd)
+    print('\n')
 
     headers = {
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
+    # convert post url back to get url and print it
+    get_url = post_url + '?' + '&'.join([key + '=' + value for key, value in data.items()])
+    get_url = get_url.replace('/select', '/query')
+    # print(get_url)
+
     results2 = requests.post(post_url, data=data, headers=headers).json()['response']['docs']
 
+    print(list(map(lambda x: x['label'], results2)))
 
 
     # PRECISION-RECALL CURVE
@@ -407,15 +427,15 @@ if __name__ == '__main__':
     # for i in range(0, len(descriptions), 2):
     #     plot_both_pr_curves(descriptions[i], descriptions[i + 1], qrels_files[i], query_urls[i], query_urls[i + 1])
 
-    # for i in range(0, len(descriptions), 2):
-    #     plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
+    for i in range(0, len(descriptions), 2):
+        plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
 
     # for i in range(0, len(descriptions), 2):
     #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=False)
     #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i + 1], interleaved=False, boosted=False)
-    for i in range(0, len(descriptions), 2):
-        plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=True)
-        plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i + 1], interleaved=True, boosted=False)
+    # for i in range(0, len(descriptions), 2):
+    #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=True)
+    #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i + 1], interleaved=True, boosted=False)
 
 
 
