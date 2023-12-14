@@ -278,7 +278,7 @@ def plot_boosted_against_semantic(description, qrels_file, query_url):
     plt.savefig('./evaluation_results/precision_recall_interpolated_with_semantic_' + description + '.pdf')
 
 
-def plot_boosted_against_reranked(description, qrels_file, query_url, interleaved):
+def plot_against_reranked(description, qrels_file, query_url, interleaved, boosted=True):
 
     if '/solr/#/' in query_url:
         query_url = query_url.replace('/solr/#/', '/solr/')
@@ -313,16 +313,16 @@ def plot_boosted_against_reranked(description, qrels_file, query_url, interleave
 
     plot1 = plot_pr_curve(precision_values1, recall_values1)
     plot2 = plot_pr_curve(precision_values2, recall_values2, color='#e83d2a')
-    plt.legend([plot1, plot2],['Boosted', name])
-    plt.savefig('./evaluation_results/precision_recall_with_' + name + description + '.pdf')
+    plt.legend([plot1, plot2],['Boosted' if boosted else 'Base', name])
+    plt.savefig('./evaluation_results/precision_recall_' + ('base_' if not boosted else '') + 'with_' + name + '_' + description + '.pdf')
 
     plt.clf()
     plt.ylim(0, 1.05)
     plt.xlim(0, 1.05)
     plot3 = plot_interpolated_pr_curve(precision_values1, recall_values1)
     plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
-    plt.legend([plot3, plot4], ['Boosted', name])
-    plt.savefig('./evaluation_results/precision_recall_interpolated_with_' + name + description + '.pdf')
+    plt.legend([plot3, plot4], ['Boosted' if boosted else 'Base', name])
+    plt.savefig('./evaluation_results/precision_recall_interpolated_' + ('base_' if not boosted else '') + 'with_' + name + '_' + description + '.pdf')
 
 def plot_pr_curve_of_system(qrels_files, query_urls, system, color='#1f77b4'):
     precision_lists = []
@@ -407,13 +407,17 @@ if __name__ == '__main__':
     # for i in range(0, len(descriptions), 2):
     #     plot_both_pr_curves(descriptions[i], descriptions[i + 1], qrels_files[i], query_urls[i], query_urls[i + 1])
 
-    for i in range(0, len(descriptions), 2):
-        plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
+    # for i in range(0, len(descriptions), 2):
+    #     plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
 
+    # for i in range(0, len(descriptions), 2):
+    #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=False)
+    #     plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i + 1], interleaved=False, boosted=False)
     for i in range(0, len(descriptions), 2):
-        plot_boosted_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=False)
-    for i in range(0, len(descriptions), 2):
-        plot_boosted_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=True)
+        plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i], interleaved=True)
+        plot_against_reranked(descriptions[i], qrels_files[i], query_urls[i + 1], interleaved=True, boosted=False)
+
+
 
     # plot_system_comparison(qrels_files, query_urls)
 

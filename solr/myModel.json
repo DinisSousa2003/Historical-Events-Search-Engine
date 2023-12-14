@@ -1,26 +1,29 @@
 {
-  "class" : "org.apache.solr.ltr.model.LinearModel",
-  "name" : "myModel",
-  "features" : [
-    { "name" : "isBattle" },
-    { "name" : "isWar" },
-    { "name" : "isRevolution" },
-    { "name" : "originalScore" },
-    { "name" : "instance_type" },
-    { "name" : "event_date" },
-    { "name" : "part_of_length" },
-    { "name" : "summary_length" },
-    { "name" : "participants_count" }
-
-  ],
-  "params" : {
-    "weights" : {
-      "isBattle" : 0.1,
-      "originalScore" : 0.5,
-      "instance_type" : 1.0,
-      "event_date" : 1.0,
-      "part_of_length" : 1.0,
-        "summary_length" : 1.0
-    }
-  }
+	"class":"org.apache.solr.ltr.model.LinearModel",
+	"store": "FeaturesStoreV1",
+	"name": "myModel",
+	"features": [
+		{ "name":"originalScore"},
+		{ "name":"isBattle"},
+		{ "name":"isWar"},
+		{ "name":"isRevolution"},
+		{ "name":"summary_length"},
+		{ "name":"part_of_length"},
+		{ "name":"participants_count"},
+		{ "name":"event_date"},
+		{ "name":"instance_type"}
+	],
+	"params": {
+		"weights": {
+			"originalScore":0.0,
+			"isBattle":-0.9466922241122868,
+			"isWar":-0.32686252925227155,
+			"isRevolution":0.8536480391368282,
+			"summary_length":-0.0005563829107839331,
+			"part_of_length":0.03309712363062059,
+			"participants_count":0.029950963878731977,
+			"event_date":-6.621418247986302e-14,
+			"instance_type":0.014440189393402669
+		}
+	}
 }

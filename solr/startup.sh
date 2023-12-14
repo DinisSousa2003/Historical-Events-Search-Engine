@@ -23,10 +23,11 @@ curl -X POST -H 'Content-type:application/json' --data-binary "@./schema.json" h
 #,!!! data.json is a copy of the file from /outputs, the relative path was not working
 curl -X POST -H 'Content-type:application/json' --data-binary "@./data.json" http://localhost:8983/solr/conflicts/update?commit=true
 
-curl -XDELETE 'http://localhost:8983/solr/conflicts/schema/feature-store/_DEFAULT_'
+curl -XDELETE 'http://localhost:8983/solr/conflicts/schema/feature-store/FeaturesStoreV1'
 curl -XPUT 'http://localhost:8983/solr/conflicts/schema/feature-store' --data-binary "@./myFeatures.json" -H 'Content-type:application/json'
-curl -XPUT 'http://localhost:8983/solr/conflicts/schema/model-store' --data-binary "@./myModel.json" -H 'Content-type:application/json'
 
+curl -XDELETE 'http://localhost:8983/solr/conflicts/schema/model-store/myModel'
+curl -XPUT 'http://localhost:8983/solr/conflicts/schema/model-store' --data-binary "@./myModel.json" -H 'Content-type:application/json'
 
 # Populate collection using mapped path inside container.
 #docker exec -it pri_44 bin/post -c conflicts ./outputs/data.json
