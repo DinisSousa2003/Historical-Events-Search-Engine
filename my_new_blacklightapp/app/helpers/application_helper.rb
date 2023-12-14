@@ -31,8 +31,6 @@ module ApplicationHelper
         end
     end
 
-
-
     def show_date(document)
         source_hash = document[:document]._source
         date_value = source_hash['date']
