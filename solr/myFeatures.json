@@ -1,0 +1,15 @@
+[
+  {
+    "name" : "originalScore",
+    "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
+    "params" : {}
+  },
+   {
+    "name" : "isBattle",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : {
+      "fq": ["{!terms f=instance_of}battle"]
+    }
+  }
+
+]

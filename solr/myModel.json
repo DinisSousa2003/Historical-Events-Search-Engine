@@ -1,0 +1,14 @@
+{
+  "class" : "org.apache.solr.ltr.model.LinearModel",
+  "name" : "myModel",
+  "features" : [
+    { "name" : "isBattle" },
+    { "name" : "originalScore" }
+  ],
+  "params" : {
+    "weights" : {
+      "isBattle" : 0.1,
+      "originalScore" : 0.5
+    }
+  }
+}

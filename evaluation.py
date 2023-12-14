@@ -1,5 +1,6 @@
 # SETUP
 import matplotlib.pyplot as plt
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics import PrecisionRecallDisplay, auc
 import numpy as np
 import json
@@ -58,6 +59,15 @@ def p10(results, relevant, n=10):
 
 def calculate_metric(key, results, relevant):
     return metrics[key](results, relevant)
+
+
+def text_to_embedding(text):
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    embedding = model.encode(text, convert_to_tensor=False).tolist()
+
+    # Convert the embedding to the expected format
+    embedding_str = "[" + ",".join(map(str, embedding)) + "]"
+    return embedding_str
 
 
 def run_evaluation(qrels_file, query_url, description):
@@ -197,6 +207,76 @@ def plot_both_pr_curves(description1, description2, qrels_file, query_url1, quer
     plt.savefig('./evaluation_results/precision_recall_interpolated_both_' + description1.replace('_boosted', '') + '.pdf')
 
 
+
+def plot_boosted_against_semantic(description, qrels_file, query_url):
+
+    if '/solr/#/' in query_url:
+        query_url = query_url.replace('/solr/#/', '/solr/')
+
+    post_url ='http://localhost:8983/solr/conflicts/select'
+
+    relevant = [line.strip() for line in open(qrels_file, encoding='utf-8').readlines() if
+                not line.startswith('#') and not line.startswith('\n')]
+    relevant = [line.split(' ')[0] for line in relevant]
+
+    # Get query results from Solr instance
+    results1 = requests.get(query_url).json()['response']['docs']
+
+    # for results2, extract the parameters from the get url used above to send a post request.
+    # In the "q" field create the embedding with text_to_embedding
+
+    get_query_params = query_url.split('?')[1].split('&')
+    params = {}
+    for param in get_query_params:
+        key, value = param.split('=')
+        if not value:
+            continue
+        # decode value if it is URL encoded
+        if '%' in value:
+            value = requests.utils.unquote(value)
+
+        params[key] = value
+
+    embedding = text_to_embedding(params['q'])
+    data = {
+        "q": f"{{!knn f=vector topK=10}}{embedding}",
+    }
+
+    for key, value in params.items():
+        if key != 'q':
+            data[key] = value
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    results2 = requests.post(post_url, data=data, headers=headers).json()['response']['docs']
+
+
+
+    # PRECISION-RECALL CURVE
+    # Calculate precision and recall values as we move down the ranked list
+    recall_values1, precision_values1= calculate_pr_values(results1, relevant)
+    recall_values2, precision_values2 = calculate_pr_values(results2, relevant)
+
+    plt.clf()
+    plt.ylim(0, 1.05)
+    plt.xlim(0, 1.05)
+    # set color
+
+    plot1 = plot_pr_curve(precision_values1, recall_values1)
+    plot2 = plot_pr_curve(precision_values2, recall_values2, color='#e83d2a')
+    plt.legend([plot1, plot2],['Semantic', 'Boosted'])
+    plt.savefig('./evaluation_results/precision_recall_with_semantic_' + description + '.pdf')
+
+    plt.clf()
+    plt.ylim(0, 1.05)
+    plt.xlim(0, 1.05)
+    plot3 = plot_interpolated_pr_curve(precision_values1, recall_values1)
+    plot4 = plot_interpolated_pr_curve(precision_values2, recall_values2, color='#e83d2a')
+    plt.legend([plot3, plot4], ['Boosted', 'Semantic'])
+    plt.savefig('./evaluation_results/precision_recall_interpolated_with_semantic_' + description + '.pdf')
+
 def plot_pr_curve_of_system(qrels_files, query_urls, system, color='#1f77b4'):
     precision_lists = []
     recall_lists = []
@@ -239,7 +319,7 @@ def plot_pr_curve_of_system(qrels_files, query_urls, system, color='#1f77b4'):
 def plot_system_comparison(qrels_files, query_urls):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
-    plt.title('Average Precision-Recall Curves')
+    plt.title('Average Precision-Recall Curves', fontweight='bold')
     plt.xlim(0, 1.01)
     plt.ylim(0, 1.01)
     plot_pr_curve_of_system(qrels_files[::2], query_urls[::2], 'Boosted')
@@ -280,6 +360,9 @@ if __name__ == '__main__':
     # for i in range(0, len(descriptions), 2):
     #     plot_both_pr_curves(descriptions[i], descriptions[i + 1], qrels_files[i], query_urls[i], query_urls[i + 1])
 
-    plot_system_comparison(qrels_files, query_urls)
+    for i in range(0, len(descriptions), 2):
+        plot_boosted_against_semantic(descriptions[i], qrels_files[i], query_urls[i])
+
+    # plot_system_comparison(qrels_files, query_urls)
 
 
