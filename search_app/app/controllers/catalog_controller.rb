@@ -309,16 +309,16 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('location') do |field|
-      field.label = 'Location'
-      field.solr_parameters = {
-        fq: '{!geofilt}',
-        sfield: 'coordinate_location',
-        pt: "8,41",
-        d: '10000000',
-        sort: 'geodist() asc'
-      }
-    end
+    # config.add_search_field('location') do |field|
+    #   field.label = 'Location'
+    #   field.solr_parameters = {
+    #     fq: '{!geofilt}',
+    #     sfield: 'coordinate_location',
+    #     pt: "8,41",
+    #     d: '10000000',
+    #     sort: 'geodist() asc'
+    #   }
+    # end
 
     
 
