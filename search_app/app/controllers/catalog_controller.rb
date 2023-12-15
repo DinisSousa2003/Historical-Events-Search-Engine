@@ -16,7 +16,7 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     ## Specify the style of markup to be generated (may be 4 or 5)
     config.bootstrap_version = 5
-    #
+    #q
     ## Class for sending and receiving requests from a search index
     config.repository_class = Blacklight::Solr::Repository
     #
@@ -308,6 +308,19 @@ class CatalogController < ApplicationController
         qf: 'summary',
       }
     end
+
+    config.add_search_field('location') do |field|
+      field.label = 'Location'
+      field.solr_parameters = {
+        fq: '{!geofilt}',
+        sfield: 'coordinate_location',
+        pt: "8,41",
+        d: '10000000',
+        sort: 'geodist() asc'
+      }
+    end
+
+    
 
     # Specifying a :qt only to show it's possible, and so our internal automated
     # tests can test it. In this case it's the same as

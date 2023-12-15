@@ -71,8 +71,9 @@ module ApplicationHelper
     def link_to_search(search_term)
         base_url = 'http://127.0.0.1:3000/catalog/'
         search_path = '?search_field=part_of&q='
+        exact_search_term = "\"" + search_term + "\""
     
-        link_to(search_term, "#{base_url}#{search_path}#{CGI.escape(search_term)}")
+        link_to(search_term, "#{base_url}#{search_path}#{CGI.escape(exact_search_term)}")
     end
 
     def link_to_page(document)
@@ -106,4 +107,12 @@ module ApplicationHelper
         name_of_link = "#{lat}, #{lng}"
         link_to name_of_link, link, target: '_blank'
     end
+
+    def is_catalog_page?
+        if params[:controller] == 'catalog'
+              true
+            else
+              false
+         end
+      end
 end
